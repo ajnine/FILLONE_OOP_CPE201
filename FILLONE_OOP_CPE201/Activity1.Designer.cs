@@ -235,9 +235,11 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Crimson;
             label1.Location = new Point(16, 449);
             label1.Name = "label1";
-            label1.Size = new Size(86, 20);
+            label1.Size = new Size(92, 20);
             label1.TabIndex = 15;
             label1.Text = "Item Name:";
             label1.Click += label1_Click;
@@ -253,9 +255,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Crimson;
             label2.Location = new Point(421, 445);
             label2.Name = "label2";
-            label2.Size = new Size(44, 20);
+            label2.Size = new Size(47, 20);
             label2.TabIndex = 17;
             label2.Text = "Price:";
             // 
@@ -268,28 +272,31 @@
             // 
             // newBtn
             // 
+            newBtn.BackColor = Color.LightPink;
             newBtn.Location = new Point(623, 440);
             newBtn.Name = "newBtn";
             newBtn.Size = new Size(94, 29);
             newBtn.TabIndex = 20;
             newBtn.Text = "New";
-            newBtn.UseVisualStyleBackColor = true;
+            newBtn.UseVisualStyleBackColor = false;
             newBtn.Click += newBtn_Click;
             // 
             // exitBtn
             // 
+            exitBtn.BackColor = Color.LightPink;
             exitBtn.Location = new Point(723, 440);
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(94, 29);
             exitBtn.TabIndex = 21;
             exitBtn.Text = "Exit";
-            exitBtn.UseVisualStyleBackColor = true;
+            exitBtn.UseVisualStyleBackColor = false;
             exitBtn.Click += exitBtn_Click;
             // 
             // Activity1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LavenderBlush;
             ClientSize = new Size(842, 500);
             Controls.Add(exitBtn);
             Controls.Add(newBtn);
@@ -314,6 +321,7 @@
             Controls.Add(pictureBox1);
             Name = "Activity1";
             Text = "Example 1";
+            Load += Activity1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

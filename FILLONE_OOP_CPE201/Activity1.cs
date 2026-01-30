@@ -117,5 +117,10 @@ namespace FILLONE_OOP_CPE201
         {
             this.Close();
         }
+
+        private void Activity1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
