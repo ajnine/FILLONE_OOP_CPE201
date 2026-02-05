@@ -32,6 +32,10 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            nodiscountRbtn = new RadioButton();
+            employeediscRbtn = new RadioButton();
+            wdisccardRbtn = new RadioButton();
+            seniorcitizenRbtn = new RadioButton();
             exitBtn = new Button();
             cancelBtn = new Button();
             newBtn = new Button();
@@ -49,17 +53,17 @@
             label8 = new Label();
             label9 = new Label();
             groupBox2 = new GroupBox();
-            label12 = new Label();
-            label11 = new Label();
+            discounted_total = new Label();
+            discount_totalgiven = new Label();
             discounted_totaltxtbox = new TextBox();
             discount_totaltxtbox = new TextBox();
-            label10 = new Label();
+            qty_total = new Label();
             qty_totaltxtbox = new TextBox();
             groupBox3 = new GroupBox();
-            label14 = new Label();
+            change = new Label();
             changetxtbox = new TextBox();
             cash_renderedtxtbox = new TextBox();
-            label13 = new Label();
+            cash_rendered = new Label();
             enterBtn = new Button();
             slashBtn = new Button();
             asteriskBtn = new Button();
@@ -166,6 +170,10 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(nodiscountRbtn);
+            groupBox1.Controls.Add(employeediscRbtn);
+            groupBox1.Controls.Add(wdisccardRbtn);
+            groupBox1.Controls.Add(seniorcitizenRbtn);
             groupBox1.Controls.Add(exitBtn);
             groupBox1.Controls.Add(cancelBtn);
             groupBox1.Controls.Add(newBtn);
@@ -186,12 +194,60 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             // 
+            // nodiscountRbtn
+            // 
+            nodiscountRbtn.AutoSize = true;
+            nodiscountRbtn.Location = new Point(253, 157);
+            nodiscountRbtn.Name = "nodiscountRbtn";
+            nodiscountRbtn.Size = new Size(112, 24);
+            nodiscountRbtn.TabIndex = 19;
+            nodiscountRbtn.TabStop = true;
+            nodiscountRbtn.Text = "No Discount";
+            nodiscountRbtn.UseVisualStyleBackColor = true;
+            nodiscountRbtn.CheckedChanged += nodiscountRbtn_CheckedChanged;
+            // 
+            // employeediscRbtn
+            // 
+            employeediscRbtn.AutoSize = true;
+            employeediscRbtn.Location = new Point(253, 124);
+            employeediscRbtn.Name = "employeediscRbtn";
+            employeediscRbtn.Size = new Size(131, 24);
+            employeediscRbtn.TabIndex = 18;
+            employeediscRbtn.TabStop = true;
+            employeediscRbtn.Text = "Employee Disc.";
+            employeediscRbtn.UseVisualStyleBackColor = true;
+            employeediscRbtn.CheckedChanged += employeediscRbtn_CheckedChanged;
+            // 
+            // wdisccardRbtn
+            // 
+            wdisccardRbtn.AutoSize = true;
+            wdisccardRbtn.Location = new Point(253, 90);
+            wdisccardRbtn.Name = "wdisccardRbtn";
+            wdisccardRbtn.Size = new Size(131, 24);
+            wdisccardRbtn.TabIndex = 17;
+            wdisccardRbtn.TabStop = true;
+            wdisccardRbtn.Text = "With Disc. Card";
+            wdisccardRbtn.UseVisualStyleBackColor = true;
+            wdisccardRbtn.CheckedChanged += wdisccardRbtn_CheckedChanged;
+            // 
+            // seniorcitizenRbtn
+            // 
+            seniorcitizenRbtn.AutoSize = true;
+            seniorcitizenRbtn.Location = new Point(253, 56);
+            seniorcitizenRbtn.Name = "seniorcitizenRbtn";
+            seniorcitizenRbtn.Size = new Size(121, 24);
+            seniorcitizenRbtn.TabIndex = 16;
+            seniorcitizenRbtn.TabStop = true;
+            seniorcitizenRbtn.Text = "Senior Citizen";
+            seniorcitizenRbtn.UseVisualStyleBackColor = true;
+            seniorcitizenRbtn.CheckedChanged += radioButton1_CheckedChanged;
+            // 
             // exitBtn
             // 
             exitBtn.BackColor = Color.PaleVioletRed;
-            exitBtn.Location = new Point(361, 152);
+            exitBtn.Location = new Point(390, 152);
             exitBtn.Name = "exitBtn";
-            exitBtn.Size = new Size(118, 29);
+            exitBtn.Size = new Size(100, 29);
             exitBtn.TabIndex = 15;
             exitBtn.Text = "EXIT";
             exitBtn.UseVisualStyleBackColor = false;
@@ -200,9 +256,9 @@
             // cancelBtn
             // 
             cancelBtn.BackColor = Color.PaleVioletRed;
-            cancelBtn.Location = new Point(361, 120);
+            cancelBtn.Location = new Point(388, 121);
             cancelBtn.Name = "cancelBtn";
-            cancelBtn.Size = new Size(118, 29);
+            cancelBtn.Size = new Size(101, 29);
             cancelBtn.TabIndex = 14;
             cancelBtn.Text = "CANCEL";
             cancelBtn.UseVisualStyleBackColor = false;
@@ -211,9 +267,9 @@
             // newBtn
             // 
             newBtn.BackColor = Color.PaleVioletRed;
-            newBtn.Location = new Point(361, 88);
+            newBtn.Location = new Point(389, 87);
             newBtn.Name = "newBtn";
-            newBtn.Size = new Size(118, 29);
+            newBtn.Size = new Size(101, 29);
             newBtn.TabIndex = 13;
             newBtn.Text = "NEW";
             newBtn.UseVisualStyleBackColor = false;
@@ -222,17 +278,18 @@
             // calculateBtn
             // 
             calculateBtn.BackColor = Color.PaleVioletRed;
-            calculateBtn.Location = new Point(361, 53);
+            calculateBtn.Location = new Point(389, 53);
             calculateBtn.Name = "calculateBtn";
-            calculateBtn.Size = new Size(118, 29);
+            calculateBtn.Size = new Size(100, 29);
             calculateBtn.TabIndex = 12;
             calculateBtn.Text = "CALCULATE";
             calculateBtn.UseVisualStyleBackColor = false;
+            calculateBtn.Click += calculateBtn_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(20, 157);
+            label7.Location = new Point(9, 157);
             label7.Name = "label7";
             label7.Size = new Size(144, 20);
             label7.TabIndex = 11;
@@ -241,7 +298,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(20, 124);
+            label6.Location = new Point(9, 124);
             label6.Name = "label6";
             label6.Size = new Size(127, 20);
             label6.TabIndex = 10;
@@ -249,30 +306,30 @@
             // 
             // discountedtxtbox
             // 
-            discountedtxtbox.Location = new Point(171, 154);
+            discountedtxtbox.Location = new Point(158, 154);
             discountedtxtbox.Name = "discountedtxtbox";
-            discountedtxtbox.Size = new Size(184, 27);
+            discountedtxtbox.Size = new Size(89, 27);
             discountedtxtbox.TabIndex = 9;
             // 
             // discounttxtbox
             // 
-            discounttxtbox.Location = new Point(171, 121);
+            discounttxtbox.Location = new Point(158, 121);
             discounttxtbox.Name = "discounttxtbox";
-            discounttxtbox.Size = new Size(184, 27);
+            discounttxtbox.Size = new Size(89, 27);
             discounttxtbox.TabIndex = 8;
             // 
             // pricetxtbox
             // 
-            pricetxtbox.Location = new Point(171, 88);
+            pricetxtbox.Location = new Point(158, 88);
             pricetxtbox.Name = "pricetxtbox";
-            pricetxtbox.Size = new Size(184, 27);
+            pricetxtbox.Size = new Size(89, 27);
             pricetxtbox.TabIndex = 7;
             pricetxtbox.TextChanged += textBox3_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(20, 91);
+            label5.Location = new Point(9, 91);
             label5.Name = "label5";
             label5.Size = new Size(44, 20);
             label5.TabIndex = 6;
@@ -280,16 +337,16 @@
             // 
             // quantitytxtbox
             // 
-            quantitytxtbox.Location = new Point(171, 55);
+            quantitytxtbox.Location = new Point(158, 55);
             quantitytxtbox.Name = "quantitytxtbox";
-            quantitytxtbox.Size = new Size(184, 27);
+            quantitytxtbox.Size = new Size(89, 27);
             quantitytxtbox.TabIndex = 5;
             quantitytxtbox.TextChanged += textBox2_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(20, 58);
+            label4.Location = new Point(9, 58);
             label4.Name = "label4";
             label4.Size = new Size(68, 20);
             label4.TabIndex = 4;
@@ -297,15 +354,15 @@
             // 
             // itemnametxtbox
             // 
-            itemnametxtbox.Location = new Point(171, 22);
+            itemnametxtbox.Location = new Point(158, 22);
             itemnametxtbox.Name = "itemnametxtbox";
-            itemnametxtbox.Size = new Size(308, 27);
+            itemnametxtbox.Size = new Size(331, 27);
             itemnametxtbox.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(20, 25);
+            label3.Location = new Point(9, 25);
             label3.Name = "label3";
             label3.Size = new Size(124, 20);
             label3.TabIndex = 3;
@@ -325,17 +382,18 @@
             label9.AutoSize = true;
             label9.Location = new Point(220, 76);
             label9.Name = "label9";
-            label9.Size = new Size(165, 20);
+            label9.Size = new Size(121, 20);
             label9.TabIndex = 4;
-            label9.Text = "By: Annabella C. Doctor";
+            label9.Text = "By: Aliyah Fillone";
+            label9.Click += label9_Click;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(label12);
-            groupBox2.Controls.Add(label11);
+            groupBox2.Controls.Add(discounted_total);
+            groupBox2.Controls.Add(discount_totalgiven);
             groupBox2.Controls.Add(discounted_totaltxtbox);
             groupBox2.Controls.Add(discount_totaltxtbox);
-            groupBox2.Controls.Add(label10);
+            groupBox2.Controls.Add(qty_total);
             groupBox2.Controls.Add(qty_totaltxtbox);
             groupBox2.Location = new Point(12, 294);
             groupBox2.Name = "groupBox2";
@@ -344,23 +402,23 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Summary";
             // 
-            // label12
+            // discounted_total
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(20, 95);
-            label12.Name = "label12";
-            label12.Size = new Size(181, 20);
-            label12.TabIndex = 20;
-            label12.Text = "Total Discounted Amount:";
+            discounted_total.AutoSize = true;
+            discounted_total.Location = new Point(17, 95);
+            discounted_total.Name = "discounted_total";
+            discounted_total.Size = new Size(181, 20);
+            discounted_total.TabIndex = 20;
+            discounted_total.Text = "Total Discounted Amount:";
             // 
-            // label11
+            // discount_totalgiven
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(20, 62);
-            label11.Name = "label11";
-            label11.Size = new Size(148, 20);
-            label11.TabIndex = 19;
-            label11.Text = "Total Discount Given:";
+            discount_totalgiven.AutoSize = true;
+            discount_totalgiven.Location = new Point(17, 62);
+            discount_totalgiven.Name = "discount_totalgiven";
+            discount_totalgiven.Size = new Size(148, 20);
+            discount_totalgiven.TabIndex = 19;
+            discount_totalgiven.Text = "Total Discount Given:";
             // 
             // discounted_totaltxtbox
             // 
@@ -376,14 +434,14 @@
             discount_totaltxtbox.Size = new Size(308, 27);
             discount_totaltxtbox.TabIndex = 17;
             // 
-            // label10
+            // qty_total
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(20, 33);
-            label10.Name = "label10";
-            label10.Size = new Size(105, 20);
-            label10.TabIndex = 16;
-            label10.Text = "Total Quantity:";
+            qty_total.AutoSize = true;
+            qty_total.Location = new Point(17, 33);
+            qty_total.Name = "qty_total";
+            qty_total.Size = new Size(105, 20);
+            qty_total.TabIndex = 16;
+            qty_total.Text = "Total Quantity:";
             // 
             // qty_totaltxtbox
             // 
@@ -394,25 +452,25 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(label14);
+            groupBox3.Controls.Add(change);
             groupBox3.Controls.Add(changetxtbox);
             groupBox3.Controls.Add(cash_renderedtxtbox);
-            groupBox3.Controls.Add(label13);
+            groupBox3.Controls.Add(cash_rendered);
             groupBox3.Location = new Point(12, 421);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(501, 130);
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             // 
-            // label14
+            // change
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label14.Location = new Point(326, 23);
-            label14.Name = "label14";
-            label14.Size = new Size(97, 31);
-            label14.TabIndex = 23;
-            label14.Text = "Change:";
+            change.AutoSize = true;
+            change.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            change.Location = new Point(326, 23);
+            change.Name = "change";
+            change.Size = new Size(97, 31);
+            change.TabIndex = 23;
+            change.Text = "Change:";
             // 
             // changetxtbox
             // 
@@ -430,15 +488,15 @@
             cash_renderedtxtbox.Size = new Size(227, 62);
             cash_renderedtxtbox.TabIndex = 21;
             // 
-            // label13
+            // cash_rendered
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(48, 23);
-            label13.Name = "label13";
-            label13.Size = new Size(172, 31);
-            label13.TabIndex = 21;
-            label13.Text = "Cash Rendered:";
+            cash_rendered.AutoSize = true;
+            cash_rendered.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cash_rendered.Location = new Point(48, 23);
+            cash_rendered.Name = "cash_rendered";
+            cash_rendered.Size = new Size(172, 31);
+            cash_rendered.TabIndex = 21;
+            cash_rendered.Text = "Cash Rendered:";
             // 
             // enterBtn
             // 
@@ -654,18 +712,18 @@
             name16lbl.AutoSize = true;
             name16lbl.Location = new Point(20, 630);
             name16lbl.Name = "name16lbl";
-            name16lbl.Size = new Size(43, 20);
+            name16lbl.Size = new Size(55, 20);
             name16lbl.TabIndex = 52;
-            name16lbl.Text = "S.B.D";
+            name16lbl.Text = "Names";
             // 
             // name17lbl
             // 
             name17lbl.AutoSize = true;
             name17lbl.Location = new Point(167, 630);
             name17lbl.Name = "name17lbl";
-            name17lbl.Size = new Size(53, 20);
+            name17lbl.Size = new Size(55, 20);
             name17lbl.TabIndex = 51;
-            name17lbl.Text = "S.B.F.D";
+            name17lbl.Text = "Names";
             name17lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // name18lbl
@@ -673,162 +731,162 @@
             name18lbl.AutoSize = true;
             name18lbl.Location = new Point(313, 630);
             name18lbl.Name = "name18lbl";
-            name18lbl.Size = new Size(65, 20);
+            name18lbl.Size = new Size(55, 20);
             name18lbl.TabIndex = 50;
-            name18lbl.Text = "Nuggets";
+            name18lbl.Text = "Names";
             // 
             // name19lbl
             // 
             name19lbl.AutoSize = true;
             name19lbl.Location = new Point(458, 630);
             name19lbl.Name = "name19lbl";
-            name19lbl.Size = new Size(72, 20);
+            name19lbl.Size = new Size(55, 20);
             name19lbl.TabIndex = 49;
-            name19lbl.Text = "Bacon CB";
+            name19lbl.Text = "Names";
             // 
             // name20lbl
             // 
             name20lbl.AutoSize = true;
             name20lbl.Location = new Point(605, 630);
             name20lbl.Name = "name20lbl";
-            name20lbl.Size = new Size(91, 20);
+            name20lbl.Size = new Size(55, 20);
             name20lbl.TabIndex = 48;
-            name20lbl.Text = "CJ n Palabok";
+            name20lbl.Text = "Names";
             // 
             // name15lbl
             // 
             name15lbl.AutoSize = true;
             name15lbl.Location = new Point(605, 467);
             name15lbl.Name = "name15lbl";
-            name15lbl.Size = new Size(87, 20);
+            name15lbl.Size = new Size(55, 20);
             name15lbl.TabIndex = 47;
-            name15lbl.Text = "Bucket Fries";
+            name15lbl.Text = "Names";
             // 
             // name14lbl
             // 
             name14lbl.AutoSize = true;
             name14lbl.Location = new Point(458, 467);
             name14lbl.Name = "name14lbl";
-            name14lbl.Size = new Size(143, 20);
+            name14lbl.Size = new Size(55, 20);
             name14lbl.TabIndex = 46;
-            name14lbl.Text = "D.P.C.B., Fries, Drinks";
+            name14lbl.Text = "Names";
             // 
             // name13lbl
             // 
             name13lbl.AutoSize = true;
             name13lbl.Location = new Point(313, 467);
             name13lbl.Name = "name13lbl";
-            name13lbl.Size = new Size(88, 20);
+            name13lbl.Size = new Size(55, 20);
             name13lbl.TabIndex = 45;
-            name13lbl.Text = "Family Meal";
+            name13lbl.Text = "Names";
             // 
             // name12lbl
             // 
             name12lbl.AutoSize = true;
             name12lbl.Location = new Point(167, 467);
             name12lbl.Name = "name12lbl";
-            name12lbl.Size = new Size(146, 20);
+            name12lbl.Size = new Size(55, 20);
             name12lbl.TabIndex = 44;
-            name12lbl.Text = "Aloha B, Fries, Drinks";
+            name12lbl.Text = "Names";
             // 
             // name11lbl
             // 
             name11lbl.AutoSize = true;
             name11lbl.Location = new Point(20, 467);
             name11lbl.Name = "name11lbl";
-            name11lbl.Size = new Size(139, 20);
+            name11lbl.Size = new Size(55, 20);
             name11lbl.TabIndex = 43;
-            name11lbl.Text = "CJ n Palabok Bucket";
+            name11lbl.Text = "Names";
             // 
             // name10lbl
             // 
             name10lbl.AutoSize = true;
             name10lbl.Location = new Point(605, 307);
             name10lbl.Name = "name10lbl";
-            name10lbl.Size = new Size(109, 20);
+            name10lbl.Size = new Size(55, 20);
             name10lbl.TabIndex = 42;
-            name10lbl.Text = "6pc ChickenJoy";
+            name10lbl.Text = "Names";
             // 
             // name9lbl
             // 
             name9lbl.AutoSize = true;
             name9lbl.Location = new Point(458, 307);
             name9lbl.Name = "name9lbl";
-            name9lbl.Size = new Size(121, 20);
+            name9lbl.Size = new Size(55, 20);
             name9lbl.TabIndex = 41;
-            name9lbl.Text = "CJ n Spag Bucket";
+            name9lbl.Text = "Names";
             // 
             // name8lbl
             // 
             name8lbl.AutoSize = true;
             name8lbl.Location = new Point(313, 307);
             name8lbl.Name = "name8lbl";
-            name8lbl.Size = new Size(68, 20);
+            name8lbl.Size = new Size(55, 20);
             name8lbl.TabIndex = 40;
-            name8lbl.Text = "Pancakes";
+            name8lbl.Text = "Names";
             // 
             // name7lbl
             // 
             name7lbl.AutoSize = true;
             name7lbl.Location = new Point(163, 307);
             name7lbl.Name = "name7lbl";
-            name7lbl.Size = new Size(150, 20);
+            name7lbl.Size = new Size(55, 20);
             name7lbl.TabIndex = 39;
-            name7lbl.Text = "CJ, Spaghetti w/Drink";
+            name7lbl.Text = "Names";
             // 
             // name6lbl
             // 
             name6lbl.AutoSize = true;
             name6lbl.Location = new Point(20, 307);
             name6lbl.Name = "name6lbl";
-            name6lbl.Size = new Size(103, 20);
+            name6lbl.Size = new Size(55, 20);
             name6lbl.TabIndex = 38;
-            name6lbl.Text = "CJ n Spaghetti";
+            name6lbl.Text = "Names";
             // 
             // name5lbl
             // 
             name5lbl.AutoSize = true;
             name5lbl.Location = new Point(605, 148);
             name5lbl.Name = "name5lbl";
-            name5lbl.Size = new Size(102, 20);
+            name5lbl.Size = new Size(55, 20);
             name5lbl.TabIndex = 37;
-            name5lbl.Text = "1pc CJ n Drink";
+            name5lbl.Text = "Names";
             // 
             // name4lbl
             // 
             name4lbl.AutoSize = true;
             name4lbl.Location = new Point(458, 148);
             name4lbl.Name = "name4lbl";
-            name4lbl.Size = new Size(131, 20);
+            name4lbl.Size = new Size(55, 20);
             name4lbl.TabIndex = 36;
-            name4lbl.Text = "1pc CJ n Cokefloat";
+            name4lbl.Text = "Names";
             // 
             // name3lbl
             // 
             name3lbl.AutoSize = true;
             name3lbl.Location = new Point(313, 148);
             name3lbl.Name = "name3lbl";
-            name3lbl.Size = new Size(109, 20);
+            name3lbl.Size = new Size(55, 20);
             name3lbl.TabIndex = 35;
-            name3lbl.Text = "1pc ChickenJoy";
+            name3lbl.Text = "Names";
             // 
             // name2lbl
             // 
             name2lbl.AutoSize = true;
             name2lbl.Location = new Point(167, 148);
             name2lbl.Name = "name2lbl";
-            name2lbl.Size = new Size(80, 20);
+            name2lbl.Size = new Size(55, 20);
             name2lbl.TabIndex = 34;
-            name2lbl.Text = "Supermeal";
+            name2lbl.Text = "Names";
             // 
             // name1lbl
             // 
             name1lbl.AutoSize = true;
             name1lbl.Location = new Point(20, 148);
             name1lbl.Name = "name1lbl";
-            name1lbl.Size = new Size(144, 20);
+            name1lbl.Size = new Size(55, 20);
             name1lbl.TabIndex = 33;
-            name1lbl.Text = "Burger Steak n Drink";
+            name1lbl.Text = "Names";
             name1lbl.Click += label15_Click;
             // 
             // pictureBox16
@@ -943,7 +1001,6 @@
             // 
             // pictureBox6
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(313, 513);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(133, 114);
@@ -954,7 +1011,6 @@
             // 
             // pictureBox7
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(167, 513);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(133, 114);
@@ -965,7 +1021,6 @@
             // 
             // pictureBox8
             // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(458, 513);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(133, 114);
@@ -976,7 +1031,6 @@
             // 
             // pictureBox9
             // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
             pictureBox9.Location = new Point(605, 513);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(133, 114);
@@ -987,7 +1041,6 @@
             // 
             // pictureBox10
             // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
             pictureBox10.Location = new Point(20, 513);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(133, 114);
@@ -1138,16 +1191,16 @@
         private Label label8;
         private Label label9;
         private GroupBox groupBox2;
-        private Label label10;
+        private Label qty_total;
         private TextBox qty_totaltxtbox;
-        private Label label12;
-        private Label label11;
+        private Label discounted_total;
+        private Label discount_totalgiven;
         private TextBox discounted_totaltxtbox;
         private TextBox discount_totaltxtbox;
         private GroupBox groupBox3;
-        private Label label13;
+        private Label cash_rendered;
         private TextBox cash_renderedtxtbox;
-        private Label label14;
+        private Label change;
         private TextBox changetxtbox;
         private Button enterBtn;
         private Button slashBtn;
@@ -1206,5 +1259,9 @@
         private Label name1lbl;
         private Label name16lbl;
         private Label name17lbl;
+        private RadioButton seniorcitizenRbtn;
+        private RadioButton nodiscountRbtn;
+        private RadioButton employeediscRbtn;
+        private RadioButton wdisccardRbtn;
     }
 }
