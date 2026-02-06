@@ -118,6 +118,9 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            label12 = new Label();
+            label13 = new Label();
+            label14 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -149,7 +152,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Maroon;
-            label1.Location = new Point(186, 24);
+            label1.Location = new Point(193, 10);
             label1.Name = "label1";
             label1.Size = new Size(254, 33);
             label1.TabIndex = 0;
@@ -231,42 +234,46 @@
             // 
             // exitBTN
             // 
+            exitBTN.BackColor = Color.PaleVioletRed;
             exitBTN.Location = new Point(449, 150);
             exitBTN.Name = "exitBTN";
             exitBTN.Size = new Size(108, 29);
             exitBTN.TabIndex = 13;
             exitBTN.Text = "EXIT";
-            exitBTN.UseVisualStyleBackColor = true;
+            exitBTN.UseVisualStyleBackColor = false;
             exitBTN.Click += exitBTN_Click;
             // 
             // cancelBTN
             // 
+            cancelBTN.BackColor = Color.PaleVioletRed;
             cancelBTN.Location = new Point(449, 117);
             cancelBTN.Name = "cancelBTN";
             cancelBTN.Size = new Size(108, 29);
             cancelBTN.TabIndex = 12;
             cancelBTN.Text = "CANCEL";
-            cancelBTN.UseVisualStyleBackColor = true;
+            cancelBTN.UseVisualStyleBackColor = false;
             cancelBTN.Click += cancelBTN_Click;
             // 
             // newBTN
             // 
+            newBTN.BackColor = Color.PaleVioletRed;
             newBTN.Location = new Point(449, 84);
             newBTN.Name = "newBTN";
             newBTN.Size = new Size(108, 29);
             newBTN.TabIndex = 11;
             newBTN.Text = "NEW";
-            newBTN.UseVisualStyleBackColor = true;
+            newBTN.UseVisualStyleBackColor = false;
             newBTN.Click += newBTN_Click;
             // 
             // calculateBTN
             // 
+            calculateBTN.BackColor = Color.PaleVioletRed;
             calculateBTN.Location = new Point(449, 51);
             calculateBTN.Name = "calculateBTN";
             calculateBTN.Size = new Size(108, 29);
             calculateBTN.TabIndex = 10;
             calculateBTN.Text = "CALCULATE";
-            calculateBTN.UseVisualStyleBackColor = true;
+            calculateBTN.UseVisualStyleBackColor = false;
             calculateBTN.Click += calculateBTN_Click;
             // 
             // discountedtxtbox
@@ -396,6 +403,7 @@
             discount_totaltxtbox.Name = "discount_totaltxtbox";
             discount_totaltxtbox.Size = new Size(387, 27);
             discount_totaltxtbox.TabIndex = 19;
+            discount_totaltxtbox.TextChanged += discount_totaltxtbox_TextChanged;
             // 
             // qty_totaltxtbox
             // 
@@ -437,11 +445,13 @@
             // 
             // changetxtbox
             // 
+            changetxtbox.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             changetxtbox.Location = new Point(297, 63);
             changetxtbox.Multiline = true;
             changetxtbox.Name = "changetxtbox";
             changetxtbox.Size = new Size(212, 66);
             changetxtbox.TabIndex = 24;
+            changetxtbox.TextChanged += changetxtbox_TextChanged;
             // 
             // label10
             // 
@@ -455,6 +465,7 @@
             // 
             // cash_renderedtxtbox
             // 
+            cash_renderedtxtbox.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cash_renderedtxtbox.Location = new Point(61, 63);
             cash_renderedtxtbox.Multiline = true;
             cash_renderedtxtbox.Name = "cash_renderedtxtbox";
@@ -463,147 +474,175 @@
             // 
             // enterBTN
             // 
+            enterBTN.BackColor = Color.PaleVioletRed;
             enterBTN.Location = new Point(12, 563);
             enterBTN.Name = "enterBTN";
             enterBTN.Size = new Size(177, 186);
             enterBTN.TabIndex = 4;
             enterBTN.Text = "ENTER";
-            enterBTN.UseVisualStyleBackColor = true;
+            enterBTN.UseVisualStyleBackColor = false;
+            enterBTN.Click += enterBTN_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.PaleVioletRed;
             button2.Location = new Point(199, 563);
             button2.Name = "button2";
             button2.Size = new Size(91, 42);
             button2.TabIndex = 5;
             button2.Text = "/";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            button3.BackColor = Color.PaleVioletRed;
             button3.Location = new Point(296, 563);
             button3.Name = "button3";
             button3.Size = new Size(91, 42);
             button3.TabIndex = 6;
             button3.Text = "*";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            button4.BackColor = Color.PaleVioletRed;
             button4.Location = new Point(393, 563);
             button4.Name = "button4";
             button4.Size = new Size(91, 42);
             button4.TabIndex = 7;
             button4.Text = "-";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
+            button5.BackColor = Color.PaleVioletRed;
             button5.Location = new Point(490, 563);
             button5.Name = "button5";
             button5.Size = new Size(91, 42);
             button5.TabIndex = 8;
             button5.Text = "+";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
+            button6.BackColor = Color.PaleVioletRed;
             button6.Location = new Point(199, 611);
             button6.Name = "button6";
             button6.Size = new Size(91, 42);
             button6.TabIndex = 9;
             button6.Text = "6";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
+            button7.BackColor = Color.PaleVioletRed;
             button7.Location = new Point(296, 611);
             button7.Name = "button7";
             button7.Size = new Size(91, 42);
             button7.TabIndex = 10;
             button7.Text = "7";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
+            button8.BackColor = Color.PaleVioletRed;
             button8.Location = new Point(393, 611);
             button8.Name = "button8";
             button8.Size = new Size(91, 42);
             button8.TabIndex = 11;
             button8.Text = "8";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
+            button9.BackColor = Color.PaleVioletRed;
             button9.Location = new Point(490, 611);
             button9.Name = "button9";
             button9.Size = new Size(91, 42);
             button9.TabIndex = 12;
             button9.Text = "9";
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
+            button10.BackColor = Color.PaleVioletRed;
             button10.Location = new Point(199, 659);
             button10.Name = "button10";
             button10.Size = new Size(91, 42);
             button10.TabIndex = 13;
             button10.Text = "2";
-            button10.UseVisualStyleBackColor = true;
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
+            button11.BackColor = Color.PaleVioletRed;
             button11.Location = new Point(296, 659);
             button11.Name = "button11";
             button11.Size = new Size(91, 42);
             button11.TabIndex = 14;
             button11.Text = "3";
-            button11.UseVisualStyleBackColor = true;
+            button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // button12
             // 
+            button12.BackColor = Color.PaleVioletRed;
             button12.Location = new Point(393, 659);
             button12.Name = "button12";
             button12.Size = new Size(91, 42);
             button12.TabIndex = 15;
             button12.Text = "4";
-            button12.UseVisualStyleBackColor = true;
+            button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
             // 
             // button13
             // 
+            button13.BackColor = Color.PaleVioletRed;
             button13.Location = new Point(490, 659);
             button13.Name = "button13";
             button13.Size = new Size(91, 42);
             button13.TabIndex = 17;
             button13.Text = "5";
-            button13.UseVisualStyleBackColor = true;
+            button13.UseVisualStyleBackColor = false;
+            button13.Click += button13_Click;
             // 
             // button1
             // 
+            button1.BackColor = Color.PaleVioletRed;
             button1.Location = new Point(199, 707);
             button1.Name = "button1";
             button1.Size = new Size(188, 42);
             button1.TabIndex = 18;
             button1.Text = "0";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button14
             // 
+            button14.BackColor = Color.PaleVioletRed;
             button14.Location = new Point(393, 707);
             button14.Name = "button14";
             button14.Size = new Size(91, 42);
             button14.TabIndex = 19;
             button14.Text = ".";
-            button14.UseVisualStyleBackColor = true;
+            button14.UseVisualStyleBackColor = false;
+            button14.Click += button14_Click;
             // 
             // button15
             // 
+            button15.BackColor = Color.PaleVioletRed;
             button15.Location = new Point(490, 707);
             button15.Name = "button15";
             button15.Size = new Size(91, 42);
             button15.TabIndex = 20;
             button15.Text = "1";
-            button15.UseVisualStyleBackColor = true;
+            button15.UseVisualStyleBackColor = false;
+            button15.Click += button15_Click;
             // 
             // groupBox4
             // 
@@ -1049,12 +1088,43 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(18, 45);
+            label12.Name = "label12";
+            label12.Size = new Size(70, 20);
+            label12.TabIndex = 22;
+            label12.Text = "LABEL 12";
+            label12.Click += label12_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(247, 45);
+            label13.Name = "label13";
+            label13.Size = new Size(121, 20);
+            label13.TabIndex = 23;
+            label13.Text = "By: Aliyah Fillone";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(474, 45);
+            label14.Name = "label14";
+            label14.Size = new Size(95, 20);
+            label14.TabIndex = 24;
+            label14.Text = "Terminal #21";
+            // 
             // Activity2New
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Pink;
             ClientSize = new Size(1378, 767);
+            Controls.Add(label14);
+            Controls.Add(label13);
+            Controls.Add(label12);
             Controls.Add(groupBox4);
             Controls.Add(button15);
             Controls.Add(button14);
@@ -1202,5 +1272,8 @@
         private Label name20LBL;
         private Label name19LBL;
         private Label name18LBL;
+        private Label label12;
+        private Label label13;
+        private Label label14;
     }
 }

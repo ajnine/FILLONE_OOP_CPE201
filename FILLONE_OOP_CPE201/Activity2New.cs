@@ -4,12 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading.Channels;
 using System.Windows.Forms;
 
 namespace FILLONE_OOP_CPE201
 {
     public partial class Activity2New : Form
     {
+        int qty_total = 0;
+        double discount_totalgiven = 0;
+        double discounted_total = 0;
         public Activity2New()
         {
             InitializeComponent();
@@ -272,22 +276,97 @@ namespace FILLONE_OOP_CPE201
         {
             int qty;
             double discount_amt, discounted_amt, cash_rendered, change;
-            
+
             qty = Convert.ToInt32(qtytxtbox.Text);
-            discount_amt=Convert.ToDouble(discounttxtbox.Text);
-            discounted_amt=Convert.ToDouble(discounttxtbox.Text);
-            cash_rendered=Convert.ToDouble(cash_renderedtxtbox.Text);
+            discount_amt = Convert.ToDouble(discounttxtbox.Text);
+            discounted_amt = Convert.ToDouble(discounttxtbox.Text);
+            cash_rendered = Convert.ToDouble(cash_renderedtxtbox.Text);
 
             qty_total += qty;
             discount_totalgiven += discount_amt;
-            discounted_totaltxtbox += discounted_amt;
+            discounted_total += discounted_amt;
             change = cash_rendered - discounted_amt;
 
-            qty_totaltxtbox.Text = qty_totaltxtbox.ToString();
-            discount_totaltxtbox.Text=discount_totalgiven.ToString("n");
-            discounted_totaltxtbox.Text=discounted_total.ToString("n");
-            changetxtbox.Text=change.ToString("n");
-            cash_renderedtxtbox.Text=cash_rendered.ToString("n");
+            qty_totaltxtbox.Text = qty_total.ToString();
+            discount_totaltxtbox.Text = discount_totalgiven.ToString("n");
+            discounted_totaltxtbox.Text = discounted_total.ToString("n");
+            changetxtbox.Text = change.ToString("n");
+            cash_renderedtxtbox.Text = cash_rendered.ToString("n");
+        }
+
+        private void discount_totaltxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 6;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 7;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 8;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 9;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 2;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 3;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 4;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 5;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 0;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += 1;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            cash_renderedtxtbox.Text += ".";
+        }
+
+        private void enterBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changetxtbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
