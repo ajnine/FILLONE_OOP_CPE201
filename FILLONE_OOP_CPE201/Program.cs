@@ -11,7 +11,7 @@ namespace FILLONE_OOP_CPE201
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Lesson2Activity());
+            Application.Run(new Lesson3Activity());
         }
     }
 }

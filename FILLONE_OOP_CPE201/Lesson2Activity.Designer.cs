@@ -123,6 +123,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(200, 15);
             label1.Name = "label1";
             label1.Size = new Size(107, 20);
@@ -132,6 +133,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(200, 48);
             label2.Name = "label2";
             label2.Size = new Size(75, 20);
@@ -141,6 +143,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(200, 82);
             label3.Name = "label3";
             label3.Size = new Size(121, 20);
@@ -159,6 +162,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(203, 115);
             label4.Name = "label4";
             label4.Size = new Size(78, 20);
@@ -168,6 +172,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(203, 148);
             label5.Name = "label5";
             label5.Size = new Size(103, 20);
@@ -177,6 +182,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.ForeColor = Color.Black;
             label6.Location = new Point(204, 182);
             label6.Name = "label6";
             label6.Size = new Size(61, 20);
@@ -185,6 +191,7 @@
             // 
             // submitBTN
             // 
+            submitBTN.ForeColor = Color.Black;
             submitBTN.Location = new Point(640, 32);
             submitBTN.Name = "submitBTN";
             submitBTN.Size = new Size(136, 41);
@@ -195,6 +202,7 @@
             // 
             // new_cancelBTN
             // 
+            new_cancelBTN.ForeColor = Color.Black;
             new_cancelBTN.Location = new Point(640, 79);
             new_cancelBTN.Name = "new_cancelBTN";
             new_cancelBTN.Size = new Size(136, 41);
@@ -233,6 +241,7 @@
             // 
             // browseBTN
             // 
+            browseBTN.ForeColor = Color.Black;
             browseBTN.Location = new Point(52, 194);
             browseBTN.Name = "browseBTN";
             browseBTN.Size = new Size(94, 29);
@@ -244,6 +253,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.ForeColor = Color.Black;
             label7.Location = new Point(31, 255);
             label7.Name = "label7";
             label7.Size = new Size(115, 20);
@@ -310,6 +320,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.ForeColor = Color.Black;
             label8.Location = new Point(31, 288);
             label8.Name = "label8";
             label8.Size = new Size(96, 20);
@@ -319,6 +330,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.ForeColor = Color.Black;
             label9.Location = new Point(31, 321);
             label9.Name = "label9";
             label9.Size = new Size(93, 20);
@@ -328,6 +340,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.ForeColor = Color.Black;
             label10.Location = new Point(31, 354);
             label10.Name = "label10";
             label10.Size = new Size(91, 20);
@@ -337,6 +350,7 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.ForeColor = Color.Black;
             label11.Location = new Point(31, 387);
             label11.Name = "label11";
             label11.Size = new Size(115, 20);
@@ -346,6 +360,7 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.ForeColor = Color.Black;
             label12.Location = new Point(31, 420);
             label12.Name = "label12";
             label12.Size = new Size(45, 20);
@@ -355,6 +370,7 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.ForeColor = Color.Black;
             label13.Location = new Point(31, 453);
             label13.Name = "label13";
             label13.Size = new Size(38, 20);
@@ -364,6 +380,7 @@
             // label14
             // 
             label14.AutoSize = true;
+            label14.ForeColor = Color.Black;
             label14.Location = new Point(383, 437);
             label14.Name = "label14";
             label14.Size = new Size(130, 20);
@@ -373,6 +390,7 @@
             // label15
             // 
             label15.AutoSize = true;
+            label15.ForeColor = Color.Black;
             label15.Location = new Point(383, 404);
             label15.Name = "label15";
             label15.Size = new Size(105, 20);
@@ -382,6 +400,7 @@
             // label16
             // 
             label16.AutoSize = true;
+            label16.ForeColor = Color.Black;
             label16.Location = new Point(383, 371);
             label16.Name = "label16";
             label16.Size = new Size(161, 20);
@@ -392,6 +411,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.Black;
             label17.Location = new Point(383, 338);
             label17.Name = "label17";
             label17.Size = new Size(119, 20);
@@ -401,6 +421,7 @@
             // label18
             // 
             label18.AutoSize = true;
+            label18.ForeColor = Color.Black;
             label18.Location = new Point(383, 305);
             label18.Name = "label18";
             label18.Size = new Size(111, 20);
@@ -410,6 +431,7 @@
             // label19
             // 
             label19.AutoSize = true;
+            label19.ForeColor = Color.Black;
             label19.Location = new Point(383, 272);
             label19.Name = "label19";
             label19.Size = new Size(158, 20);
@@ -468,6 +490,7 @@
             // label20
             // 
             label20.AutoSize = true;
+            label20.ForeColor = Color.Black;
             label20.Location = new Point(383, 239);
             label20.Name = "label20";
             label20.Size = new Size(89, 20);
@@ -484,6 +507,7 @@
             // label21
             // 
             label21.AutoSize = true;
+            label21.ForeColor = Color.Black;
             label21.Location = new Point(383, 470);
             label21.Name = "label21";
             label21.Size = new Size(147, 20);
@@ -493,6 +517,7 @@
             // label22
             // 
             label22.AutoSize = true;
+            label22.ForeColor = Color.Black;
             label22.Location = new Point(50, 519);
             label22.Name = "label22";
             label22.Size = new Size(96, 20);
@@ -518,6 +543,7 @@
             // label23
             // 
             label23.AutoSize = true;
+            label23.ForeColor = Color.Black;
             label23.Location = new Point(154, 519);
             label23.Name = "label23";
             label23.Size = new Size(93, 20);
@@ -527,6 +553,7 @@
             // label24
             // 
             label24.AutoSize = true;
+            label24.ForeColor = Color.Black;
             label24.Location = new Point(313, 519);
             label24.Name = "label24";
             label24.Size = new Size(65, 20);
@@ -552,6 +579,7 @@
             // label25
             // 
             label25.AutoSize = true;
+            label25.ForeColor = Color.Black;
             label25.Location = new Point(388, 519);
             label25.Name = "label25";
             label25.Size = new Size(67, 20);
@@ -569,6 +597,7 @@
             // label26
             // 
             label26.AutoSize = true;
+            label26.ForeColor = Color.Black;
             label26.Location = new Point(460, 519);
             label26.Name = "label26";
             label26.Size = new Size(89, 20);
@@ -594,6 +623,7 @@
             // label27
             // 
             label27.AutoSize = true;
+            label27.ForeColor = Color.Black;
             label27.Location = new Point(581, 519);
             label27.Name = "label27";
             label27.Size = new Size(45, 20);
@@ -603,6 +633,7 @@
             // label28
             // 
             label28.AutoSize = true;
+            label28.ForeColor = Color.Black;
             label28.Location = new Point(678, 519);
             label28.Name = "label28";
             label28.Size = new Size(38, 20);
@@ -612,6 +643,7 @@
             // label29
             // 
             label29.AutoSize = true;
+            label29.ForeColor = Color.Black;
             label29.Location = new Point(12, 731);
             label29.Name = "label29";
             label29.Size = new Size(147, 20);
@@ -621,6 +653,7 @@
             // label30
             // 
             label30.AutoSize = true;
+            label30.ForeColor = Color.Black;
             label30.Location = new Point(14, 764);
             label30.Name = "label30";
             label30.Size = new Size(161, 20);
@@ -651,6 +684,7 @@
             // label31
             // 
             label31.AutoSize = true;
+            label31.ForeColor = Color.Black;
             label31.Location = new Point(14, 801);
             label31.Name = "label31";
             label31.Size = new Size(131, 20);
@@ -660,6 +694,7 @@
             // label32
             // 
             label32.AutoSize = true;
+            label32.ForeColor = Color.Black;
             label32.Location = new Point(43, 831);
             label32.Name = "label32";
             label32.Size = new Size(181, 20);
@@ -669,6 +704,7 @@
             // label33
             // 
             label33.AutoSize = true;
+            label33.ForeColor = Color.Black;
             label33.Location = new Point(43, 864);
             label33.Name = "label33";
             label33.Size = new Size(108, 20);
@@ -685,6 +721,7 @@
             // label34
             // 
             label34.AutoSize = true;
+            label34.ForeColor = Color.Black;
             label34.Location = new Point(43, 897);
             label34.Name = "label34";
             label34.Size = new Size(103, 20);
@@ -701,6 +738,7 @@
             // label35
             // 
             label35.AutoSize = true;
+            label35.ForeColor = Color.Black;
             label35.Location = new Point(43, 930);
             label35.Name = "label35";
             label35.Size = new Size(168, 20);
@@ -717,6 +755,7 @@
             // label36
             // 
             label36.AutoSize = true;
+            label36.ForeColor = Color.Black;
             label36.Location = new Point(423, 731);
             label36.Name = "label36";
             label36.Size = new Size(158, 20);
@@ -733,6 +772,7 @@
             // label37
             // 
             label37.AutoSize = true;
+            label37.ForeColor = Color.Black;
             label37.Location = new Point(423, 764);
             label37.Name = "label37";
             label37.Size = new Size(157, 20);
@@ -757,6 +797,7 @@
             // label38
             // 
             label38.AutoSize = true;
+            label38.ForeColor = Color.Black;
             label38.Location = new Point(12, 519);
             label38.Name = "label38";
             label38.Size = new Size(18, 20);
@@ -767,6 +808,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(802, 986);
             Controls.Add(label38);
             Controls.Add(numberlistBox);
@@ -847,6 +889,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(student_picsPCTBOX);
+            ForeColor = Color.White;
             Name = "Lesson2Activity";
             Text = "LESSON ACTIVITY";
             Load += Lesson2Activity_Load;
