@@ -71,7 +71,7 @@
             comlab_feeTXTBOX = new TextBox();
             groupBox3 = new GroupBox();
             total_miscfeeTXTBOX = new TextBox();
-            totaltuition_andfeeTXTBOX = new TextBox();
+            totaltuitionfeeTXTBOX = new TextBox();
             label30 = new Label();
             label29 = new Label();
             groupBox2 = new GroupBox();
@@ -357,6 +357,7 @@
             clearsched_coursesBTN.TabIndex = 40;
             clearsched_coursesBTN.Text = "CLEAR SCHEDULE OF COURSES";
             clearsched_coursesBTN.UseVisualStyleBackColor = true;
+            clearsched_coursesBTN.Click += clearsched_coursesBTN_Click;
             // 
             // clearstud_infoBTN
             // 
@@ -366,6 +367,7 @@
             clearstud_infoBTN.TabIndex = 39;
             clearstud_infoBTN.Text = "CLEAR STUDENT INFORMATION\r\n";
             clearstud_infoBTN.UseVisualStyleBackColor = true;
+            clearstud_infoBTN.Click += clearstud_infoBTN_Click;
             // 
             // exitBTN
             // 
@@ -385,6 +387,7 @@
             computeBTN.TabIndex = 37;
             computeBTN.Text = "COMPUTE FEES";
             computeBTN.UseVisualStyleBackColor = true;
+            computeBTN.Click += computeBTN_Click;
             // 
             // groupBox5
             // 
@@ -680,7 +683,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(total_miscfeeTXTBOX);
-            groupBox3.Controls.Add(totaltuition_andfeeTXTBOX);
+            groupBox3.Controls.Add(totaltuitionfeeTXTBOX);
             groupBox3.Controls.Add(label30);
             groupBox3.Controls.Add(label29);
             groupBox3.Location = new Point(16, 598);
@@ -696,12 +699,12 @@
             total_miscfeeTXTBOX.Size = new Size(218, 27);
             total_miscfeeTXTBOX.TabIndex = 72;
             // 
-            // totaltuition_andfeeTXTBOX
+            // totaltuitionfeeTXTBOX
             // 
-            totaltuition_andfeeTXTBOX.Location = new Point(163, 20);
-            totaltuition_andfeeTXTBOX.Name = "totaltuition_andfeeTXTBOX";
-            totaltuition_andfeeTXTBOX.Size = new Size(245, 27);
-            totaltuition_andfeeTXTBOX.TabIndex = 71;
+            totaltuitionfeeTXTBOX.Location = new Point(163, 20);
+            totaltuitionfeeTXTBOX.Name = "totaltuitionfeeTXTBOX";
+            totaltuitionfeeTXTBOX.Size = new Size(245, 27);
+            totaltuitionfeeTXTBOX.TabIndex = 71;
             // 
             // label30
             // 
@@ -721,9 +724,9 @@
             label29.ForeColor = Color.Black;
             label29.Location = new Point(10, 23);
             label29.Name = "label29";
-            label29.Size = new Size(155, 20);
+            label29.Size = new Size(125, 20);
             label29.TabIndex = 69;
-            label29.Text = "Total Tution and Fee:";
+            label29.Text = "Total Tution Fee:";
             // 
             // groupBox2
             // 
@@ -940,6 +943,7 @@
             cred_sevenTXTBOX.Name = "cred_sevenTXTBOX";
             cred_sevenTXTBOX.Size = new Size(64, 27);
             cred_sevenTXTBOX.TabIndex = 180;
+            cred_sevenTXTBOX.TextChanged += cred_sevenTXTBOX_TextChanged;
             // 
             // lab_sevenTXTBOX
             // 
@@ -949,6 +953,7 @@
             lab_sevenTXTBOX.Name = "lab_sevenTXTBOX";
             lab_sevenTXTBOX.Size = new Size(64, 27);
             lab_sevenTXTBOX.TabIndex = 179;
+            lab_sevenTXTBOX.TextChanged += lab_sevenTXTBOX_TextChanged;
             // 
             // lec_sevenTXTBOX
             // 
@@ -958,6 +963,7 @@
             lec_sevenTXTBOX.Name = "lec_sevenTXTBOX";
             lec_sevenTXTBOX.Size = new Size(64, 27);
             lec_sevenTXTBOX.TabIndex = 178;
+            lec_sevenTXTBOX.TextChanged += lec_sevenTXTBOX_TextChanged;
             // 
             // desc_sevenTXTBOX
             // 
@@ -1004,6 +1010,7 @@
             textBox112.Size = new Size(26, 27);
             textBox112.TabIndex = 164;
             textBox112.Text = "7";
+            textBox112.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox113
             // 
@@ -1121,6 +1128,7 @@
             cred_sixTXTBOX.Name = "cred_sixTXTBOX";
             cred_sixTXTBOX.Size = new Size(64, 27);
             cred_sixTXTBOX.TabIndex = 160;
+            cred_sixTXTBOX.TextChanged += cred_sixTXTBOX_TextChanged;
             // 
             // lab_sixTXTBOX
             // 
@@ -1130,6 +1138,7 @@
             lab_sixTXTBOX.Name = "lab_sixTXTBOX";
             lab_sixTXTBOX.Size = new Size(64, 27);
             lab_sixTXTBOX.TabIndex = 159;
+            lab_sixTXTBOX.TextChanged += lab_sixTXTBOX_TextChanged;
             // 
             // lec_sixTXTBOX
             // 
@@ -1139,6 +1148,7 @@
             lec_sixTXTBOX.Name = "lec_sixTXTBOX";
             lec_sixTXTBOX.Size = new Size(64, 27);
             lec_sixTXTBOX.TabIndex = 158;
+            lec_sixTXTBOX.TextChanged += lec_sixTXTBOX_TextChanged;
             // 
             // desc_sixTXTBOX
             // 
@@ -1185,6 +1195,7 @@
             textBox132.Size = new Size(26, 27);
             textBox132.TabIndex = 144;
             textBox132.Text = "6";
+            textBox132.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox133
             // 
@@ -1302,6 +1313,7 @@
             cred_fiveTXTBOX.Name = "cred_fiveTXTBOX";
             cred_fiveTXTBOX.Size = new Size(64, 27);
             cred_fiveTXTBOX.TabIndex = 140;
+            cred_fiveTXTBOX.TextChanged += cred_fiveTXTBOX_TextChanged;
             // 
             // lab_fiveTXTBOX
             // 
@@ -1311,6 +1323,7 @@
             lab_fiveTXTBOX.Name = "lab_fiveTXTBOX";
             lab_fiveTXTBOX.Size = new Size(64, 27);
             lab_fiveTXTBOX.TabIndex = 139;
+            lab_fiveTXTBOX.TextChanged += lab_fiveTXTBOX_TextChanged;
             // 
             // lec_fiveTXTBOX
             // 
@@ -1320,6 +1333,7 @@
             lec_fiveTXTBOX.Name = "lec_fiveTXTBOX";
             lec_fiveTXTBOX.Size = new Size(64, 27);
             lec_fiveTXTBOX.TabIndex = 138;
+            lec_fiveTXTBOX.TextChanged += lec_fiveTXTBOX_TextChanged;
             // 
             // desc_fiveTXTBOX
             // 
@@ -1366,6 +1380,7 @@
             textBox152.Size = new Size(26, 27);
             textBox152.TabIndex = 124;
             textBox152.Text = "5";
+            textBox152.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox153
             // 
@@ -1483,6 +1498,7 @@
             cred_fourTXTBOX.Name = "cred_fourTXTBOX";
             cred_fourTXTBOX.Size = new Size(64, 27);
             cred_fourTXTBOX.TabIndex = 120;
+            cred_fourTXTBOX.TextChanged += cred_fourTXTBOX_TextChanged;
             // 
             // lab_fourTXTBOX
             // 
@@ -1492,6 +1508,7 @@
             lab_fourTXTBOX.Name = "lab_fourTXTBOX";
             lab_fourTXTBOX.Size = new Size(64, 27);
             lab_fourTXTBOX.TabIndex = 119;
+            lab_fourTXTBOX.TextChanged += lab_fourTXTBOX_TextChanged;
             // 
             // lec_fourTXTBOX
             // 
@@ -1501,6 +1518,7 @@
             lec_fourTXTBOX.Name = "lec_fourTXTBOX";
             lec_fourTXTBOX.Size = new Size(64, 27);
             lec_fourTXTBOX.TabIndex = 118;
+            lec_fourTXTBOX.TextChanged += lec_fourTXTBOX_TextChanged;
             // 
             // desc_fourTXTBOX
             // 
@@ -1547,6 +1565,7 @@
             textBox51.Size = new Size(26, 27);
             textBox51.TabIndex = 104;
             textBox51.Text = "4";
+            textBox51.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox52
             // 
@@ -1664,6 +1683,7 @@
             cred_threeTXTBOX.Name = "cred_threeTXTBOX";
             cred_threeTXTBOX.Size = new Size(64, 27);
             cred_threeTXTBOX.TabIndex = 100;
+            cred_threeTXTBOX.TextChanged += cred_threeTXTBOX_TextChanged;
             // 
             // lab_threeTXTBOX
             // 
@@ -1673,6 +1693,7 @@
             lab_threeTXTBOX.Name = "lab_threeTXTBOX";
             lab_threeTXTBOX.Size = new Size(64, 27);
             lab_threeTXTBOX.TabIndex = 99;
+            lab_threeTXTBOX.TextChanged += lab_threeTXTBOX_TextChanged;
             // 
             // lec_threeTXTBOX
             // 
@@ -1682,6 +1703,7 @@
             lec_threeTXTBOX.Name = "lec_threeTXTBOX";
             lec_threeTXTBOX.Size = new Size(64, 27);
             lec_threeTXTBOX.TabIndex = 98;
+            lec_threeTXTBOX.TextChanged += lec_threeTXTBOX_TextChanged;
             // 
             // desc_threeTXTBOX
             // 
@@ -1728,6 +1750,7 @@
             textBox72.Size = new Size(26, 27);
             textBox72.TabIndex = 84;
             textBox72.Text = "3";
+            textBox72.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox73
             // 
@@ -1845,6 +1868,7 @@
             cred_twoTXTBOX.Name = "cred_twoTXTBOX";
             cred_twoTXTBOX.Size = new Size(64, 27);
             cred_twoTXTBOX.TabIndex = 80;
+            cred_twoTXTBOX.TextChanged += cred_twoTXTBOX_TextChanged;
             // 
             // lab_twoTXTBOX
             // 
@@ -1854,6 +1878,7 @@
             lab_twoTXTBOX.Name = "lab_twoTXTBOX";
             lab_twoTXTBOX.Size = new Size(64, 27);
             lab_twoTXTBOX.TabIndex = 79;
+            lab_twoTXTBOX.TextChanged += lab_twoTXTBOX_TextChanged;
             // 
             // lec_twoTXTBOX
             // 
@@ -1863,6 +1888,7 @@
             lec_twoTXTBOX.Name = "lec_twoTXTBOX";
             lec_twoTXTBOX.Size = new Size(64, 27);
             lec_twoTXTBOX.TabIndex = 78;
+            lec_twoTXTBOX.TextChanged += lec_twoTXTBOX_TextChanged;
             // 
             // desc_twoTXTBOX
             // 
@@ -1909,6 +1935,7 @@
             textBox31.Size = new Size(26, 27);
             textBox31.TabIndex = 64;
             textBox31.Text = "2";
+            textBox31.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox32
             // 
@@ -2036,6 +2063,7 @@
             lab_oneTXTBOX.Name = "lab_oneTXTBOX";
             lab_oneTXTBOX.Size = new Size(64, 27);
             lab_oneTXTBOX.TabIndex = 59;
+            lab_oneTXTBOX.TextChanged += lab_oneTXTBOX_TextChanged;
             // 
             // lec_oneTXTBOX
             // 
@@ -2102,6 +2130,7 @@
             textBox55.Size = new Size(26, 27);
             textBox55.TabIndex = 34;
             textBox55.Text = "1";
+            textBox55.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox1
             // 
@@ -2279,7 +2308,7 @@
             modeCMBBOX.FormattingEnabled = true;
             modeCMBBOX.Location = new Point(878, 99);
             modeCMBBOX.Name = "modeCMBBOX";
-            modeCMBBOX.Size = new Size(78, 28);
+            modeCMBBOX.Size = new Size(132, 28);
             modeCMBBOX.TabIndex = 32;
             // 
             // label7
@@ -2530,7 +2559,7 @@
         private TextBox day_fourTXTBOX;
         private TextBox time_fourTXTBOX;
         private TextBox cred_fourTXTBOX;
-        private TextBox textBox45;
+       // private TextBox textBox45;
         private TextBox lec_fourTXTBOX;
         private TextBox desc_fourTXTBOX;
         private TextBox sec_fourTXTBOX;
@@ -2597,7 +2626,7 @@
         private TextBox textBox13;
         private GroupBox groupBox3;
         private TextBox total_miscfeeTXTBOX;
-        private TextBox totaltuition_andfeeTXTBOX;
+        private TextBox totaltuitionfeeTXTBOX;
         private Label label30;
         private Label label29;
         private GroupBox groupBox4;
