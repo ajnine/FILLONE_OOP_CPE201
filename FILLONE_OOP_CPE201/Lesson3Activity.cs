@@ -87,9 +87,6 @@ namespace FILLONE_OOP_CPE201
             }
         }
 
-        
-
-        // question 2b
         private void lec_oneTXTBOX_TextChanged(object sender, EventArgs e)
         {
             if (lec_oneTXTBOX.Text != "" && lab_oneTXTBOX.Text != "")
