@@ -16,7 +16,7 @@ namespace FILLONE_OOP_CPE201
         {
             InitializeComponent();
         }
-
+         // global variables
         double ComLabFee = 0;
         double SAPFee = 2000;
         double CISCOLabFee = 4500;
@@ -24,26 +24,27 @@ namespace FILLONE_OOP_CPE201
 
         double installmentCharge = 8000;
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void Lesson3Activity_Load(object sender, EventArgs e)
         {
 
-            // question 2a
+            // question 2a - program combo box
             progsCMBBOX.Items.Add("BS Information Technology");
             progsCMBBOX.Items.Add("BS Computer Engineering");
             progsCMBBOX.Items.Add("BS Electrical Engineering");
             progsCMBBOX.Items.Add("BS Computer Science");
             progsCMBBOX.Items.Add("BS Mechanical Engineering");
             progsCMBBOX.Items.Add("BS Industrial Engineering");
+
+            // year level combo box
+            year_levelCMBBOX.Items.Add("1st Year");
+            year_levelCMBBOX.Items.Add("2nd Year");
+            year_levelCMBBOX.Items.Add("3rd Year");
+            year_levelCMBBOX.Items.Add("4thYear");
+
+            // scholar combo box
+            scholar_CMBBOX.Items.Add("None");
+            scholar_CMBBOX.Items.Add("Presidential Scholar");
+            scholar_CMBBOX.Items.Add("Residential Scholar");
 
             cred_oneTXTBOX.Enabled = false;
             cred_twoTXTBOX.Enabled = false;
@@ -52,15 +53,13 @@ namespace FILLONE_OOP_CPE201
             cred_fiveTXTBOX.Enabled = false;
             cred_sixTXTBOX.Enabled = false;
             cred_sevenTXTBOX.Enabled = false;
+            totalcredTXTBOX.Enabled = false;
 
-            // letter m
+            // letter m - mode combo box
             modeCMBBOX.Items.Add("Installment");
             mode_paymentTXTBOX.Text = "Installment"; 
             
             installmaent_changeTXTBOX.Text = installmentCharge.ToString();
-
-           
-
 
             //  other school fees
             comlab_feeTXTBOX.Text = ComLabFee.ToString();
@@ -70,23 +69,9 @@ namespace FILLONE_OOP_CPE201
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox17_TextChanged(object sender, EventArgs e)
         {
+            // cred units
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
                 double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX.Text);
@@ -98,14 +83,11 @@ namespace FILLONE_OOP_CPE201
                 double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
                 double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
                 totalcredTXTBOX.Text = temp_credtotal.ToString();
-                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
         // question 2b
         private void lec_oneTXTBOX_TextChanged(object sender, EventArgs e)
@@ -116,13 +98,13 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_oneTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_oneTXTBOX.Text =temp_credunit.ToString();
-                //cred_oneTXTBOX.Text = (Convert.ToInt32(lec_oneTXTBOX.Text) + Convert.ToInt32(lab_oneTXTBOX.Text)).ToString();
             }
         }
 
 
         private void clearstud_infoBTN_Click(object sender, EventArgs e)
         {
+            // clear student info
             stud_nameTXTBOX.Clear();
             student_noTXTBOX.Clear();
         }
@@ -131,12 +113,30 @@ namespace FILLONE_OOP_CPE201
         private void computeBTN_Click(object sender, EventArgs e)
         {
             // letter i = total tuition
-            double total_lecunits = Convert.ToInt32(lec_oneTXTBOX.Text) + Convert.ToInt32(lec_twoTXTBOX.Text) + Convert.ToInt32(lec_threeTXTBOX.Text) + Convert.ToInt32(lec_fourTXTBOX.Text) + Convert.ToInt32(lec_fiveTXTBOX.Text) + Convert.ToInt32(lec_sixTXTBOX.Text) + Convert.ToInt32(lec_sevenTXTBOX.Text);
-            double totalTuition = Convert.ToInt32(totalcredTXTBOX.Text) * 1500;
+            double lec_one = Convert.ToInt32(lec_oneTXTBOX.Text);
+            double lec_two = Convert.ToInt32(lec_twoTXTBOX.Text);
+            double lec_three = Convert.ToInt32(lec_threeTXTBOX.Text);
+            double lec_four = Convert.ToInt32(lec_fourTXTBOX.Text);
+            double lec_five = Convert.ToInt32(lec_fiveTXTBOX.Text);
+            double lec_six = Convert.ToInt32(lec_sixTXTBOX.Text);
+            double lec_seven = Convert.ToInt32(lec_sevenTXTBOX.Text);
+
+            double total_lecunits = lec_one + lec_two + lec_three + lec_four +lec_five+lec_six+lec_seven;
+
+            double totalcred = Convert.ToInt32(totalcredTXTBOX.Text);
+            double totalTuition = totalcred * 1500;
             totaltuitionfeeTXTBOX.Text = totalTuition.ToString();
 
             // letter j = total misc
-            double totallabunits = (Convert.ToDouble(lab_oneTXTBOX.Text) + Convert.ToDouble(lab_twoTXTBOX.Text) + Convert.ToDouble(lab_threeTXTBOX.Text) + Convert.ToDouble(lab_fourTXTBOX.Text) + Convert.ToDouble(lab_fiveTXTBOX.Text) + Convert.ToDouble(lab_sixTXTBOX.Text) + Convert.ToDouble(lab_sevenTXTBOX.Text));
+            double lab_one = Convert.ToInt32(lab_oneTXTBOX.Text);
+            double lab_two = Convert.ToInt32(lab_twoTXTBOX.Text);
+            double lab_three = Convert.ToInt32(lab_threeTXTBOX.Text);
+            double lab_four = Convert.ToInt32(lab_fourTXTBOX.Text);
+            double lab_five = Convert.ToInt32(lab_fiveTXTBOX.Text);
+            double lab_six = Convert.ToInt32(lab_sixTXTBOX.Text);
+            double lab_seven = Convert.ToInt32(lab_sevenTXTBOX.Text);
+
+            double totallabunits = lab_one + lab_two + lab_three + lab_four + lab_five + lab_six + lab_seven ;
             ComLabFee = totallabunits * 2500;
             comlab_feeTXTBOX.Text=ComLabFee.ToString();
             double totalMisc = ComLabFee + SAPFee + CISCOLabFee + ExamBookletFee;
@@ -146,11 +146,13 @@ namespace FILLONE_OOP_CPE201
             total_miscfeeTXTBOX.Text = totalMisc.ToString();
 
             // letter k = computer laboratory fee
-            ComLabFee = (Convert.ToDouble(lab_oneTXTBOX.Text) + Convert.ToDouble(lab_twoTXTBOX.Text) + Convert.ToDouble(lab_threeTXTBOX.Text) + Convert.ToDouble(lab_fourTXTBOX.Text) + Convert.ToDouble(lab_fiveTXTBOX.Text) + Convert.ToDouble(lab_sixTXTBOX.Text) + Convert.ToDouble(lab_sevenTXTBOX.Text)) * 2500;
+            ComLabFee = (totallabunits) * 2500;
 
+            // tuition and fees
             double total_tuition_and_fees = totalTuition + totalMisc;
             tuitionandfees_totalTXTBOX.Text = total_tuition_and_fees.ToString();
 
+            // installments
             double installment_fee = (total_tuition_and_fees - 8000) / 3;
             first_installTXTBOX.Text = installment_fee.ToString("C");
             second_installTXTBOX.Text = installment_fee.ToString("C");
@@ -243,6 +245,7 @@ namespace FILLONE_OOP_CPE201
             rm_sevenTXTBOX.Clear();
         }
 
+        // lab, lec, and cred units
         private void lab_oneTXTBOX_TextChanged(object sender, EventArgs e)
         {
             if (lec_oneTXTBOX.Text != "" && lab_oneTXTBOX.Text != "")
@@ -252,7 +255,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_oneTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_oneTXTBOX.Text = temp_credunit.ToString();
-                //cred_oneTXTBOX.Text = (Convert.ToInt32(lec_oneTXTBOX.Text) + Convert.ToInt32(lab_oneTXTBOX.Text)).ToString();
             }
         }
 
@@ -264,7 +266,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_twoTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_twoTXTBOX.Text = temp_credunit.ToString();
-                //cred_twoTXTBOX.Text = (Convert.ToInt32(lec_twoTXTBOX.Text) + Convert.ToInt32(lab_twoTXTBOX.Text)).ToString();
             }
         }
 
@@ -276,7 +277,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_twoTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_twoTXTBOX.Text = temp_credunit.ToString();
-                //cred_twoTXTBOX.Text = (Convert.ToInt32(lec_twoTXTBOX.Text) + Convert.ToInt32(lab_twoTXTBOX.Text)).ToString();
             }
         }
 
@@ -288,7 +288,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_threeTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_threeTXTBOX.Text = temp_credunit.ToString();
-                //cred_threeTXTBOX.Text = (Convert.ToInt32(lec_threeTXTBOX.Text) + Convert.ToInt32(lab_threeTXTBOX.Text)).ToString();
             }
         }
 
@@ -300,7 +299,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_threeTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_threeTXTBOX.Text = temp_credunit.ToString();
-                //cred_threeTXTBOX.Text = (Convert.ToInt32(lec_threeTXTBOX.Text) + Convert.ToInt32(lab_threeTXTBOX.Text)).ToString();
             }
         }
 
@@ -312,7 +310,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_fourTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_fourTXTBOX.Text = temp_credunit.ToString();
-                //cred_fourTXTBOX.Text = (Convert.ToInt32(lec_fourTXTBOX.Text) + Convert.ToInt32(lab_fourTXTBOX.Text)).ToString();
             }
         }
 
@@ -324,7 +321,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_fourTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_fourTXTBOX.Text = temp_credunit.ToString();
-                //cred_fourTXTBOX.Text = (Convert.ToInt32(lec_fourTXTBOX.Text) + Convert.ToInt32(lab_fourTXTBOX.Text)).ToString();
             }
         }
 
@@ -336,7 +332,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_fiveTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_fiveTXTBOX.Text = temp_credunit.ToString();
-                //cred_fiveTXTBOX.Text = (Convert.ToInt32(lec_fiveTXTBOX.Text) + Convert.ToInt32(lab_fiveTXTBOX.Text)).ToString();
             }
         }
 
@@ -348,7 +343,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_fiveTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_fiveTXTBOX.Text = temp_credunit.ToString();
-                //cred_fiveTXTBOX.Text = (Convert.ToInt32(lec_fiveTXTBOX.Text) + Convert.ToInt32(lab_fiveTXTBOX.Text)).ToString();
             }
         }
 
@@ -360,7 +354,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_sixTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_sixTXTBOX.Text = temp_credunit.ToString();
-                //cred_sixTXTBOX.Text = (Convert.ToInt32(lec_sixTXTBOX.Text) + Convert.ToInt32(lab_sixTXTBOX.Text)).ToString();
             }
         }
 
@@ -372,7 +365,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_sixTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_sixTXTBOX.Text = temp_credunit.ToString();
-                //cred_sixTXTBOX.Text = (Convert.ToInt32(lec_sixTXTBOX.Text) + Convert.ToInt32(lab_sixTXTBOX.Text)).ToString();
             }
         }
 
@@ -384,7 +376,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_sevenTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_sevenTXTBOX.Text = temp_credunit.ToString();
-                //cred_sevenTXTBOX.Text = (Convert.ToInt32(lec_sevenTXTBOX.Text) + Convert.ToInt32(lab_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -401,7 +392,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
                 double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
                 totalcredTXTBOX.Text= temp_credtotal.ToString();
-                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -418,7 +408,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
                 double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
                 totalcredTXTBOX.Text = temp_credtotal.ToString();
-                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -434,8 +423,7 @@ namespace FILLONE_OOP_CPE201
                 double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX.Text);
                 double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
                 double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
-                totalcredTXTBOX.Text = temp_credtotal.ToString();
-                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                totalcredTXTBOX.Text = temp_credtotal.ToString();                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -452,7 +440,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
                 double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
                 totalcredTXTBOX.Text = temp_credtotal.ToString();
-                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -469,7 +456,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
                 double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
                 totalcredTXTBOX.Text = temp_credtotal.ToString();
-                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -486,7 +472,6 @@ namespace FILLONE_OOP_CPE201
                 double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
                 double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
                 totalcredTXTBOX.Text = temp_credtotal.ToString();
-                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -498,13 +483,9 @@ namespace FILLONE_OOP_CPE201
                 double temp_lecunit = Convert.ToInt32(lec_sevenTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_sevenTXTBOX.Text = temp_credunit.ToString();
-                //cred_sevenTXTBOX.Text = (Convert.ToInt32(lec_sevenTXTBOX.Text) + Convert.ToInt32(lab_sevenTXTBOX.Text)).ToString();
             }
         }
 
-        private void total_miscfeeTXTBOX_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

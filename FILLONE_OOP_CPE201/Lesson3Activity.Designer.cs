@@ -206,7 +206,7 @@
             desc_oneTXTBOX = new TextBox();
             sec_oneTXTBOX = new TextBox();
             textBox13 = new TextBox();
-            textBox12 = new TextBox();
+            secTXTBOX = new TextBox();
             codeoneTXTBOX = new TextBox();
             textBox55 = new TextBox();
             textBox1 = new TextBox();
@@ -251,6 +251,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.PowderBlue;
             groupBox1.Controls.Add(groupBox6);
             groupBox1.Controls.Add(clearsched_coursesBTN);
             groupBox1.Controls.Add(clearstud_infoBTN);
@@ -279,7 +280,7 @@
             groupBox1.Size = new Size(1053, 983);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
+           // groupBox1.Enter += groupBox1_Enter;
             // 
             // groupBox6
             // 
@@ -308,6 +309,7 @@
             // 
             // discountTXTBOX
             // 
+            discountTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             discountTXTBOX.Location = new Point(287, 83);
             discountTXTBOX.Name = "discountTXTBOX";
             discountTXTBOX.Size = new Size(268, 27);
@@ -326,6 +328,7 @@
             // 
             // grand_totalTXTBOX
             // 
+            grand_totalTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             grand_totalTXTBOX.Location = new Point(287, 50);
             grand_totalTXTBOX.Name = "grand_totalTXTBOX";
             grand_totalTXTBOX.Size = new Size(268, 27);
@@ -344,6 +347,7 @@
             // 
             // amount_dueTXTBOX
             // 
+            amount_dueTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             amount_dueTXTBOX.Location = new Point(284, 17);
             amount_dueTXTBOX.Name = "amount_dueTXTBOX";
             amount_dueTXTBOX.Size = new Size(267, 27);
@@ -351,42 +355,50 @@
             // 
             // clearsched_coursesBTN
             // 
-            clearsched_coursesBTN.Location = new Point(169, 903);
+            clearsched_coursesBTN.BackColor = Color.SteelBlue;
+            clearsched_coursesBTN.ForeColor = Color.Black;
+            clearsched_coursesBTN.Location = new Point(169, 897);
             clearsched_coursesBTN.Name = "clearsched_coursesBTN";
-            clearsched_coursesBTN.Size = new Size(232, 27);
+            clearsched_coursesBTN.Size = new Size(240, 34);
             clearsched_coursesBTN.TabIndex = 40;
             clearsched_coursesBTN.Text = "CLEAR SCHEDULE OF COURSES";
-            clearsched_coursesBTN.UseVisualStyleBackColor = true;
+            clearsched_coursesBTN.UseVisualStyleBackColor = false;
             clearsched_coursesBTN.Click += clearsched_coursesBTN_Click;
             // 
             // clearstud_infoBTN
             // 
+            clearstud_infoBTN.BackColor = Color.SteelBlue;
+            clearstud_infoBTN.ForeColor = Color.Black;
             clearstud_infoBTN.Location = new Point(169, 931);
             clearstud_infoBTN.Name = "clearstud_infoBTN";
-            clearstud_infoBTN.Size = new Size(240, 25);
+            clearstud_infoBTN.Size = new Size(240, 34);
             clearstud_infoBTN.TabIndex = 39;
             clearstud_infoBTN.Text = "CLEAR STUDENT INFORMATION\r\n";
-            clearstud_infoBTN.UseVisualStyleBackColor = true;
+            clearstud_infoBTN.UseVisualStyleBackColor = false;
             clearstud_infoBTN.Click += clearstud_infoBTN_Click;
             // 
             // exitBTN
             // 
+            exitBTN.BackColor = Color.SteelBlue;
+            exitBTN.ForeColor = Color.Black;
             exitBTN.Location = new Point(16, 931);
             exitBTN.Name = "exitBTN";
-            exitBTN.Size = new Size(147, 25);
+            exitBTN.Size = new Size(147, 34);
             exitBTN.TabIndex = 38;
             exitBTN.Text = "EXIT";
-            exitBTN.UseVisualStyleBackColor = true;
-            exitBTN.Click += button2_Click;
+            exitBTN.UseVisualStyleBackColor = false;
+            //exitBTN.Click += button2_Click;
             // 
             // computeBTN
             // 
-            computeBTN.Location = new Point(16, 903);
+            computeBTN.BackColor = Color.SteelBlue;
+            computeBTN.ForeColor = Color.Black;
+            computeBTN.Location = new Point(16, 896);
             computeBTN.Name = "computeBTN";
-            computeBTN.Size = new Size(147, 27);
+            computeBTN.Size = new Size(147, 34);
             computeBTN.TabIndex = 37;
             computeBTN.Text = "COMPUTE FEES";
-            computeBTN.UseVisualStyleBackColor = true;
+            computeBTN.UseVisualStyleBackColor = false;
             computeBTN.Click += computeBTN_Click;
             // 
             // groupBox5
@@ -412,7 +424,7 @@
             groupBox5.Size = new Size(586, 255);
             groupBox5.TabIndex = 36;
             groupBox5.TabStop = false;
-            groupBox5.Enter += groupBox5_Enter;
+            //groupBox5.Enter += groupBox5_Enter;
             // 
             // label17
             // 
@@ -427,6 +439,7 @@
             // 
             // third_installTXTBOX
             // 
+            third_installTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             third_installTXTBOX.Location = new Point(282, 221);
             third_installTXTBOX.Name = "third_installTXTBOX";
             third_installTXTBOX.Size = new Size(271, 27);
@@ -445,6 +458,7 @@
             // 
             // second_installTXTBOX
             // 
+            second_installTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             second_installTXTBOX.Location = new Point(282, 188);
             second_installTXTBOX.Name = "second_installTXTBOX";
             second_installTXTBOX.Size = new Size(271, 27);
@@ -473,6 +487,7 @@
             // 
             // first_installTXTBOX
             // 
+            first_installTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             first_installTXTBOX.Location = new Point(282, 155);
             first_installTXTBOX.Name = "first_installTXTBOX";
             first_installTXTBOX.Size = new Size(271, 27);
@@ -501,6 +516,7 @@
             // 
             // downpaymentTXTBOX
             // 
+            downpaymentTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             downpaymentTXTBOX.Location = new Point(282, 122);
             downpaymentTXTBOX.Name = "downpaymentTXTBOX";
             downpaymentTXTBOX.Size = new Size(271, 27);
@@ -519,6 +535,7 @@
             // 
             // installmaent_changeTXTBOX
             // 
+            installmaent_changeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             installmaent_changeTXTBOX.Location = new Point(282, 89);
             installmaent_changeTXTBOX.Name = "installmaent_changeTXTBOX";
             installmaent_changeTXTBOX.Size = new Size(271, 27);
@@ -537,6 +554,7 @@
             // 
             // mode_paymentTXTBOX
             // 
+            mode_paymentTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             mode_paymentTXTBOX.Location = new Point(282, 56);
             mode_paymentTXTBOX.Name = "mode_paymentTXTBOX";
             mode_paymentTXTBOX.Size = new Size(271, 27);
@@ -555,6 +573,7 @@
             // 
             // tuitionandfees_totalTXTBOX
             // 
+            tuitionandfees_totalTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             tuitionandfees_totalTXTBOX.Location = new Point(282, 23);
             tuitionandfees_totalTXTBOX.Name = "tuitionandfees_totalTXTBOX";
             tuitionandfees_totalTXTBOX.Size = new Size(271, 27);
@@ -604,6 +623,8 @@
             // 
             // SAP_feeTXTBOX
             // 
+            SAP_feeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            SAP_feeTXTBOX.Font = new Font("Segoe UI", 9F);
             SAP_feeTXTBOX.Location = new Point(214, 59);
             SAP_feeTXTBOX.Name = "SAP_feeTXTBOX";
             SAP_feeTXTBOX.Size = new Size(180, 27);
@@ -621,6 +642,7 @@
             // 
             // otherfeesTXTBOX
             // 
+            otherfeesTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             otherfeesTXTBOX.Location = new Point(193, 158);
             otherfeesTXTBOX.Name = "otherfeesTXTBOX";
             otherfeesTXTBOX.Size = new Size(201, 27);
@@ -639,6 +661,8 @@
             // 
             // exambookletTXTBOX
             // 
+            exambookletTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            exambookletTXTBOX.Font = new Font("Segoe UI", 9F);
             exambookletTXTBOX.Location = new Point(214, 125);
             exambookletTXTBOX.Name = "exambookletTXTBOX";
             exambookletTXTBOX.Size = new Size(180, 27);
@@ -657,6 +681,8 @@
             // 
             // CISCOlabfeeTXTBOX
             // 
+            CISCOlabfeeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            CISCOlabfeeTXTBOX.Font = new Font("Segoe UI", 9F);
             CISCOlabfeeTXTBOX.Location = new Point(214, 92);
             CISCOlabfeeTXTBOX.Name = "CISCOlabfeeTXTBOX";
             CISCOlabfeeTXTBOX.Size = new Size(180, 27);
@@ -675,6 +701,8 @@
             // 
             // comlab_feeTXTBOX
             // 
+            comlab_feeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            comlab_feeTXTBOX.Font = new Font("Segoe UI", 9F);
             comlab_feeTXTBOX.Location = new Point(214, 26);
             comlab_feeTXTBOX.Name = "comlab_feeTXTBOX";
             comlab_feeTXTBOX.Size = new Size(180, 27);
@@ -694,14 +722,16 @@
             // 
             // total_miscfeeTXTBOX
             // 
+            total_miscfeeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             total_miscfeeTXTBOX.Location = new Point(188, 54);
             total_miscfeeTXTBOX.Name = "total_miscfeeTXTBOX";
             total_miscfeeTXTBOX.Size = new Size(218, 27);
             total_miscfeeTXTBOX.TabIndex = 72;
-            total_miscfeeTXTBOX.TextChanged += total_miscfeeTXTBOX_TextChanged;
+            //total_miscfeeTXTBOX.TextChanged += total_miscfeeTXTBOX_TextChanged;
             // 
             // totaltuitionfeeTXTBOX
             // 
+            totaltuitionfeeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
             totaltuitionfeeTXTBOX.Location = new Point(163, 20);
             totaltuitionfeeTXTBOX.Name = "totaltuitionfeeTXTBOX";
             totaltuitionfeeTXTBOX.Size = new Size(245, 27);
@@ -862,7 +892,7 @@
             groupBox2.Controls.Add(desc_oneTXTBOX);
             groupBox2.Controls.Add(sec_oneTXTBOX);
             groupBox2.Controls.Add(textBox13);
-            groupBox2.Controls.Add(textBox12);
+            groupBox2.Controls.Add(secTXTBOX);
             groupBox2.Controls.Add(codeoneTXTBOX);
             groupBox2.Controls.Add(textBox55);
             groupBox2.Controls.Add(textBox1);
@@ -1004,8 +1034,9 @@
             // 
             // textBox112
             // 
+            textBox112.BackColor = Color.Azure;
             textBox112.BorderStyle = BorderStyle.FixedSingle;
-            textBox112.Location = new Point(10, 376);
+            textBox112.Location = new Point(11, 376);
             textBox112.Multiline = true;
             textBox112.Name = "textBox112";
             textBox112.Size = new Size(26, 27);
@@ -1189,8 +1220,9 @@
             // 
             // textBox132
             // 
+            textBox132.BackColor = Color.Azure;
             textBox132.BorderStyle = BorderStyle.FixedSingle;
-            textBox132.Location = new Point(10, 327);
+            textBox132.Location = new Point(11, 327);
             textBox132.Multiline = true;
             textBox132.Name = "textBox132";
             textBox132.Size = new Size(26, 27);
@@ -1374,8 +1406,9 @@
             // 
             // textBox152
             // 
+            textBox152.BackColor = Color.Azure;
             textBox152.BorderStyle = BorderStyle.FixedSingle;
-            textBox152.Location = new Point(10, 278);
+            textBox152.Location = new Point(11, 278);
             textBox152.Multiline = true;
             textBox152.Name = "textBox152";
             textBox152.Size = new Size(26, 27);
@@ -1559,8 +1592,9 @@
             // 
             // textBox51
             // 
+            textBox51.BackColor = Color.Azure;
             textBox51.BorderStyle = BorderStyle.FixedSingle;
-            textBox51.Location = new Point(10, 229);
+            textBox51.Location = new Point(11, 229);
             textBox51.Multiline = true;
             textBox51.Name = "textBox51";
             textBox51.Size = new Size(26, 27);
@@ -1744,8 +1778,9 @@
             // 
             // textBox72
             // 
+            textBox72.BackColor = Color.Azure;
             textBox72.BorderStyle = BorderStyle.FixedSingle;
-            textBox72.Location = new Point(10, 180);
+            textBox72.Location = new Point(11, 180);
             textBox72.Multiline = true;
             textBox72.Name = "textBox72";
             textBox72.Size = new Size(26, 27);
@@ -1929,8 +1964,9 @@
             // 
             // textBox31
             // 
+            textBox31.BackColor = Color.Azure;
             textBox31.BorderStyle = BorderStyle.FixedSingle;
-            textBox31.Location = new Point(10, 131);
+            textBox31.Location = new Point(11, 131);
             textBox31.Multiline = true;
             textBox31.Name = "textBox31";
             textBox31.Size = new Size(26, 27);
@@ -2103,15 +2139,17 @@
             textBox13.Size = new Size(88, 42);
             textBox13.TabIndex = 55;
             // 
-            // textBox12
+            // secTXTBOX
             // 
-            textBox12.BorderStyle = BorderStyle.FixedSingle;
-            textBox12.Location = new Point(127, 26);
-            textBox12.Multiline = true;
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(88, 50);
-            textBox12.TabIndex = 54;
-            textBox12.Text = "Section:";
+            secTXTBOX.BackColor = Color.SteelBlue;
+            secTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            secTXTBOX.ForeColor = Color.White;
+            secTXTBOX.Location = new Point(127, 26);
+            secTXTBOX.Multiline = true;
+            secTXTBOX.Name = "secTXTBOX";
+            secTXTBOX.Size = new Size(88, 50);
+            secTXTBOX.TabIndex = 54;
+            secTXTBOX.Text = "Section:";
             // 
             // codeoneTXTBOX
             // 
@@ -2124,8 +2162,9 @@
             // 
             // textBox55
             // 
+            textBox55.BackColor = Color.Azure;
             textBox55.BorderStyle = BorderStyle.FixedSingle;
-            textBox55.Location = new Point(10, 83);
+            textBox55.Location = new Point(11, 83);
             textBox55.Multiline = true;
             textBox55.Name = "textBox55";
             textBox55.Size = new Size(26, 27);
@@ -2216,7 +2255,9 @@
             // 
             // roomTXTBOX
             // 
+            roomTXTBOX.BackColor = Color.SteelBlue;
             roomTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            roomTXTBOX.ForeColor = Color.White;
             roomTXTBOX.Location = new Point(886, 26);
             roomTXTBOX.Multiline = true;
             roomTXTBOX.Name = "roomTXTBOX";
@@ -2226,7 +2267,9 @@
             // 
             // dayTXTBOX
             // 
+            dayTXTBOX.BackColor = Color.SteelBlue;
             dayTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            dayTXTBOX.ForeColor = Color.White;
             dayTXTBOX.Location = new Point(789, 26);
             dayTXTBOX.Multiline = true;
             dayTXTBOX.Name = "dayTXTBOX";
@@ -2236,7 +2279,9 @@
             // 
             // timeTXTBOX
             // 
+            timeTXTBOX.BackColor = Color.SteelBlue;
             timeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            timeTXTBOX.ForeColor = Color.White;
             timeTXTBOX.Location = new Point(679, 26);
             timeTXTBOX.Multiline = true;
             timeTXTBOX.Name = "timeTXTBOX";
@@ -2246,7 +2291,9 @@
             // 
             // cred_unitsTXTBOX
             // 
+            cred_unitsTXTBOX.BackColor = Color.SteelBlue;
             cred_unitsTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            cred_unitsTXTBOX.ForeColor = Color.White;
             cred_unitsTXTBOX.Location = new Point(602, 26);
             cred_unitsTXTBOX.Multiline = true;
             cred_unitsTXTBOX.Name = "cred_unitsTXTBOX";
@@ -2256,7 +2303,9 @@
             // 
             // lab_unitsTXTBOX
             // 
+            lab_unitsTXTBOX.BackColor = Color.SteelBlue;
             lab_unitsTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            lab_unitsTXTBOX.ForeColor = Color.White;
             lab_unitsTXTBOX.Location = new Point(525, 26);
             lab_unitsTXTBOX.Multiline = true;
             lab_unitsTXTBOX.Name = "lab_unitsTXTBOX";
@@ -2266,7 +2315,9 @@
             // 
             // lec_unitsTXTBOX
             // 
+            lec_unitsTXTBOX.BackColor = Color.SteelBlue;
             lec_unitsTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            lec_unitsTXTBOX.ForeColor = Color.White;
             lec_unitsTXTBOX.Location = new Point(448, 26);
             lec_unitsTXTBOX.Multiline = true;
             lec_unitsTXTBOX.Name = "lec_unitsTXTBOX";
@@ -2276,7 +2327,9 @@
             // 
             // descTXTBOX
             // 
+            descTXTBOX.BackColor = Color.SteelBlue;
             descTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            descTXTBOX.ForeColor = Color.White;
             descTXTBOX.Location = new Point(214, 26);
             descTXTBOX.Multiline = true;
             descTXTBOX.Name = "descTXTBOX";
@@ -2286,7 +2339,9 @@
             // 
             // course_codeTXTBOX
             // 
+            course_codeTXTBOX.BackColor = Color.SteelBlue;
             course_codeTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            course_codeTXTBOX.ForeColor = Color.White;
             course_codeTXTBOX.Location = new Point(40, 26);
             course_codeTXTBOX.Multiline = true;
             course_codeTXTBOX.Name = "course_codeTXTBOX";
@@ -2296,7 +2351,9 @@
             // 
             // course_numTXTBOX
             // 
+            course_numTXTBOX.BackColor = Color.SteelBlue;
             course_numTXTBOX.BorderStyle = BorderStyle.FixedSingle;
+            course_numTXTBOX.ForeColor = Color.White;
             course_numTXTBOX.Location = new Point(7, 26);
             course_numTXTBOX.Multiline = true;
             course_numTXTBOX.Name = "course_numTXTBOX";
@@ -2321,7 +2378,7 @@
             label7.Size = new Size(51, 20);
             label7.TabIndex = 31;
             label7.Text = "Mode:";
-            label7.Click += label7_Click;
+           // label7.Click += label7_Click;
             // 
             // scholar_CMBBOX
             // 
@@ -2435,6 +2492,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightBlue;
             ClientSize = new Size(1089, 980);
             Controls.Add(groupBox1);
             Name = "Lesson3Activity";
@@ -2482,7 +2540,7 @@
         private TextBox descTXTBOX;
         private TextBox course_codeTXTBOX;
         private TextBox course_numTXTBOX;
-        private TextBox textBox12;
+        private TextBox secTXTBOX;
         private TextBox codeoneTXTBOX;
         private TextBox textBox55;
         private TextBox textBox1;
