@@ -2222,7 +2222,7 @@
             roomTXTBOX.Name = "roomTXTBOX";
             roomTXTBOX.Size = new Size(118, 50);
             roomTXTBOX.TabIndex = 42;
-            roomTXTBOX.Text = "Room";
+            roomTXTBOX.Text = "Room:";
             // 
             // dayTXTBOX
             // 

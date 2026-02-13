@@ -89,7 +89,16 @@ namespace FILLONE_OOP_CPE201
         {
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
-                totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX.Text);
+                double temp_cred2 = Convert.ToInt32(cred_twoTXTBOX.Text);
+                double temp_cred3 = Convert.ToInt32(cred_threeTXTBOX.Text);
+                double temp_cred4 = Convert.ToInt32(cred_fourTXTBOX.Text);
+                double temp_cred5 = Convert.ToInt32(cred_fiveTXTBOX.Text);
+                double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX.Text);
+                double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX.Text);
+                double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
+                totalcredTXTBOX.Text = temp_credtotal.ToString();
+                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -326,7 +335,7 @@ namespace FILLONE_OOP_CPE201
                 double temp_labunit = Convert.ToInt32(lab_fiveTXTBOX.Text);
                 double temp_lecunit = Convert.ToInt32(lec_fiveTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
-                cred_fourTXTBOX.Text = temp_credunit.ToString();
+                cred_fiveTXTBOX.Text = temp_credunit.ToString();
                 //cred_fiveTXTBOX.Text = (Convert.ToInt32(lec_fiveTXTBOX.Text) + Convert.ToInt32(lab_fiveTXTBOX.Text)).ToString();
             }
         }
@@ -371,8 +380,8 @@ namespace FILLONE_OOP_CPE201
         {
             if (lec_sevenTXTBOX.Text != "" && lab_sevenTXTBOX.Text != "")
             {
-                double temp_labunit = Convert.ToInt32(lab_sevenTXTBOX);
-                double temp_lecunit = Convert.ToInt32(lec_sevenTXTBOX);
+                double temp_labunit = Convert.ToInt32(lab_sevenTXTBOX.Text);
+                double temp_lecunit = Convert.ToInt32(lec_sevenTXTBOX.Text);
                 double temp_credunit = temp_labunit + temp_lecunit;
                 cred_sevenTXTBOX.Text = temp_credunit.ToString();
                 //cred_sevenTXTBOX.Text = (Convert.ToInt32(lec_sevenTXTBOX.Text) + Convert.ToInt32(lab_sevenTXTBOX.Text)).ToString();
@@ -383,68 +392,33 @@ namespace FILLONE_OOP_CPE201
         {
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
-                totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX);
+                double temp_cred2 = Convert.ToInt32(cred_twoTXTBOX);
+                double temp_cred3 = Convert.ToInt32(cred_threeTXTBOX);
+                double temp_cred4 = Convert.ToInt32(cred_fourTXTBOX);
+                double temp_cred5 = Convert.ToInt32(cred_fiveTXTBOX);
+                double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX);
+                double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX);
+                double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
+                totalcredTXTBOX.Text= temp_credtotal.ToString();
+                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void cred_sixTXTBOX_TextChanged(object sender, EventArgs e)
         {
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
-                totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX);
+                double temp_cred2 = Convert.ToInt32(cred_twoTXTBOX);
+                double temp_cred3 = Convert.ToInt32(cred_threeTXTBOX);
+                double temp_cred4 = Convert.ToInt32(cred_fourTXTBOX);
+                double temp_cred5 = Convert.ToInt32(cred_fiveTXTBOX);
+                double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX);
+                double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX);
+                double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
+                totalcredTXTBOX.Text = temp_credtotal.ToString();
+                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -452,7 +426,16 @@ namespace FILLONE_OOP_CPE201
         {
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
-                totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX);
+                double temp_cred2 = Convert.ToInt32(cred_twoTXTBOX);
+                double temp_cred3 = Convert.ToInt32(cred_threeTXTBOX);
+                double temp_cred4 = Convert.ToInt32(cred_fourTXTBOX);
+                double temp_cred5 = Convert.ToInt32(cred_fiveTXTBOX);
+                double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX);
+                double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX);
+                double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
+                totalcredTXTBOX.Text = temp_credtotal.ToString();
+                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -460,7 +443,16 @@ namespace FILLONE_OOP_CPE201
         {
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
-                totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX);
+                double temp_cred2 = Convert.ToInt32(cred_twoTXTBOX);
+                double temp_cred3 = Convert.ToInt32(cred_threeTXTBOX);
+                double temp_cred4 = Convert.ToInt32(cred_fourTXTBOX);
+                double temp_cred5 = Convert.ToInt32(cred_fiveTXTBOX);
+                double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX);
+                double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX);
+                double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
+                totalcredTXTBOX.Text = temp_credtotal.ToString();
+                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -468,7 +460,16 @@ namespace FILLONE_OOP_CPE201
         {
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
-                totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX);
+                double temp_cred2 = Convert.ToInt32(cred_twoTXTBOX);
+                double temp_cred3 = Convert.ToInt32(cred_threeTXTBOX);
+                double temp_cred4 = Convert.ToInt32(cred_fourTXTBOX);
+                double temp_cred5 = Convert.ToInt32(cred_fiveTXTBOX);
+                double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX);
+                double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX);
+                double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
+                totalcredTXTBOX.Text = temp_credtotal.ToString();
+                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
@@ -476,7 +477,16 @@ namespace FILLONE_OOP_CPE201
         {
             if (cred_sevenTXTBOX.Text != "" && cred_sixTXTBOX.Text != "" && cred_fiveTXTBOX.Text != "" && cred_fourTXTBOX.Text != "" && cred_threeTXTBOX.Text != "" && cred_twoTXTBOX.Text != "" && cred_oneTXTBOX.Text != "")
             {
-                totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
+                double temp_cred1 = Convert.ToInt32(cred_oneTXTBOX);
+                double temp_cred2 = Convert.ToInt32(cred_twoTXTBOX);
+                double temp_cred3 = Convert.ToInt32(cred_threeTXTBOX);
+                double temp_cred4 = Convert.ToInt32(cred_fourTXTBOX);
+                double temp_cred5 = Convert.ToInt32(cred_fiveTXTBOX);
+                double temp_cred6 = Convert.ToInt32(cred_sixTXTBOX);
+                double temp_cred7 = Convert.ToInt32(cred_sevenTXTBOX);
+                double temp_credtotal = temp_cred1 + temp_cred2 + temp_cred3 + temp_cred4 + temp_cred5 + temp_cred6 + temp_cred7;
+                totalcredTXTBOX.Text = temp_credtotal.ToString();
+                //totalcredTXTBOX.Text = (Convert.ToInt32(cred_oneTXTBOX.Text) + Convert.ToInt32(cred_twoTXTBOX.Text) + Convert.ToInt32(cred_threeTXTBOX.Text) + Convert.ToInt32(cred_fourTXTBOX.Text) + Convert.ToInt32(cred_fiveTXTBOX.Text) + Convert.ToInt32(cred_sixTXTBOX.Text) + Convert.ToInt32(cred_sevenTXTBOX.Text)).ToString();
             }
         }
 
