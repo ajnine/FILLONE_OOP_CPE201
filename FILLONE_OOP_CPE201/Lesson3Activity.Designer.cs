@@ -698,6 +698,7 @@
             total_miscfeeTXTBOX.Name = "total_miscfeeTXTBOX";
             total_miscfeeTXTBOX.Size = new Size(218, 27);
             total_miscfeeTXTBOX.TabIndex = 72;
+            total_miscfeeTXTBOX.TextChanged += total_miscfeeTXTBOX_TextChanged;
             // 
             // totaltuitionfeeTXTBOX
             // 

@@ -22,6 +22,7 @@ namespace FILLONE_OOP_CPE201
         double CISCOLabFee = 4500;
         double ExamBookletFee = 450;
 
+        double installmentCharge = 8000;
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -54,8 +55,11 @@ namespace FILLONE_OOP_CPE201
 
             // letter m
             modeCMBBOX.Items.Add("Installment");
-            //textBox13.Text = "Installment"; 
-            //textBox11.Text = "8000";
+            mode_paymentTXTBOX.Text = "Installment"; 
+            
+            installmaent_changeTXTBOX.Text = installmentCharge.ToString();
+
+           
 
 
             //  other school fees
@@ -119,7 +123,11 @@ namespace FILLONE_OOP_CPE201
             totaltuitionfeeTXTBOX.Text = totalTuition.ToString();
 
             // letter j = total misc
+            double totallabunits = (Convert.ToDouble(lab_oneTXTBOX.Text) + Convert.ToDouble(lab_twoTXTBOX.Text) + Convert.ToDouble(lab_threeTXTBOX.Text) + Convert.ToDouble(lab_fourTXTBOX.Text) + Convert.ToDouble(lab_fiveTXTBOX.Text) + Convert.ToDouble(lab_sixTXTBOX.Text) + Convert.ToDouble(lab_sevenTXTBOX.Text));
+            ComLabFee = totallabunits * 2500;
+            comlab_feeTXTBOX.Text=ComLabFee.ToString();
             double totalMisc = ComLabFee + SAPFee + CISCOLabFee + ExamBookletFee;
+
             // same as total others fee
             otherfeesTXTBOX.Text = totalMisc.ToString();
             total_miscfeeTXTBOX.Text = totalMisc.ToString();
@@ -128,7 +136,7 @@ namespace FILLONE_OOP_CPE201
             ComLabFee = (Convert.ToDouble(lab_oneTXTBOX.Text) + Convert.ToDouble(lab_twoTXTBOX.Text) + Convert.ToDouble(lab_threeTXTBOX.Text) + Convert.ToDouble(lab_fourTXTBOX.Text) + Convert.ToDouble(lab_fiveTXTBOX.Text) + Convert.ToDouble(lab_sixTXTBOX.Text) + Convert.ToDouble(lab_sevenTXTBOX.Text)) * 2500;
 
             double total_tuition_and_fees = totalTuition + totalMisc;
-            totaltuitionfeeTXTBOX.Text = total_tuition_and_fees.ToString();
+            tuitionandfees_totalTXTBOX.Text = total_tuition_and_fees.ToString();
 
             double installment_fee = (total_tuition_and_fees - 8000) / 3;
             first_installTXTBOX.Text = installment_fee.ToString("C");
@@ -372,6 +380,11 @@ namespace FILLONE_OOP_CPE201
             {
                 cred_sevenTXTBOX.Text = (Convert.ToInt32(lec_sevenTXTBOX.Text) + Convert.ToInt32(lab_sevenTXTBOX.Text)).ToString();
             }
+        }
+
+        private void total_miscfeeTXTBOX_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
