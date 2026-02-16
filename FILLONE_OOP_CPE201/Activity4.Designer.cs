@@ -323,7 +323,7 @@
             pricetxtbox.Name = "pricetxtbox";
             pricetxtbox.Size = new Size(212, 27);
             pricetxtbox.TabIndex = 2;
-            pricetxtbox.TextChanged += pricetxtbox_TextChanged;
+            //pricetxtbox.TextChanged += pricetxtbox_TextChanged;
             // 
             // label3
             // 
@@ -416,7 +416,7 @@
             A_friedchickenCheckbox.TabIndex = 0;
             A_friedchickenCheckbox.Text = "10 pcs. Delicious Fried Chicken";
             A_friedchickenCheckbox.UseVisualStyleBackColor = true;
-            A_friedchickenCheckbox.CheckedChanged += A_friedchickenCheckbox_CheckedChanged;
+            //A_friedchickenCheckbox.CheckedChanged += A_friedchickenCheckbox_CheckedChanged;
             // 
             // groupBox4
             // 

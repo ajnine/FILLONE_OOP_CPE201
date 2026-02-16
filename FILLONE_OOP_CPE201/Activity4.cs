@@ -105,6 +105,9 @@ namespace FILLONE_OOP_CPE201
 
         private void bundleB_Rbtn_CheckedChanged(object sender, EventArgs e)
         {
+            // setting local variable
+            //double price;
+            
             // changing background color
             this.BackColor = Color.LightBlue;
 
@@ -129,24 +132,15 @@ namespace FILLONE_OOP_CPE201
             B_pizzaCheckbox.Checked = true;
 
             // to display data inside textboxes
-            pricetxtbox.Text = "P1,299.00";
-            disc_amttxtbox.Text = "(15% of the Price) P194.85";
+            pricetxtbox.Text = "1,299.00";
+            disc_amttxtbox.Text = "(15% of the Price) 194.85";
+            //price = Convert.ToDouble(pricetxtbox.Text);
 
             // to insert data inside listbox
             dsplayListbox.Items.Add(bundleB_Rbtn.Text + "                   " + pricetxtbox.Text);
             dsplayListbox.Items.Add("Discount Amount: " + "             " + disc_amttxtbox.Text);
             qntytxtbox.Text = "0";
             qntytxtbox.Focus();
-        }
-
-        private void A_friedchickenCheckbox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pricetxtbox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void calcbillsBTN_Click(object sender, EventArgs e)
