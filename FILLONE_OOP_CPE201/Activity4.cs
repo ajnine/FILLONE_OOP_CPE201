@@ -92,8 +92,8 @@ namespace FILLONE_OOP_CPE201
             B_pizzaCheckbox.Checked = false;
 
             // to display data inside textboxes
-            pricetxtbox.Text = "P1,000.00";
-            disc_amttxtbox.Text = "P200.00";
+            pricetxtbox.Text = "1,000.00";
+            disc_amttxtbox.Text = "200.00";
             price = Convert.ToDouble(pricetxtbox.Text);
 
             // to insert data inside listbox
