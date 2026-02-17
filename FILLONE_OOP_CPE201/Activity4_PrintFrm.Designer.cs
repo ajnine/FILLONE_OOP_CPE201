@@ -67,6 +67,6 @@
         #endregion
 
         private Label label1;
-        private ListBox printDisplayListBox;
+        public ListBox printDisplayListBox;
     }
 }

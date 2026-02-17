@@ -104,7 +104,7 @@ namespace FILLONE_OOP_CPE201
         private void prev_payslipdetsBTN_Click(object sender, EventArgs e)
         {
             // payslip_viewListBox.Items.add("");
-            payslip_viewListBox.Items.Add("Employee Number:   " + "             " + emp_noTXTBOX.Text);
+            payslip_viewListBox.Items.Add("Employee Number:  " + "             " + emp_noTXTBOX.Text);
             payslip_viewListBox.Items.Add("Firstname:     " + "             " + firstnameTXTBOX.Text);
             payslip_viewListBox.Items.Add("Middlename:     " + "             " + middlenameTXTBOX.Text);
             payslip_viewListBox.Items.Add("Surname:     " + "             " + surnameTXTBOX.Text);
@@ -154,7 +154,7 @@ namespace FILLONE_OOP_CPE201
             Activity5_PrintFrm print1 = new Activity5_PrintFrm();
 
             // for displaying the contents of the listbox from other form to the current form
-            //print1.priDisplayListbox.Items.AddRange(this.payslip_viewListBox.Items);
+            print1.priDisplayListbox.Items.AddRange(this.payslip_viewListBox.Items);
 
             // to display the other form
             print1.Show();
@@ -241,16 +241,23 @@ namespace FILLONE_OOP_CPE201
         private void basicpay_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
             // to convert input data from textboxes as string to numeric
-            basic_numhrs = Double.Parse(basicpay_cutoffTXTBOX.Text);
+            basic_numhrs = Convert.ToDouble(basicpay_cutoffTXTBOX.Text);
             basic_rate = Convert.ToDouble(basic_ratehourTXTBOX.Text);
             basic_netincome = basic_numhrs * basic_rate;
             basic_netincomeTXTBOX.Text = basic_netincome.ToString("n");
 
+        }
+
+        private void honor_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
+        {
             hono_numhrs = Convert.ToDouble(honor_cutoffTXTBOX.Text);
             hono_rate = Convert.ToDouble(honor_ratehourTXTBOX.Text);
             hono_netincome = hono_numhrs * hono_rate;
             honor_netincomeTXTBOX.Text = hono_netincome.ToString("n");
+        }
 
+        private void other_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
+        {
             other_numhrs = Convert.ToDouble(other_cutoffTXTBOX.Text);
             other_rate = Convert.ToDouble(other_ratehourTXTBOX.Text);
             other_netincome = other_numhrs * other_rate;
@@ -258,7 +265,7 @@ namespace FILLONE_OOP_CPE201
 
             grossincome = basic_netincome + hono_netincome + other_netincome;
             grossincomeTXTBOX.Text = grossincome.ToString("n");
-
         }
+               
     }
 }

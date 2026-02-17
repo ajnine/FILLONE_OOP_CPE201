@@ -22,9 +22,6 @@ namespace FILLONE_OOP_CPE201
 
         private void Activity3_Load(object sender, EventArgs e)
         {
-            // form bg color 
-            this.BackColor = Color.LightGoldenrodYellow;
-
             // disabling textboxes
             pricetxtbox.Enabled = false;
             discounted_amttxtbox.Enabled = false;
@@ -97,7 +94,7 @@ namespace FILLONE_OOP_CPE201
             price = Convert.ToDouble(pricetxtbox.Text);
 
             // to insert data inside listbox
-            dsplayListbox.Items.Add(bundleA_Rbtn.Text + "                   " + pricetxtbox.Text);
+            dsplayListbox.Items.Add(bundleB_Rbtn.Text + "                   " + pricetxtbox.Text);
             dsplayListbox.Items.Add("Discount Amount: " + "             " + disc_amttxtbox.Text);
             qntytxtbox.Text = "0";
             qntytxtbox.Focus();
@@ -105,9 +102,6 @@ namespace FILLONE_OOP_CPE201
 
         private void bundleB_Rbtn_CheckedChanged(object sender, EventArgs e)
         {
-            // setting local variable
-            //double price;
-            
             // changing background color
             this.BackColor = Color.LightBlue;
 
@@ -134,13 +128,9 @@ namespace FILLONE_OOP_CPE201
             // to display data inside textboxes
             pricetxtbox.Text = "1,299.00";
             disc_amttxtbox.Text = "(15% of the Price) 194.85";
-            //price = Convert.ToDouble(pricetxtbox.Text);
 
             // to insert data inside listbox
-            dsplayListbox.Items.Add(bundleB_Rbtn.Text + "                   " + pricetxtbox.Text);
-            dsplayListbox.Items.Add("Discount Amount: " + "             " + disc_amttxtbox.Text);
-            qntytxtbox.Text = "0";
-            qntytxtbox.Focus();
+            dsplayListbox.Items.Add(bundleA_Rbtn.Text);
         }
 
         private void calcbillsBTN_Click(object sender, EventArgs e)
@@ -152,6 +142,7 @@ namespace FILLONE_OOP_CPE201
             cash_given = Convert.ToDouble(cash_gvntxtbox.Text);
             total_amountPaid = Convert.ToDouble(total_billstxtbox.Text);
             change = cash_given - total_amountPaid;
+            changetxtbox.Text = change.ToString("n");
 
             // to display data into listbox
             dsplayListbox.Items.Add("Total Bills: " + "          " + total_billstxtbox.Text);
@@ -166,7 +157,7 @@ namespace FILLONE_OOP_CPE201
             Activity4_PrintFrm print = new Activity4_PrintFrm();
 
             // to display data of listbox from other form to current form
-            //print.printDisplayListBox.Items.AddRange(this.dsplayListbox.Items);
+            print.printDisplayListBox.Items.AddRange(this.dsplayListbox.Items);
 
             //to display the other form
             print.Show();
@@ -235,16 +226,17 @@ namespace FILLONE_OOP_CPE201
 
         private void qntytxtbox_TextChanged(object sender, EventArgs e)
         {
+            // set variables
             double price, discounted_amount, discount_amount;
             int qty;
 
+            // to convert string data inside the textbox to numeric data to store inside the variable
             price = Convert.ToDouble(pricetxtbox.Text);
             qty = Convert.ToInt32(qntytxtbox.Text);
             discount_amount = Convert.ToDouble(disc_amttxtbox.Text);
-
             discounted_amount = (price * qty) - discount_amount;
+            
             total_qty += qty;
-
             total_qntytxtbox.Text += total_qty.ToString();
             total_amount += discounted_amount;
             total_billstxtbox.Text = total_amount.ToString("n");

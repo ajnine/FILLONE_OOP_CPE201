@@ -157,14 +157,14 @@
             // 
             // picpathTXTBOX
             // 
-            picpathTXTBOX.Location = new Point(802, 133);
+            picpathTXTBOX.Location = new Point(801, 158);
             picpathTXTBOX.Name = "picpathTXTBOX";
             picpathTXTBOX.Size = new Size(159, 27);
             picpathTXTBOX.TabIndex = 22;
             // 
             // browseBTN
             // 
-            browseBTN.Location = new Point(812, 181);
+            browseBTN.Location = new Point(822, 201);
             browseBTN.Name = "browseBTN";
             browseBTN.Size = new Size(121, 29);
             browseBTN.TabIndex = 21;
@@ -177,7 +177,7 @@
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
             pictureBox1.Location = new Point(768, 16);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(227, 156);
+            pictureBox1.Size = new Size(227, 179);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 20;
             pictureBox1.TabStop = false;
@@ -222,6 +222,7 @@
             paydateDatePicker.Size = new Size(238, 25);
             paydateDatePicker.TabIndex = 15;
             paydateDatePicker.Value = new DateTime(2026, 2, 16, 0, 0, 0, 0);
+            //paydateDatePicker.ValueChanged += paydateDatePicker_ValueChanged;
             // 
             // label8
             // 
@@ -363,10 +364,12 @@
             // 
             // basic_netincomeTXTBOX
             // 
+            basic_netincomeTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             basic_netincomeTXTBOX.Location = new Point(195, 84);
             basic_netincomeTXTBOX.Name = "basic_netincomeTXTBOX";
-            basic_netincomeTXTBOX.Size = new Size(237, 27);
+            basic_netincomeTXTBOX.Size = new Size(237, 22);
             basic_netincomeTXTBOX.TabIndex = 7;
+            basic_netincomeTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label13
             // 
@@ -380,10 +383,12 @@
             // 
             // basicpay_cutoffTXTBOX
             // 
+            basicpay_cutoffTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             basicpay_cutoffTXTBOX.Location = new Point(195, 51);
             basicpay_cutoffTXTBOX.Name = "basicpay_cutoffTXTBOX";
-            basicpay_cutoffTXTBOX.Size = new Size(237, 27);
+            basicpay_cutoffTXTBOX.Size = new Size(237, 22);
             basicpay_cutoffTXTBOX.TabIndex = 5;
+            basicpay_cutoffTXTBOX.TextAlign = HorizontalAlignment.Right;
             basicpay_cutoffTXTBOX.TextChanged += basicpay_cutoffTXTBOX_TextChanged;
             // 
             // label12
@@ -398,10 +403,12 @@
             // 
             // basic_ratehourTXTBOX
             // 
+            basic_ratehourTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             basic_ratehourTXTBOX.Location = new Point(195, 18);
             basic_ratehourTXTBOX.Name = "basic_ratehourTXTBOX";
-            basic_ratehourTXTBOX.Size = new Size(237, 27);
+            basic_ratehourTXTBOX.Size = new Size(237, 22);
             basic_ratehourTXTBOX.TabIndex = 3;
+            basic_ratehourTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label11
             // 
@@ -431,10 +438,12 @@
             // 
             // honor_netincomeTXTBOX
             // 
+            honor_netincomeTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             honor_netincomeTXTBOX.Location = new Point(195, 84);
             honor_netincomeTXTBOX.Name = "honor_netincomeTXTBOX";
-            honor_netincomeTXTBOX.Size = new Size(237, 27);
+            honor_netincomeTXTBOX.Size = new Size(237, 22);
             honor_netincomeTXTBOX.TabIndex = 7;
+            honor_netincomeTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label14
             // 
@@ -448,10 +457,13 @@
             // 
             // honor_cutoffTXTBOX
             // 
+            honor_cutoffTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             honor_cutoffTXTBOX.Location = new Point(195, 51);
             honor_cutoffTXTBOX.Name = "honor_cutoffTXTBOX";
-            honor_cutoffTXTBOX.Size = new Size(237, 27);
+            honor_cutoffTXTBOX.Size = new Size(237, 22);
             honor_cutoffTXTBOX.TabIndex = 5;
+            honor_cutoffTXTBOX.TextAlign = HorizontalAlignment.Right;
+            honor_cutoffTXTBOX.TextChanged += honor_cutoffTXTBOX_TextChanged;
             // 
             // label15
             // 
@@ -465,10 +477,12 @@
             // 
             // honor_ratehourTXTBOX
             // 
+            honor_ratehourTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             honor_ratehourTXTBOX.Location = new Point(195, 18);
             honor_ratehourTXTBOX.Name = "honor_ratehourTXTBOX";
-            honor_ratehourTXTBOX.Size = new Size(237, 27);
+            honor_ratehourTXTBOX.Size = new Size(237, 22);
             honor_ratehourTXTBOX.TabIndex = 3;
+            honor_ratehourTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label16
             // 
@@ -498,10 +512,12 @@
             // 
             // other_netincomeTXTBOX
             // 
+            other_netincomeTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             other_netincomeTXTBOX.Location = new Point(195, 84);
             other_netincomeTXTBOX.Name = "other_netincomeTXTBOX";
-            other_netincomeTXTBOX.Size = new Size(237, 27);
+            other_netincomeTXTBOX.Size = new Size(237, 22);
             other_netincomeTXTBOX.TabIndex = 7;
+            other_netincomeTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label17
             // 
@@ -515,10 +531,13 @@
             // 
             // other_cutoffTXTBOX
             // 
+            other_cutoffTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             other_cutoffTXTBOX.Location = new Point(195, 51);
             other_cutoffTXTBOX.Name = "other_cutoffTXTBOX";
-            other_cutoffTXTBOX.Size = new Size(237, 27);
+            other_cutoffTXTBOX.Size = new Size(237, 22);
             other_cutoffTXTBOX.TabIndex = 5;
+            other_cutoffTXTBOX.TextAlign = HorizontalAlignment.Right;
+            other_cutoffTXTBOX.TextChanged += other_cutoffTXTBOX_TextChanged;
             // 
             // label18
             // 
@@ -532,10 +551,12 @@
             // 
             // other_ratehourTXTBOX
             // 
+            other_ratehourTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             other_ratehourTXTBOX.Location = new Point(195, 18);
             other_ratehourTXTBOX.Name = "other_ratehourTXTBOX";
-            other_ratehourTXTBOX.Size = new Size(237, 27);
+            other_ratehourTXTBOX.Size = new Size(237, 22);
             other_ratehourTXTBOX.TabIndex = 3;
+            other_ratehourTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label19
             // 
@@ -563,10 +584,12 @@
             // 
             // netincomeTXTBOX
             // 
+            netincomeTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             netincomeTXTBOX.Location = new Point(187, 59);
             netincomeTXTBOX.Name = "netincomeTXTBOX";
-            netincomeTXTBOX.Size = new Size(237, 27);
+            netincomeTXTBOX.Size = new Size(237, 22);
             netincomeTXTBOX.TabIndex = 5;
+            netincomeTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label21
             // 
@@ -580,10 +603,12 @@
             // 
             // grossincomeTXTBOX
             // 
+            grossincomeTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             grossincomeTXTBOX.Location = new Point(187, 26);
             grossincomeTXTBOX.Name = "grossincomeTXTBOX";
-            grossincomeTXTBOX.Size = new Size(237, 27);
+            grossincomeTXTBOX.Size = new Size(237, 22);
             grossincomeTXTBOX.TabIndex = 3;
+            grossincomeTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label22
             // 
@@ -615,10 +640,12 @@
             // 
             // taxTXTBOX
             // 
+            taxTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             taxTXTBOX.Location = new Point(199, 125);
             taxTXTBOX.Name = "taxTXTBOX";
-            taxTXTBOX.Size = new Size(237, 27);
+            taxTXTBOX.Size = new Size(237, 22);
             taxTXTBOX.TabIndex = 9;
+            taxTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label25
             // 
@@ -632,10 +659,12 @@
             // 
             // pagibig_contribTXTBOX
             // 
+            pagibig_contribTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             pagibig_contribTXTBOX.Location = new Point(199, 92);
             pagibig_contribTXTBOX.Name = "pagibig_contribTXTBOX";
-            pagibig_contribTXTBOX.Size = new Size(237, 27);
+            pagibig_contribTXTBOX.Size = new Size(237, 22);
             pagibig_contribTXTBOX.TabIndex = 7;
+            pagibig_contribTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label20
             // 
@@ -649,10 +678,12 @@
             // 
             // philhealth_contribTXTBOX
             // 
+            philhealth_contribTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             philhealth_contribTXTBOX.Location = new Point(199, 59);
             philhealth_contribTXTBOX.Name = "philhealth_contribTXTBOX";
-            philhealth_contribTXTBOX.Size = new Size(237, 27);
+            philhealth_contribTXTBOX.Size = new Size(237, 22);
             philhealth_contribTXTBOX.TabIndex = 5;
+            philhealth_contribTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label23
             // 
@@ -666,10 +697,12 @@
             // 
             // SSS_contribTXTBOX
             // 
+            SSS_contribTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             SSS_contribTXTBOX.Location = new Point(199, 26);
             SSS_contribTXTBOX.Name = "SSS_contribTXTBOX";
-            SSS_contribTXTBOX.Size = new Size(237, 27);
+            SSS_contribTXTBOX.Size = new Size(237, 22);
             SSS_contribTXTBOX.TabIndex = 3;
+            SSS_contribTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label24
             // 
@@ -714,10 +747,12 @@
             // 
             // othersTXTBOX
             // 
+            othersTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             othersTXTBOX.Location = new Point(199, 225);
             othersTXTBOX.Name = "othersTXTBOX";
-            othersTXTBOX.Size = new Size(237, 27);
+            othersTXTBOX.Size = new Size(237, 22);
             othersTXTBOX.TabIndex = 13;
+            othersTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label31
             // 
@@ -731,10 +766,12 @@
             // 
             // salary_loanTXTBOX
             // 
+            salary_loanTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             salary_loanTXTBOX.Location = new Point(199, 158);
             salary_loanTXTBOX.Name = "salary_loanTXTBOX";
-            salary_loanTXTBOX.Size = new Size(237, 27);
+            salary_loanTXTBOX.Size = new Size(237, 22);
             salary_loanTXTBOX.TabIndex = 11;
+            salary_loanTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label30
             // 
@@ -748,10 +785,12 @@
             // 
             // fcltysavings_loanTXTBOX
             // 
+            fcltysavings_loanTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             fcltysavings_loanTXTBOX.Location = new Point(199, 125);
             fcltysavings_loanTXTBOX.Name = "fcltysavings_loanTXTBOX";
-            fcltysavings_loanTXTBOX.Size = new Size(237, 27);
+            fcltysavings_loanTXTBOX.Size = new Size(237, 22);
             fcltysavings_loanTXTBOX.TabIndex = 9;
+            fcltysavings_loanTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label26
             // 
@@ -765,10 +804,12 @@
             // 
             // fcltysavings_depoTXTBOX
             // 
+            fcltysavings_depoTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             fcltysavings_depoTXTBOX.Location = new Point(199, 92);
             fcltysavings_depoTXTBOX.Name = "fcltysavings_depoTXTBOX";
-            fcltysavings_depoTXTBOX.Size = new Size(237, 27);
+            fcltysavings_depoTXTBOX.Size = new Size(237, 22);
             fcltysavings_depoTXTBOX.TabIndex = 7;
+            fcltysavings_depoTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label27
             // 
@@ -782,10 +823,12 @@
             // 
             // pagibig_loanTXTBOX
             // 
+            pagibig_loanTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             pagibig_loanTXTBOX.Location = new Point(199, 59);
             pagibig_loanTXTBOX.Name = "pagibig_loanTXTBOX";
-            pagibig_loanTXTBOX.Size = new Size(237, 27);
+            pagibig_loanTXTBOX.Size = new Size(237, 22);
             pagibig_loanTXTBOX.TabIndex = 5;
+            pagibig_loanTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label28
             // 
@@ -799,10 +842,12 @@
             // 
             // SSS_loanTXTBOX
             // 
+            SSS_loanTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             SSS_loanTXTBOX.Location = new Point(199, 26);
             SSS_loanTXTBOX.Name = "SSS_loanTXTBOX";
-            SSS_loanTXTBOX.Size = new Size(237, 27);
+            SSS_loanTXTBOX.Size = new Size(237, 22);
             SSS_loanTXTBOX.TabIndex = 3;
+            SSS_loanTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label29
             // 
@@ -828,10 +873,12 @@
             // 
             // total_deductTXTBOX
             // 
+            total_deductTXTBOX.Font = new Font("Microsoft Sans Serif", 7.8F);
             total_deductTXTBOX.Location = new Point(188, 24);
             total_deductTXTBOX.Name = "total_deductTXTBOX";
-            total_deductTXTBOX.Size = new Size(237, 27);
+            total_deductTXTBOX.Size = new Size(237, 22);
             total_deductTXTBOX.TabIndex = 3;
+            total_deductTXTBOX.TextAlign = HorizontalAlignment.Right;
             // 
             // label33
             // 
@@ -916,6 +963,7 @@
             // 
             // payslip_viewListBox
             // 
+            payslip_viewListBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             payslip_viewListBox.FormattingEnabled = true;
             payslip_viewListBox.Location = new Point(21, 44);
             payslip_viewListBox.Name = "payslip_viewListBox";

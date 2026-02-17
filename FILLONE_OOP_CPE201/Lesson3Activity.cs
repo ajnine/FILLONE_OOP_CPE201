@@ -22,7 +22,7 @@ namespace FILLONE_OOP_CPE201
         double CISCOLabFee = 4500;
         double ExamBookletFee = 450;
 
-        double installmentCharge = 8000;
+        double downpayment = 8000;
 
         private void Lesson3Activity_Load(object sender, EventArgs e)
         {
@@ -46,6 +46,7 @@ namespace FILLONE_OOP_CPE201
             scholar_CMBBOX.Items.Add("Presidential Scholar");
             scholar_CMBBOX.Items.Add("Residential Scholar");
 
+            // to disable the credit units textboxes
             cred_oneTXTBOX.Enabled = false;
             cred_twoTXTBOX.Enabled = false;
             cred_threeTXTBOX.Enabled = false;
@@ -57,9 +58,10 @@ namespace FILLONE_OOP_CPE201
 
             // letter m - mode combo box
             modeCMBBOX.Items.Add("Installment");
-            mode_paymentTXTBOX.Text = "Installment"; 
+            mode_paymentTXTBOX.Text = "Installment";
+            //installmaent_changeTXTBOX.Text = "8000";
             
-            installmaent_changeTXTBOX.Text = installmentCharge.ToString();
+            downpaymentTXTBOX.Text = downpayment.ToString();
 
             //  other school fees
             comlab_feeTXTBOX.Text = ComLabFee.ToString();
@@ -120,8 +122,7 @@ namespace FILLONE_OOP_CPE201
 
             double total_lecunits = lec_one + lec_two + lec_three + lec_four +lec_five+lec_six+lec_seven;
 
-            double totalcred = Convert.ToInt32(totalcredTXTBOX.Text);
-            double totalTuition = totalcred * 1500;
+            double totalTuition = total_lecunits * 1500;
             totaltuitionfeeTXTBOX.Text = totalTuition.ToString();
 
             // letter j = total misc

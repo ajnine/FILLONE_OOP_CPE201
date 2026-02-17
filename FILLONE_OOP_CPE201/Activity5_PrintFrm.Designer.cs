@@ -53,6 +53,6 @@
 
         #endregion
 
-        private ListBox priDisplayListbox;
+        public ListBox priDisplayListbox;
     }
 }
