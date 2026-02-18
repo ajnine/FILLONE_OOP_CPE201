@@ -15,6 +15,8 @@ namespace FILLONE_OOP_CPE201
         private double total_amount = 0;
         private int total_qty = 0;
 
+        // to check if the user can change the value of the textboxes
+        bool can_change = true;
         public Activity3()
         {
             InitializeComponent();
@@ -58,6 +60,10 @@ namespace FILLONE_OOP_CPE201
             B_friesCheckbox.Checked = false;
             B_halohaloCheckbox.Checked = false;
             B_pizzaCheckbox.Checked = false;
+
+            // insert default picture
+            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\default.jpg");
+
         }
 
         private void bundleA_Rbtn_CheckedChanged(object sender, EventArgs e)
@@ -66,7 +72,7 @@ namespace FILLONE_OOP_CPE201
             double price;
 
             // changing background color
-            this.BackColor = Color.LightCyan;
+            this.BackColor = Color.Thistle;
 
             // to disable bundle B
             bundleB_Rbtn.Checked = false;
@@ -94,16 +100,19 @@ namespace FILLONE_OOP_CPE201
             price = Convert.ToDouble(pricetxtbox.Text);
 
             // to insert data inside listbox
-            dsplayListbox.Items.Add(bundleB_Rbtn.Text + "                   " + pricetxtbox.Text);
-            dsplayListbox.Items.Add("Discount Amount: " + "             " + disc_amttxtbox.Text);
+            dsplayListbox.Items.Add(bundleA_Rbtn.Text + "                   " + pricetxtbox.Text);
+            dsplayListbox.Items.Add("           Discount Amount: " + "       " + disc_amttxtbox.Text);
             qntytxtbox.Text = "0";
             qntytxtbox.Focus();
         }
 
         private void bundleB_Rbtn_CheckedChanged(object sender, EventArgs e)
         {
+            // setting local variable
+            double price;
+
             // changing background color
-            this.BackColor = Color.LightBlue;
+            this.BackColor = Color.AliceBlue;
 
             // for bundle A not to be selected
             bundleA_Rbtn.Checked = false;
@@ -127,10 +136,14 @@ namespace FILLONE_OOP_CPE201
 
             // to display data inside textboxes
             pricetxtbox.Text = "1,299.00";
-            disc_amttxtbox.Text = "(15% of the Price) 194.85";
+            disc_amttxtbox.Text = "194.85";
+            price = Convert.ToDouble(pricetxtbox.Text);
 
             // to insert data inside listbox
-            dsplayListbox.Items.Add(bundleA_Rbtn.Text);
+            dsplayListbox.Items.Add(bundleB_Rbtn.Text + "                   " + pricetxtbox.Text);
+            dsplayListbox.Items.Add("           Discount Amount: " + "       " + disc_amttxtbox.Text);
+            qntytxtbox.Text = "0";
+            qntytxtbox.Focus();
         }
 
         private void calcbillsBTN_Click(object sender, EventArgs e)
@@ -171,6 +184,9 @@ namespace FILLONE_OOP_CPE201
 
         private void newBTN_Click(object sender, EventArgs e)
         {
+            // to prevent the user from changing the value of the textboxes while the event of the object is triggered
+            can_change = false;
+
             // to uncheck all given checkboxes
             bundleA_Rbtn.Checked = false;
             bundleB_Rbtn.Checked = false;
@@ -217,6 +233,8 @@ namespace FILLONE_OOP_CPE201
 
             // to remove contents of listbox
             dsplayListbox.Items.Clear();
+
+            can_change = true;
         }
 
         private void exitBTN_Click(object sender, EventArgs e)
@@ -226,22 +244,24 @@ namespace FILLONE_OOP_CPE201
 
         private void qntytxtbox_TextChanged(object sender, EventArgs e)
         {
-            // set variables
-            double price, discounted_amount, discount_amount;
-            int qty;
+            if (can_change)
+            {
+                // set variables
+                double price, discounted_amount, discount_amount;
+                int qty;
 
-            // to convert string data inside the textbox to numeric data to store inside the variable
-            price = Convert.ToDouble(pricetxtbox.Text);
-            qty = Convert.ToInt32(qntytxtbox.Text);
-            discount_amount = Convert.ToDouble(disc_amttxtbox.Text);
-            discounted_amount = (price * qty) - discount_amount;
-            
-            total_qty += qty;
-            total_qntytxtbox.Text += total_qty.ToString();
-            total_amount += discounted_amount;
-            total_billstxtbox.Text = total_amount.ToString("n");
-            discounted_amttxtbox.Text = discounted_amount.ToString("n");
+                // to convert string data inside the textbox to numeric data to store inside the variable
+                price = Convert.ToDouble(pricetxtbox.Text);
+                qty = Convert.ToInt32(qntytxtbox.Text);
+                discount_amount = Convert.ToDouble(disc_amttxtbox.Text);
+                discounted_amount = (price * qty) - discount_amount;
 
+                total_qty += qty;
+                total_qntytxtbox.Text += total_qty.ToString();
+                total_amount += discounted_amount;
+                total_billstxtbox.Text = total_amount.ToString("n");
+                discounted_amttxtbox.Text = discounted_amount.ToString("n");
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

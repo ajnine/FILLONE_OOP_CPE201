@@ -141,12 +141,13 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Perpetua Titling MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(137, 14);
+            label1.Font = new Font("Wide Latin", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkRed;
+            label1.Location = new Point(632, 11);
             label1.Name = "label1";
-            label1.Size = new Size(458, 28);
+            label1.Size = new Size(472, 42);
             label1.TabIndex = 0;
-            label1.Text = "4JEE Food Ordering Application";
+            label1.Text = "Pizza ni Aliyah";
             // 
             // groupBox1
             // 
@@ -166,7 +167,6 @@
             bundleB_Rbtn.Name = "bundleB_Rbtn";
             bundleB_Rbtn.Size = new Size(127, 24);
             bundleB_Rbtn.TabIndex = 1;
-            bundleB_Rbtn.TabStop = true;
             bundleB_Rbtn.Text = "Food Bundle B";
             bundleB_Rbtn.UseVisualStyleBackColor = true;
             bundleB_Rbtn.CheckedChanged += bundleB_Rbtn_CheckedChanged;
@@ -178,7 +178,6 @@
             bundleA_Rbtn.Name = "bundleA_Rbtn";
             bundleA_Rbtn.Size = new Size(128, 24);
             bundleA_Rbtn.TabIndex = 0;
-            bundleA_Rbtn.TabStop = true;
             bundleA_Rbtn.Text = "Food Bundle A";
             bundleA_Rbtn.UseVisualStyleBackColor = true;
             bundleA_Rbtn.CheckedChanged += bundleA_Rbtn_CheckedChanged;
@@ -218,6 +217,7 @@
             // 
             // cash_gvntxtbox
             // 
+            cash_gvntxtbox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cash_gvntxtbox.Location = new Point(132, 264);
             cash_gvntxtbox.Multiline = true;
             cash_gvntxtbox.Name = "cash_gvntxtbox";
@@ -323,7 +323,6 @@
             pricetxtbox.Name = "pricetxtbox";
             pricetxtbox.Size = new Size(212, 27);
             pricetxtbox.TabIndex = 2;
-            //pricetxtbox.TextChanged += pricetxtbox_TextChanged;
             // 
             // label3
             // 
@@ -416,7 +415,6 @@
             A_friedchickenCheckbox.TabIndex = 0;
             A_friedchickenCheckbox.Text = "10 pcs. Delicious Fried Chicken";
             A_friedchickenCheckbox.UseVisualStyleBackColor = true;
-            //A_friedchickenCheckbox.CheckedChanged += A_friedchickenCheckbox_CheckedChanged;
             // 
             // groupBox4
             // 
@@ -534,44 +532,44 @@
             // checkBox16
             // 
             checkBox16.AutoSize = true;
-            checkBox16.Location = new Point(650, 689);
+            checkBox16.Location = new Point(650, 686);
             checkBox16.Name = "checkBox16";
-            checkBox16.Size = new Size(85, 24);
+            checkBox16.Size = new Size(108, 24);
             checkBox16.TabIndex = 39;
-            checkBox16.Text = "Pizza 20";
+            checkBox16.Text = "Aloha Pizza";
             checkBox16.UseVisualStyleBackColor = true;
             checkBox16.CheckedChanged += checkBox16_CheckedChanged;
             // 
             // checkBox17
             // 
             checkBox17.AutoSize = true;
-            checkBox17.Location = new Point(507, 689);
+            checkBox17.Location = new Point(494, 686);
             checkBox17.Name = "checkBox17";
-            checkBox17.Size = new Size(85, 24);
+            checkBox17.Size = new Size(123, 24);
             checkBox17.TabIndex = 38;
-            checkBox17.Text = "Pizza 19";
+            checkBox17.Text = "Pacific Veggie";
             checkBox17.UseVisualStyleBackColor = true;
             checkBox17.CheckedChanged += checkBox17_CheckedChanged;
             // 
             // checkBox18
             // 
             checkBox18.AutoSize = true;
-            checkBox18.Location = new Point(326, 686);
+            checkBox18.Location = new Point(334, 686);
             checkBox18.Name = "checkBox18";
-            checkBox18.Size = new Size(85, 24);
+            checkBox18.Size = new Size(121, 24);
             checkBox18.TabIndex = 37;
-            checkBox18.Text = "Pizza 18";
+            checkBox18.Text = "Ult Pepperoni";
             checkBox18.UseVisualStyleBackColor = true;
             checkBox18.CheckedChanged += checkBox18_CheckedChanged;
             // 
             // checkBox19
             // 
             checkBox19.AutoSize = true;
-            checkBox19.Location = new Point(192, 686);
+            checkBox19.Location = new Point(177, 686);
             checkBox19.Name = "checkBox19";
-            checkBox19.Size = new Size(85, 24);
+            checkBox19.Size = new Size(109, 24);
             checkBox19.TabIndex = 36;
-            checkBox19.Text = "Pizza 17";
+            checkBox19.Text = "Carbo Pizza";
             checkBox19.UseVisualStyleBackColor = true;
             checkBox19.CheckedChanged += checkBox19_CheckedChanged;
             // 
@@ -580,9 +578,9 @@
             checkBox20.AutoSize = true;
             checkBox20.Location = new Point(20, 686);
             checkBox20.Name = "checkBox20";
-            checkBox20.Size = new Size(85, 24);
+            checkBox20.Size = new Size(87, 24);
             checkBox20.TabIndex = 35;
-            checkBox20.Text = "Pizza 16";
+            checkBox20.Text = "Meatzza";
             checkBox20.UseVisualStyleBackColor = true;
             checkBox20.CheckedChanged += checkBox20_CheckedChanged;
             // 
@@ -636,20 +634,20 @@
             checkBox11.AutoSize = true;
             checkBox11.Location = new Point(650, 519);
             checkBox11.Name = "checkBox11";
-            checkBox11.Size = new Size(85, 24);
+            checkBox11.Size = new Size(90, 24);
             checkBox11.TabIndex = 29;
-            checkBox11.Text = "Pizza 15";
+            checkBox11.Text = "5 Cheese";
             checkBox11.UseVisualStyleBackColor = true;
             checkBox11.CheckedChanged += checkBox11_CheckedChanged;
             // 
             // checkBox12
             // 
             checkBox12.AutoSize = true;
-            checkBox12.Location = new Point(507, 519);
+            checkBox12.Location = new Point(481, 517);
             checkBox12.Name = "checkBox12";
-            checkBox12.Size = new Size(85, 24);
+            checkBox12.Size = new Size(136, 24);
             checkBox12.TabIndex = 28;
-            checkBox12.Text = "Pizza 14";
+            checkBox12.Text = "Spinach nd Peta";
             checkBox12.UseVisualStyleBackColor = true;
             checkBox12.CheckedChanged += checkBox12_CheckedChanged;
             // 
@@ -658,31 +656,31 @@
             checkBox13.AutoSize = true;
             checkBox13.Location = new Point(326, 516);
             checkBox13.Name = "checkBox13";
-            checkBox13.Size = new Size(85, 24);
+            checkBox13.Size = new Size(135, 24);
             checkBox13.TabIndex = 27;
-            checkBox13.Text = "Pizza 13";
+            checkBox13.Text = "Ham nd Cheese";
             checkBox13.UseVisualStyleBackColor = true;
             checkBox13.CheckedChanged += checkBox13_CheckedChanged;
             // 
             // checkBox14
             // 
             checkBox14.AutoSize = true;
-            checkBox14.Location = new Point(192, 516);
+            checkBox14.Location = new Point(177, 516);
             checkBox14.Name = "checkBox14";
-            checkBox14.Size = new Size(85, 24);
+            checkBox14.Size = new Size(123, 24);
             checkBox14.TabIndex = 26;
-            checkBox14.Text = "Pizza 12";
+            checkBox14.Text = "Cheese Mania";
             checkBox14.UseVisualStyleBackColor = true;
             checkBox14.CheckedChanged += checkBox14_CheckedChanged;
             // 
             // checkBox15
             // 
             checkBox15.AutoSize = true;
-            checkBox15.Location = new Point(20, 516);
+            checkBox15.Location = new Point(20, 512);
             checkBox15.Name = "checkBox15";
-            checkBox15.Size = new Size(85, 24);
+            checkBox15.Size = new Size(102, 44);
             checkBox15.TabIndex = 25;
-            checkBox15.Text = "Pizza 11";
+            checkBox15.Text = "Beef nd \r\nMushroom";
             checkBox15.UseVisualStyleBackColor = true;
             checkBox15.CheckedChanged += checkBox15_CheckedChanged;
             // 
@@ -734,44 +732,44 @@
             // checkBox6
             // 
             checkBox6.AutoSize = true;
-            checkBox6.Location = new Point(650, 343);
+            checkBox6.Location = new Point(642, 335);
             checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(85, 24);
+            checkBox6.Size = new Size(105, 44);
             checkBox6.TabIndex = 19;
-            checkBox6.Text = "Pizza 10";
+            checkBox6.Text = "Combo nd \r\nPepperoni";
             checkBox6.UseVisualStyleBackColor = true;
             checkBox6.CheckedChanged += checkBox6_CheckedChanged;
             // 
             // checkBox7
             // 
             checkBox7.AutoSize = true;
-            checkBox7.Location = new Point(507, 343);
+            checkBox7.Location = new Point(484, 341);
             checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(77, 24);
+            checkBox7.Size = new Size(152, 24);
             checkBox7.TabIndex = 18;
-            checkBox7.Text = "Pizza 9";
+            checkBox7.Text = "Combo nd Cheese";
             checkBox7.UseVisualStyleBackColor = true;
             checkBox7.CheckedChanged += checkBox7_CheckedChanged;
             // 
             // checkBox8
             // 
             checkBox8.AutoSize = true;
-            checkBox8.Location = new Point(326, 340);
+            checkBox8.Location = new Point(334, 339);
             checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(77, 24);
+            checkBox8.Size = new Size(150, 24);
             checkBox8.TabIndex = 17;
-            checkBox8.Text = "Pizza 8";
+            checkBox8.Text = "Tropical Hawaiian";
             checkBox8.UseVisualStyleBackColor = true;
             checkBox8.CheckedChanged += checkBox8_CheckedChanged;
             // 
             // checkBox9
             // 
             checkBox9.AutoSize = true;
-            checkBox9.Location = new Point(192, 340);
+            checkBox9.Location = new Point(171, 342);
             checkBox9.Name = "checkBox9";
-            checkBox9.Size = new Size(77, 24);
+            checkBox9.Size = new Size(125, 24);
             checkBox9.TabIndex = 16;
-            checkBox9.Text = "Pizza 7";
+            checkBox9.Text = "Cheesy Burger";
             checkBox9.UseVisualStyleBackColor = true;
             checkBox9.CheckedChanged += checkBox9_CheckedChanged;
             // 
@@ -780,9 +778,9 @@
             checkBox10.AutoSize = true;
             checkBox10.Location = new Point(20, 340);
             checkBox10.Name = "checkBox10";
-            checkBox10.Size = new Size(77, 24);
+            checkBox10.Size = new Size(87, 24);
             checkBox10.TabIndex = 15;
-            checkBox10.Text = "Pizza 6";
+            checkBox10.Text = "All Meat";
             checkBox10.UseVisualStyleBackColor = true;
             checkBox10.CheckedChanged += checkBox10_CheckedChanged;
             // 
@@ -878,7 +876,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(20, 165);
+            checkBox1.Location = new Point(21, 165);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(125, 24);
             checkBox1.TabIndex = 5;
@@ -938,6 +936,7 @@
             // 
             // dsplayListbox
             // 
+            dsplayListbox.BackColor = Color.LightYellow;
             dsplayListbox.FormattingEnabled = true;
             dsplayListbox.Location = new Point(18, 575);
             dsplayListbox.Name = "dsplayListbox";
@@ -955,58 +954,64 @@
             // 
             // calcbillsBTN
             // 
+            calcbillsBTN.BackColor = Color.PaleVioletRed;
             calcbillsBTN.Location = new Point(763, 800);
             calcbillsBTN.Name = "calcbillsBTN";
             calcbillsBTN.Size = new Size(145, 39);
             calcbillsBTN.TabIndex = 18;
             calcbillsBTN.Text = "Calculate Bills";
-            calcbillsBTN.UseVisualStyleBackColor = true;
+            calcbillsBTN.UseVisualStyleBackColor = false;
             calcbillsBTN.Click += calcbillsBTN_Click;
             // 
             // prnt_transBTN
             // 
+            prnt_transBTN.BackColor = Color.PaleVioletRed;
             prnt_transBTN.Location = new Point(924, 800);
             prnt_transBTN.Name = "prnt_transBTN";
             prnt_transBTN.Size = new Size(145, 39);
             prnt_transBTN.TabIndex = 19;
             prnt_transBTN.Text = "Print Transaction";
-            prnt_transBTN.UseVisualStyleBackColor = true;
+            prnt_transBTN.UseVisualStyleBackColor = false;
             prnt_transBTN.Click += prnt_transBTN_Click;
             // 
             // rem_orderBTN
             // 
+            rem_orderBTN.BackColor = Color.PaleVioletRed;
             rem_orderBTN.Location = new Point(1083, 800);
             rem_orderBTN.Name = "rem_orderBTN";
             rem_orderBTN.Size = new Size(145, 39);
             rem_orderBTN.TabIndex = 20;
             rem_orderBTN.Text = "Remove Order";
-            rem_orderBTN.UseVisualStyleBackColor = true;
+            rem_orderBTN.UseVisualStyleBackColor = false;
             rem_orderBTN.Click += rem_orderBTN_Click;
             // 
             // newBTN
             // 
+            newBTN.BackColor = Color.PaleVioletRed;
             newBTN.Location = new Point(1243, 800);
             newBTN.Name = "newBTN";
             newBTN.Size = new Size(145, 39);
             newBTN.TabIndex = 21;
             newBTN.Text = "New";
-            newBTN.UseVisualStyleBackColor = true;
+            newBTN.UseVisualStyleBackColor = false;
             newBTN.Click += newBTN_Click;
             // 
             // exitBTN
             // 
+            exitBTN.BackColor = Color.PaleVioletRed;
             exitBTN.Location = new Point(1399, 800);
             exitBTN.Name = "exitBTN";
             exitBTN.Size = new Size(145, 39);
             exitBTN.TabIndex = 22;
             exitBTN.Text = "Exit";
-            exitBTN.UseVisualStyleBackColor = true;
+            exitBTN.UseVisualStyleBackColor = false;
             exitBTN.Click += exitBTN_Click;
             // 
             // Activity3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightPink;
             ClientSize = new Size(1584, 863);
             Controls.Add(exitBTN);
             Controls.Add(newBTN);

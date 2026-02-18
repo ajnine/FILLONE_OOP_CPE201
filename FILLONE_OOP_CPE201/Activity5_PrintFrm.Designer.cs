@@ -33,6 +33,7 @@
             // 
             // priDisplayListbox
             // 
+            priDisplayListbox.BackColor = Color.LavenderBlush;
             priDisplayListbox.FormattingEnabled = true;
             priDisplayListbox.Location = new Point(12, 12);
             priDisplayListbox.Name = "priDisplayListbox";
@@ -44,6 +45,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkOrchid;
             ClientSize = new Size(360, 450);
             Controls.Add(priDisplayListbox);
             Name = "Activity5_PrintFrm";

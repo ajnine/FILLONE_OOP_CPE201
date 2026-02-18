@@ -36,11 +36,12 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Perpetua Titling MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkRed;
             label1.Location = new Point(23, 25);
             label1.Name = "label1";
-            label1.Size = new Size(458, 28);
+            label1.Size = new Size(465, 28);
             label1.TabIndex = 1;
-            label1.Text = "4JEE Food Ordering Application";
+            label1.Text = "Ali's Food Ordering Application";
             // 
             // printDisplayListBox
             // 
@@ -54,6 +55,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Plum;
             ClientSize = new Size(515, 450);
             Controls.Add(printDisplayListBox);
             Controls.Add(label1);

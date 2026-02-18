@@ -90,6 +90,23 @@ namespace FILLONE_OOP_CPE201
             salary_savings = Convert.ToDouble(fcltysavings_depoTXTBOX.Text);
             other_deduction = Convert.ToDouble(othersTXTBOX.Text);
 
+            // to compute the desired data to be computed
+            basic_numhrs = Convert.ToDouble(basicpay_cutoffTXTBOX.Text);
+            basic_rate = Convert.ToDouble(basic_ratehourTXTBOX.Text);
+            basic_netincome = basic_numhrs * basic_rate;
+            basic_netincomeTXTBOX.Text = basic_netincome.ToString("n");
+            hono_numhrs = Convert.ToDouble(honor_cutoffTXTBOX.Text);
+            hono_rate = Convert.ToDouble(honor_ratehourTXTBOX.Text);
+            hono_netincome = hono_numhrs * hono_rate;
+            honor_netincomeTXTBOX.Text = hono_netincome.ToString("n");
+            other_numhrs = Convert.ToDouble(other_cutoffTXTBOX.Text);
+            other_rate = Convert.ToDouble(other_ratehourTXTBOX.Text);
+            other_netincome = other_numhrs * other_rate;
+            other_netincomeTXTBOX.Text = other_netincome.ToString("n");
+
+            grossincome = basic_netincome + hono_netincome + other_netincome;
+            grossincomeTXTBOX.Text = grossincome.ToString("n");
+
             // formula to compute the desired data to be computed
             total_contrib = sss_contrib + pagibig_contrib + philhealth_contrib + tax_contrib;
             total_loan = sss_loan + pagibig_loan + salary_loan + faculty_sav_loan + salary_savings + other_deduction;
@@ -182,12 +199,33 @@ namespace FILLONE_OOP_CPE201
             other_cutoffTXTBOX.Clear();
             other_ratehourTXTBOX.Clear();
             grossincomeTXTBOX.Clear();
+            netincomeTXTBOX.Clear();
             SSS_contribTXTBOX.Clear();
             pagibig_contribTXTBOX.Clear();
             philhealth_contribTXTBOX.Clear();
             taxTXTBOX.Clear();
             SSS_loanTXTBOX.Clear();
             pagibig_loanTXTBOX.Clear();
+            fcltysavings_depoTXTBOX.Clear();
+            fcltysavings_loanTXTBOX.Clear();
+            salary_loanTXTBOX.Clear();
+            othersTXTBOX.Clear();
+
+            // to reset the combo box and textboxes to default value
+            othersCMBBOX.SelectedIndex = -1;
+            othersCMBBOX.Text = "Select other deduction";
+            SSS_contribTXTBOX.Text = "0.00";
+            pagibig_contribTXTBOX.Text = "0.00";
+            philhealth_contribTXTBOX.Text = "0.00";
+            taxTXTBOX.Text = "0.00";
+
+            SSS_loanTXTBOX.Text = "0.00";
+            pagibig_loanTXTBOX.Text = "0.00";
+            fcltysavings_depoTXTBOX.Text = "0.00";
+            fcltysavings_loanTXTBOX.Text = "0.00";
+            salary_loanTXTBOX.Text = "0.00";
+            othersTXTBOX.Text = "0.00";
+            total_deductTXTBOX.Clear();
         }
 
         private void cancelBTN_Click(object sender, EventArgs e)
@@ -212,12 +250,33 @@ namespace FILLONE_OOP_CPE201
             other_cutoffTXTBOX.Clear();
             other_ratehourTXTBOX.Clear();
             grossincomeTXTBOX.Clear();
+            netincomeTXTBOX.Clear();
             SSS_contribTXTBOX.Clear();
             pagibig_contribTXTBOX.Clear();
             philhealth_contribTXTBOX.Clear();
             taxTXTBOX.Clear();
             SSS_loanTXTBOX.Clear();
             pagibig_loanTXTBOX.Clear();
+            fcltysavings_depoTXTBOX.Clear();
+            fcltysavings_loanTXTBOX.Clear();
+            salary_loanTXTBOX.Clear();
+            othersTXTBOX.Clear();
+
+            // to reset the combo box and textboxes to default value
+            othersCMBBOX.SelectedIndex = -1;
+            othersCMBBOX.Text = "Select other deduction";
+            SSS_contribTXTBOX.Text = "0.00";
+            pagibig_contribTXTBOX.Text = "0.00";
+            philhealth_contribTXTBOX.Text = "0.00";
+            taxTXTBOX.Text = "0.00";
+
+            SSS_loanTXTBOX.Text = "0.00";
+            pagibig_loanTXTBOX.Text = "0.00";
+            fcltysavings_depoTXTBOX.Text = "0.00";
+            fcltysavings_loanTXTBOX.Text = "0.00";
+            salary_loanTXTBOX.Text = "0.00";
+            othersTXTBOX.Text = "0.00";
+            total_deductTXTBOX.Clear();
         }
 
         private void browseBTN_Click(object sender, EventArgs e)
@@ -241,23 +300,27 @@ namespace FILLONE_OOP_CPE201
         private void basicpay_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
             // to convert input data from textboxes as string to numeric
+            /*
             basic_numhrs = Convert.ToDouble(basicpay_cutoffTXTBOX.Text);
             basic_rate = Convert.ToDouble(basic_ratehourTXTBOX.Text);
             basic_netincome = basic_numhrs * basic_rate;
             basic_netincomeTXTBOX.Text = basic_netincome.ToString("n");
-
+            */
         }
 
         private void honor_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
+            /*
             hono_numhrs = Convert.ToDouble(honor_cutoffTXTBOX.Text);
             hono_rate = Convert.ToDouble(honor_ratehourTXTBOX.Text);
             hono_netincome = hono_numhrs * hono_rate;
             honor_netincomeTXTBOX.Text = hono_netincome.ToString("n");
+            */
         }
-
+        
         private void other_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
+            /*
             other_numhrs = Convert.ToDouble(other_cutoffTXTBOX.Text);
             other_rate = Convert.ToDouble(other_ratehourTXTBOX.Text);
             other_netincome = other_numhrs * other_rate;
@@ -265,7 +328,7 @@ namespace FILLONE_OOP_CPE201
 
             grossincome = basic_netincome + hono_netincome + other_netincome;
             grossincomeTXTBOX.Text = grossincome.ToString("n");
+            */
         }
-               
     }
 }

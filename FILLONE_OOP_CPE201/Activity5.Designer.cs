@@ -161,15 +161,18 @@
             picpathTXTBOX.Name = "picpathTXTBOX";
             picpathTXTBOX.Size = new Size(159, 27);
             picpathTXTBOX.TabIndex = 22;
+           // picpathTXTBOX.TextChanged += picpathTXTBOX_TextChanged;
             // 
             // browseBTN
             // 
+            browseBTN.BackColor = Color.Indigo;
+            browseBTN.ForeColor = Color.White;
             browseBTN.Location = new Point(822, 201);
             browseBTN.Name = "browseBTN";
             browseBTN.Size = new Size(121, 29);
             browseBTN.TabIndex = 21;
             browseBTN.Text = "Browse";
-            browseBTN.UseVisualStyleBackColor = true;
+            browseBTN.UseVisualStyleBackColor = false;
             browseBTN.Click += browseBTN_Click;
             // 
             // pictureBox1
@@ -222,7 +225,6 @@
             paydateDatePicker.Size = new Size(238, 25);
             paydateDatePicker.TabIndex = 15;
             paydateDatePicker.Value = new DateTime(2026, 2, 16, 0, 0, 0, 0);
-            //paydateDatePicker.ValueChanged += paydateDatePicker_ValueChanged;
             // 
             // label8
             // 
@@ -557,6 +559,7 @@
             other_ratehourTXTBOX.Size = new Size(237, 22);
             other_ratehourTXTBOX.TabIndex = 3;
             other_ratehourTXTBOX.TextAlign = HorizontalAlignment.Right;
+            //other_ratehourTXTBOX.TextChanged += other_ratehourTXTBOX_TextChanged;
             // 
             // label19
             // 
@@ -892,62 +895,74 @@
             // 
             // calculateBTN
             // 
+            calculateBTN.BackColor = Color.Indigo;
+            calculateBTN.ForeColor = Color.White;
             calculateBTN.Location = new Point(15, 760);
             calculateBTN.Name = "calculateBTN";
             calculateBTN.Size = new Size(153, 41);
             calculateBTN.TabIndex = 13;
             calculateBTN.Text = "CALCULATE";
-            calculateBTN.UseVisualStyleBackColor = true;
+            calculateBTN.UseVisualStyleBackColor = false;
             calculateBTN.Click += calculateBTN_Click;
             // 
             // newBTN
             // 
+            newBTN.BackColor = Color.Indigo;
+            newBTN.ForeColor = Color.White;
             newBTN.Location = new Point(175, 760);
             newBTN.Name = "newBTN";
             newBTN.Size = new Size(153, 41);
             newBTN.TabIndex = 14;
             newBTN.Text = "NEW";
-            newBTN.UseVisualStyleBackColor = true;
+            newBTN.UseVisualStyleBackColor = false;
             newBTN.Click += newBTN_Click;
             // 
             // cancelBTN
             // 
+            cancelBTN.BackColor = Color.Indigo;
+            cancelBTN.ForeColor = Color.White;
             cancelBTN.Location = new Point(338, 760);
             cancelBTN.Name = "cancelBTN";
             cancelBTN.Size = new Size(153, 41);
             cancelBTN.TabIndex = 15;
             cancelBTN.Text = "CANCEL";
-            cancelBTN.UseVisualStyleBackColor = true;
+            cancelBTN.UseVisualStyleBackColor = false;
             cancelBTN.Click += cancelBTN_Click;
             // 
             // prnt_payslipBTN
             // 
+            prnt_payslipBTN.BackColor = Color.Indigo;
+            prnt_payslipBTN.ForeColor = Color.White;
             prnt_payslipBTN.Location = new Point(498, 760);
             prnt_payslipBTN.Name = "prnt_payslipBTN";
             prnt_payslipBTN.Size = new Size(162, 41);
             prnt_payslipBTN.TabIndex = 16;
             prnt_payslipBTN.Text = "PRINT PAYSLIP";
-            prnt_payslipBTN.UseVisualStyleBackColor = true;
+            prnt_payslipBTN.UseVisualStyleBackColor = false;
             prnt_payslipBTN.Click += prnt_payslipBTN_Click;
             // 
             // prev_payslipdetsBTN
             // 
+            prev_payslipdetsBTN.BackColor = Color.Indigo;
+            prev_payslipdetsBTN.ForeColor = Color.White;
             prev_payslipdetsBTN.Location = new Point(667, 760);
             prev_payslipdetsBTN.Name = "prev_payslipdetsBTN";
             prev_payslipdetsBTN.Size = new Size(215, 41);
             prev_payslipdetsBTN.TabIndex = 17;
             prev_payslipdetsBTN.Text = "PREVIEW PAYSLIP DETAILS";
-            prev_payslipdetsBTN.UseVisualStyleBackColor = true;
+            prev_payslipdetsBTN.UseVisualStyleBackColor = false;
             prev_payslipdetsBTN.Click += prev_payslipdetsBTN_Click;
             // 
             // exitBTN
             // 
+            exitBTN.BackColor = Color.Indigo;
+            exitBTN.ForeColor = Color.White;
             exitBTN.Location = new Point(888, 760);
             exitBTN.Name = "exitBTN";
             exitBTN.Size = new Size(153, 41);
             exitBTN.TabIndex = 18;
             exitBTN.Text = "EXIT";
-            exitBTN.UseVisualStyleBackColor = true;
+            exitBTN.UseVisualStyleBackColor = false;
             exitBTN.Click += exitBTN_Click;
             // 
             // groupBox9
@@ -974,6 +989,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Plum;
             ClientSize = new Size(1510, 914);
             Controls.Add(groupBox9);
             Controls.Add(exitBTN);
