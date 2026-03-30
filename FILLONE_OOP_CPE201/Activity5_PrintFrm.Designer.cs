@@ -34,6 +34,7 @@
             // priDisplayListbox
             // 
             priDisplayListbox.BackColor = Color.LavenderBlush;
+            priDisplayListbox.ForeColor = Color.DeepPink;
             priDisplayListbox.FormattingEnabled = true;
             priDisplayListbox.Location = new Point(12, 12);
             priDisplayListbox.Name = "priDisplayListbox";

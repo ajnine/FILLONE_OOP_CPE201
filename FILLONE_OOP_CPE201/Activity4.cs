@@ -151,17 +151,26 @@ namespace FILLONE_OOP_CPE201
             // setting variables
             double cash_given, change, total_amountPaid;
 
-            // formula for change
-            cash_given = Convert.ToDouble(cash_gvntxtbox.Text);
-            total_amountPaid = Convert.ToDouble(total_billstxtbox.Text);
-            change = cash_given - total_amountPaid;
-            changetxtbox.Text = change.ToString("n");
+            // to convert string data inside the textbox to numeric data to store inside the variable
+            try
+            { 
+                cash_given = Convert.ToDouble(cash_gvntxtbox.Text);
+                total_amountPaid = Convert.ToDouble(total_billstxtbox.Text);
 
-            // to display data into listbox
-            dsplayListbox.Items.Add("Total Bills: " + "          " + total_billstxtbox.Text);
-            dsplayListbox.Items.Add("Cash Given: " + "          " + cash_gvntxtbox.Text);
-            dsplayListbox.Items.Add("Change: " + "          " + changetxtbox.Text);
-            dsplayListbox.Items.Add("Total No. of Items: " + "          " + total_qntytxtbox.Text);
+                change = cash_given - total_amountPaid;
+                changetxtbox.Text = change.ToString("n");
+
+                dsplayListbox.Items.Add("Total Bills: " + "          " + total_billstxtbox.Text);
+                dsplayListbox.Items.Add("Cash Given: " + "          " + cash_gvntxtbox.Text);
+                dsplayListbox.Items.Add("Change: " + "          " + changetxtbox.Text);
+                dsplayListbox.Items.Add("Total No. of Items: " + "          " + total_qntytxtbox.Text);
+            } 
+            catch (Exception)
+            { 
+                MessageBox.Show("Enter valid data in cash given textbox!");
+                cash_gvntxtbox.Clear();
+                cash_gvntxtbox.Focus();
+            }
         }
 
         private void prnt_transBTN_Click(object sender, EventArgs e)
@@ -244,23 +253,29 @@ namespace FILLONE_OOP_CPE201
 
         private void qntytxtbox_TextChanged(object sender, EventArgs e)
         {
-            if (can_change)
-            {
-                // set variables
-                double price, discounted_amount, discount_amount;
-                int qty;
+         // set variables
+         double price, discounted_amount, discount_amount;
+         int qty;
 
-                // to convert string data inside the textbox to numeric data to store inside the variable
+        // to convert string data inside the textbox to numeric data to store inside the variable
+        try 
+            { 
                 price = Convert.ToDouble(pricetxtbox.Text);
                 qty = Convert.ToInt32(qntytxtbox.Text);
+
                 discount_amount = Convert.ToDouble(disc_amttxtbox.Text);
                 discounted_amount = (price * qty) - discount_amount;
 
                 total_qty += qty;
-                total_qntytxtbox.Text += total_qty.ToString();
+                total_qntytxtbox.Text = total_qty.ToString();
                 total_amount += discounted_amount;
                 total_billstxtbox.Text = total_amount.ToString("n");
                 discounted_amttxtbox.Text = discounted_amount.ToString("n");
+            } 
+            catch (Exception)
+            { 
+                MessageBox.Show("Choose an order");
+                qntytxtbox.Focus();
             }
         }
 
@@ -702,6 +717,11 @@ namespace FILLONE_OOP_CPE201
 
             // for the cursor inside the textbox once the event of the object triggered
             qntytxtbox.Focus();
+        }
+
+        private void pizza1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

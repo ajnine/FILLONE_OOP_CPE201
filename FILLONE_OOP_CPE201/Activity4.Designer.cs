@@ -933,6 +933,7 @@
             pizza1.SizeMode = PictureBoxSizeMode.StretchImage;
             pizza1.TabIndex = 0;
             pizza1.TabStop = false;
+            pizza1.Click += pizza1_Click;
             // 
             // dsplayListbox
             // 

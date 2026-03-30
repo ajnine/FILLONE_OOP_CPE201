@@ -45,6 +45,7 @@
             // 
             // printDisplayListBox
             // 
+            printDisplayListBox.ForeColor = Color.Purple;
             printDisplayListBox.FormattingEnabled = true;
             printDisplayListBox.Location = new Point(45, 75);
             printDisplayListBox.Name = "printDisplayListBox";

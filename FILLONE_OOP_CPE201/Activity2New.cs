@@ -59,22 +59,31 @@ namespace FILLONE_OOP_CPE201
             int qty;
             double price, discount_amt, discounted_amt;
 
-            // convert string data from textboxes to numeric and place it as value of the variable
-            qty = Convert.ToInt32(qtytxtbox.Text);
-            price = Convert.ToDouble(pricetextbox.Text);
+            // try-catch block to handle exceptions that may occur during the execution of the code
+            try
+            {
+                qty = Convert.ToInt32(qtytxtbox.Text);
+                price = Convert.ToDouble(pricetextbox.Text);
 
-            // create a formula needed for computation
-            discount_amt = (qty * price) * 0.30;
-            discounted_amt = (qty * price) - discount_amt;
+                // create a formula needed for computation
+                discount_amt = (qty * price) * 0.30;
+                discounted_amt = (qty * price) - discount_amt;
 
-            // converting numeric data to string and display it inside the textboxes
-            discounttxtbox.Text = discount_amt.ToString("n");
-            discountedtxtbox.Text = discounted_amt.ToString("n");
+                // converting numeric data to string and display it inside the textboxes
+                discounttxtbox.Text = discount_amt.ToString("n");
+                discountedtxtbox.Text = discounted_amt.ToString("n");
 
-            // codes for unchecking the other radio buttons in the interface once the senior citizen method executed
-            withdiscRBTN.Checked = false;
-            employeediscRBTN.Checked = false;
-            nodiscountRBTN.Checked = false;
+                // codes for unchecking the other radio buttons in the interface once the senior citizen method executed
+                withdiscRBTN.Checked = false;
+                employeediscRBTN.Checked = false;
+                nodiscountRBTN.Checked = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Input is invalid");
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
+            }
         }
 
         private void withdiscRBTN_CheckedChanged(object sender, EventArgs e)
@@ -82,18 +91,27 @@ namespace FILLONE_OOP_CPE201
             int qty;
             double price, discount_amt, discounted_amt;
 
-            qty = Convert.ToInt32(qtytxtbox.Text);
-            price = Convert.ToDouble(pricetextbox.Text);
+            try
+            {
+                qty = Convert.ToInt32(qtytxtbox.Text);
+                price = Convert.ToDouble(pricetextbox.Text);
 
-            discount_amt = (qty * price) * 0.30;
-            discounted_amt = (qty * price) - discount_amt;
+                discount_amt = (qty * price) * 0.10;
+                discounted_amt = (qty * price) - discount_amt;
 
-            discounttxtbox.Text = discount_amt.ToString("n");
-            discountedtxtbox.Text = discounted_amt.ToString("n");
+                discounttxtbox.Text = discount_amt.ToString("n");
+                discountedtxtbox.Text = discounted_amt.ToString("n");
 
-            seniorcitizenRBTN.Checked = false;
-            employeediscRBTN.Checked = false;
-            nodiscountRBTN.Checked = false;
+                seniorcitizenRBTN.Checked = false;
+                employeediscRBTN.Checked = false;
+                nodiscountRBTN.Checked = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Input is invalid");
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
+            }
         }
 
         private void employeediscRBTN_CheckedChanged(object sender, EventArgs e)
@@ -101,18 +119,27 @@ namespace FILLONE_OOP_CPE201
             int qty;
             double price, discount_amt, discounted_amt;
 
-            qty = Convert.ToInt32(qtytxtbox.Text);
-            price = Convert.ToDouble(pricetextbox.Text);
+            try
+            {
+                qty = Convert.ToInt32(qtytxtbox.Text);
+                price = Convert.ToDouble(pricetextbox.Text);
 
-            discount_amt = (qty * price) * 0.15;
-            discounted_amt = (qty * price) - discount_amt;
+                discount_amt = (qty * price) * 0.15;
+                discounted_amt = (qty * price) - discount_amt;
 
-            discounttxtbox.Text = discount_amt.ToString("n");
-            discountedtxtbox.Text = discounted_amt.ToString("n");
+                discounttxtbox.Text = discount_amt.ToString("n");
+                discountedtxtbox.Text = discounted_amt.ToString("n");
 
-            seniorcitizenRBTN.Checked = false;
-            withdiscRBTN.Checked = false;
-            nodiscountRBTN.Checked = false;
+                seniorcitizenRBTN.Checked = false;
+                withdiscRBTN.Checked = false;
+                employeediscRBTN.Checked = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid data input in quantity");
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
+            }
         }
 
         private void nodiscountRBTN_CheckedChanged(object sender, EventArgs e)
@@ -120,15 +147,27 @@ namespace FILLONE_OOP_CPE201
             int qty;
             double price, discount_amt, discounted_amt;
 
-            qty = Convert.ToInt32(qtytxtbox.Text);
-            price = Convert.ToDouble(pricetextbox.Text);
+            try
+            {
+                qty = Convert.ToInt32(qtytxtbox.Text);
+                price = Convert.ToDouble(pricetextbox.Text);
 
-            discount_amt = (qty * price) * 0;
-            discounted_amt = (qty * price) - discount_amt;
+                discount_amt = (qty * price) * 0;
+                discounted_amt = (qty * price) - discount_amt;
 
-            seniorcitizenRBTN.Checked = false;
-            withdiscRBTN.Checked = false;
-            employeediscRBTN.Checked = false;
+                discounttxtbox.Text = discount_amt.ToString("n");
+                discountedtxtbox.Text = discounted_amt.ToString("n");
+
+                seniorcitizenRBTN.Checked = false;
+                withdiscRBTN.Checked = false;
+                employeediscRBTN.Checked = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid data input in quantity");
+                qtytxtbox.Clear();
+                qtytxtbox.Focus();
+            }
         }
 
         private void newBTN_Click(object sender, EventArgs e)
@@ -276,22 +315,32 @@ namespace FILLONE_OOP_CPE201
         {
             int qty;
             double discount_amt, discounted_amt, cash_rendered, change;
+            
+            try
+            {
+                qty = Convert.ToInt32(qtytxtbox.Text);
+                discount_amt = Convert.ToDouble(discounttxtbox.Text);
+                discounted_amt = Convert.ToDouble(discountedtxtbox.Text);
+                cash_rendered = Convert.ToDouble(cash_renderedtxtbox.Text);
 
-            qty = Convert.ToInt32(qtytxtbox.Text);
-            discount_amt = Convert.ToDouble(discounttxtbox.Text);
-            discounted_amt = Convert.ToDouble(discounttxtbox.Text);
-            cash_rendered = Convert.ToDouble(cash_renderedtxtbox.Text);
+                qty_total += qty;
+                discount_totalgiven += discount_amt;
+                discounted_total += discounted_amt;
+                change = cash_rendered - discounted_amt;
 
-            qty_total += qty;
-            discount_totalgiven += discount_amt;
-            discounted_total += discounted_amt;
-            change = cash_rendered - discounted_amt;
+                qty_totaltxtbox.Text = qty_total.ToString();
+                discount_totaltxtbox.Text = discount_totalgiven.ToString("n");
+                discounted_totaltxtbox.Text = discounted_total.ToString("n");
+                changetxtbox.Text = change.ToString("n");
+                cash_renderedtxtbox.Text = cash_rendered.ToString("n");
+            }
 
-            qty_totaltxtbox.Text = qty_total.ToString();
-            discount_totaltxtbox.Text = discount_totalgiven.ToString("n");
-            discounted_totaltxtbox.Text = discounted_total.ToString("n");
-            changetxtbox.Text = change.ToString("n");
-            cash_renderedtxtbox.Text = cash_rendered.ToString("n");
+            catch (Exception)
+            {
+                MessageBox.Show("Make sure cash given textbox is not empty invalid");
+                cash_renderedtxtbox.Clear();
+                cash_renderedtxtbox.Focus();
+            }
         }
 
         private void discount_totaltxtbox_TextChanged(object sender, EventArgs e)
@@ -365,6 +414,11 @@ namespace FILLONE_OOP_CPE201
         }
 
         private void changetxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

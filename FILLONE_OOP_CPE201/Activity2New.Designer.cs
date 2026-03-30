@@ -183,6 +183,7 @@
             groupBox1.Size = new Size(569, 198);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // nodiscountRBTN
             // 

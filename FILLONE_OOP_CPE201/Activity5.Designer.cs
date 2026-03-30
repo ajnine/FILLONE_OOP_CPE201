@@ -161,7 +161,6 @@
             picpathTXTBOX.Name = "picpathTXTBOX";
             picpathTXTBOX.Size = new Size(159, 27);
             picpathTXTBOX.TabIndex = 22;
-           // picpathTXTBOX.TextChanged += picpathTXTBOX_TextChanged;
             // 
             // browseBTN
             // 
@@ -411,6 +410,7 @@
             basic_ratehourTXTBOX.Size = new Size(237, 22);
             basic_ratehourTXTBOX.TabIndex = 3;
             basic_ratehourTXTBOX.TextAlign = HorizontalAlignment.Right;
+            //basic_ratehourTXTBOX.TextChanged += basic_ratehourTXTBOX_TextChanged;
             // 
             // label11
             // 
@@ -559,7 +559,6 @@
             other_ratehourTXTBOX.Size = new Size(237, 22);
             other_ratehourTXTBOX.TabIndex = 3;
             other_ratehourTXTBOX.TextAlign = HorizontalAlignment.Right;
-            //other_ratehourTXTBOX.TextChanged += other_ratehourTXTBOX_TextChanged;
             // 
             // label19
             // 

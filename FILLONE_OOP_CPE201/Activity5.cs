@@ -10,6 +10,8 @@ namespace FILLONE_OOP_CPE201
 {
     public partial class Activity5 : Form
     {
+        bool can_change = true;
+
         // setting global variables
         private string picpath;
         private Double basic_netincome = 0.00,
@@ -91,7 +93,7 @@ namespace FILLONE_OOP_CPE201
             other_deduction = Convert.ToDouble(othersTXTBOX.Text);
 
             // to compute the desired data to be computed
-            basic_numhrs = Convert.ToDouble(basicpay_cutoffTXTBOX.Text);
+            /*basic_numhrs = Convert.ToDouble(basicpay_cutoffTXTBOX.Text);
             basic_rate = Convert.ToDouble(basic_ratehourTXTBOX.Text);
             basic_netincome = basic_numhrs * basic_rate;
             basic_netincomeTXTBOX.Text = basic_netincome.ToString("n");
@@ -102,7 +104,7 @@ namespace FILLONE_OOP_CPE201
             other_numhrs = Convert.ToDouble(other_cutoffTXTBOX.Text);
             other_rate = Convert.ToDouble(other_ratehourTXTBOX.Text);
             other_netincome = other_numhrs * other_rate;
-            other_netincomeTXTBOX.Text = other_netincome.ToString("n");
+            other_netincomeTXTBOX.Text = other_netincome.ToString("n"); */
 
             grossincome = basic_netincome + hono_netincome + other_netincome;
             grossincomeTXTBOX.Text = grossincome.ToString("n");
@@ -116,6 +118,8 @@ namespace FILLONE_OOP_CPE201
             total_deductTXTBOX.Text = total_deduction.ToString();
             netincome = grossincome - total_deduction;
             netincomeTXTBOX.Text = netincome.ToString("n");
+
+
         }
 
         private void prev_payslipdetsBTN_Click(object sender, EventArgs e)
@@ -128,7 +132,7 @@ namespace FILLONE_OOP_CPE201
             payslip_viewListBox.Items.Add("Designation:     " + "             " + designationTXTBOX.Text);
             payslip_viewListBox.Items.Add("Employee Status:     " + "             " + emp_statTXTBOX.Text);
             payslip_viewListBox.Items.Add("Department:     " + "             " + deptTXTBOX.Text);
-            payslip_viewListBox.Items.Add("Pay Date:     " + "             " + paydateDatePicker.Text);
+            payslip_viewListBox.Items.Add("Pay Date:     " + "        " + paydateDatePicker.Text);
             payslip_viewListBox.Items.Add("------------------------------------------------------------------------------------");
 
             payslip_viewListBox.Items.Add("BP Num. of Hrs:   " + "P" + basicpay_cutoffTXTBOX.Text);
@@ -179,6 +183,7 @@ namespace FILLONE_OOP_CPE201
 
         private void newBTN_Click(object sender, EventArgs e)
         {
+            can_change = false;
             // to clear all textboxes
             emp_noTXTBOX.Clear();
             firstnameTXTBOX.Clear();
@@ -226,10 +231,13 @@ namespace FILLONE_OOP_CPE201
             salary_loanTXTBOX.Text = "0.00";
             othersTXTBOX.Text = "0.00";
             total_deductTXTBOX.Clear();
+
+            can_change = true;
         }
 
         private void cancelBTN_Click(object sender, EventArgs e)
         {
+            can_change = false;
             // to clear all textboxes
             emp_noTXTBOX.Clear();
             firstnameTXTBOX.Clear();
@@ -277,18 +285,29 @@ namespace FILLONE_OOP_CPE201
             salary_loanTXTBOX.Text = "0.00";
             othersTXTBOX.Text = "0.00";
             total_deductTXTBOX.Clear();
+
+            can_change = true;
         }
 
         private void browseBTN_Click(object sender, EventArgs e)
         {
-            // to open file dialog and to filter the file type to be selected
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image File | *.gif; *.jpg; *.png; *.bmp;";
-            openFileDialog.Title = "Select Employee Picture";
-            openFileDialog.ShowDialog();
-            picpath = openFileDialog.FileName;
-            picpathTXTBOX.Text = picpath;
-            pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+            try 
+            {
+                // to open file dialog and to filter the file type to be selected
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Image File | *.gif; *.jpg; *.png; *.bmp;";
+                openFileDialog.Title = "Select Employee Picture";
+                openFileDialog.ShowDialog();
+                picpath = openFileDialog.FileName;
+                picpathTXTBOX.Text = picpath;
+                pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+            } 
+            catch 
+            {
+                MessageBox.Show("No file selected.");
+                
+            }
+            
         }
 
         private void exitBTN_Click(object sender, EventArgs e)
@@ -299,36 +318,64 @@ namespace FILLONE_OOP_CPE201
 
         private void basicpay_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
+
             // to convert input data from textboxes as string to numeric
-            /*
-            basic_numhrs = Convert.ToDouble(basicpay_cutoffTXTBOX.Text);
-            basic_rate = Convert.ToDouble(basic_ratehourTXTBOX.Text);
-            basic_netincome = basic_numhrs * basic_rate;
-            basic_netincomeTXTBOX.Text = basic_netincome.ToString("n");
-            */
+            try
+            {
+                basic_numhrs = Convert.ToDouble(basicpay_cutoffTXTBOX.Text);
+                basic_rate = Convert.ToDouble(basic_ratehourTXTBOX.Text);
+                basic_netincome = basic_numhrs * basic_rate;
+                basic_netincomeTXTBOX.Text = basic_netincome.ToString("n");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please input numeric value only.");
+                basicpay_cutoffTXTBOX.Clear();
+                basicpay_cutoffTXTBOX.Focus();
+            }
+
+
         }
 
         private void honor_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
-            /*
-            hono_numhrs = Convert.ToDouble(honor_cutoffTXTBOX.Text);
-            hono_rate = Convert.ToDouble(honor_ratehourTXTBOX.Text);
-            hono_netincome = hono_numhrs * hono_rate;
-            honor_netincomeTXTBOX.Text = hono_netincome.ToString("n");
-            */
+
+            try
+            {
+                hono_numhrs = Convert.ToDouble(honor_cutoffTXTBOX.Text);
+                hono_rate = Convert.ToDouble(honor_ratehourTXTBOX.Text);
+                hono_netincome = hono_numhrs * hono_rate;
+                honor_netincomeTXTBOX.Text = hono_netincome.ToString("n");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please input numeric value only.");
+                honor_cutoffTXTBOX.Clear();
+                honor_cutoffTXTBOX.Focus();
+            }
+
+
         }
-        
+
         private void other_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
-            /*
-            other_numhrs = Convert.ToDouble(other_cutoffTXTBOX.Text);
-            other_rate = Convert.ToDouble(other_ratehourTXTBOX.Text);
-            other_netincome = other_numhrs * other_rate;
-            other_netincomeTXTBOX.Text = other_netincome.ToString("n");
 
-            grossincome = basic_netincome + hono_netincome + other_netincome;
-            grossincomeTXTBOX.Text = grossincome.ToString("n");
-            */
+            try
+            {
+                other_numhrs = Convert.ToDouble(other_cutoffTXTBOX.Text);
+                other_rate = Convert.ToDouble(other_ratehourTXTBOX.Text);
+                other_netincome = other_numhrs * other_rate;
+                other_netincomeTXTBOX.Text = other_netincome.ToString("n");
+
+                grossincome = basic_netincome + hono_netincome + other_netincome;
+                grossincomeTXTBOX.Text = grossincome.ToString("n");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please input numeric value only.");
+                other_cutoffTXTBOX.Focus();
+                other_cutoffTXTBOX.Clear();
+            }
         }
     }
 }
