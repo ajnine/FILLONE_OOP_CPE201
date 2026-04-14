@@ -157,7 +157,7 @@
             progsCMBBOX.Name = "progsCMBBOX";
             progsCMBBOX.Size = new Size(296, 28);
             progsCMBBOX.TabIndex = 5;
-            progsCMBBOX.SelectedIndexChanged += progsCMBBOX_SelectedIndexChanged;
+            //progsCMBBOX.SelectedIndexChanged += progsCMBBOX_SelectedIndexChanged;
             // 
             // label4
             // 

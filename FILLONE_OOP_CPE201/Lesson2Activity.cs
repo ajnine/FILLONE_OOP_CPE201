@@ -45,11 +45,6 @@ namespace FILLONE_OOP_CPE201
             }
         }
 
-        private void progsCMBBOX_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitBTN_Click(object sender, EventArgs e)
         {
             numberlistBox.Items.Add(course_numberTXTBOX.Text);

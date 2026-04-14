@@ -68,6 +68,7 @@ namespace FILLONE_OOP_CPE201
             SSSConTxtBox.Clear();
             PagibigConTxtBox.Clear();
             IncTaxTxtBox.Clear();
+            EmpNameTxtBox.Clear();
 
 
         }
@@ -112,7 +113,7 @@ namespace FILLONE_OOP_CPE201
             CivStatTxtBox.Enabled = false;
             EmpStatTxtBox.Enabled = false;
             DesigTxtBox.Enabled = false;
-            DepTxtBox.Enabled = false;
+            //DepTxtBox.Enabled = false;
             IncCutTxtBox.Enabled = false;
             IncCut2TxtBox.Enabled = false;
             IncCut3TxtBox.Enabled = false;
@@ -144,6 +145,9 @@ namespace FILLONE_OOP_CPE201
             other_numhrs = Convert.ToDouble(Nohrs3TxtBox.Text);
             other_rate = Convert.ToDouble(RateHr3TxtBox.Text);
             other_netincome = other_numhrs * other_rate;
+            IncCut3TxtBox.Text = other_netincome.ToString("n");
+
+            // for computing the gross income
             gross_income = basic_netincome + hono_netincome + other_netincome;
             GrossTxtBox.Text = gross_income.ToString("n");
 

@@ -33,21 +33,21 @@ namespace FILLONE_OOP_CPE201
             total_qntytxtbox.Enabled = false;
 
             // inserting pizza pictures
-            pizza6.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\all meat.jpg");
-            pizza7.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\cheesy burger.jpg");
-            pizza8.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\tropical hawaiian.jpg");
-            pizza9.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\combo and cheese.jpg");
-            pizza10.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\combo and pepperoni.jpg");
-            pizza11.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\beef & mushroom.jpg");
-            pizza12.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\cheese mania.jpg");
-            pizza13.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\ham & cheese.jpg");
-            pizza14.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\spinach & peta.jpg");
-            pizza15.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\5 cheese.jpg");
-            pizza16.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\meatzza.jpg");
-            pizza17.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\carbo pizza.jpg");
-            pizza18.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\ult pepperoni.jpg");
-            pizza19.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\pacific veggie.jpg");
-            pizza20.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\aloha pizza.jpg");
+            pizza6.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\all meat.jpg");
+            pizza7.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\cheesy burger.jpg");
+            pizza8.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\tropical hawaiian.jpg");
+            pizza9.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\combo and cheese.jpg");
+            pizza10.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\combo and pepperoni.jpg");
+            pizza11.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\beef & mushroom.jpg");
+            pizza12.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\cheese mania.jpg");
+            pizza13.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\ham & cheese.jpg");
+            pizza14.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\spinach & peta.jpg");
+            pizza15.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\5 cheese.jpg");
+            pizza16.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\meatzza.jpg");
+            pizza17.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\carbo pizza.jpg");
+            pizza18.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\ult pepperoni.jpg");
+            pizza19.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\pacific veggie.jpg");
+            pizza20.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\pizza pictures\\aloha pizza.jpg");
 
             // disabling checkboxes
             A_cokeCheckbox.Checked = false;
@@ -62,7 +62,7 @@ namespace FILLONE_OOP_CPE201
             B_pizzaCheckbox.Checked = false;
 
             // insert default picture
-            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\default.jpg");
+            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\default.jpg");
 
         }
 

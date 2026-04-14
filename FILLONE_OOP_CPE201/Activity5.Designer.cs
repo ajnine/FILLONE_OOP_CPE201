@@ -410,7 +410,6 @@
             basic_ratehourTXTBOX.Size = new Size(237, 22);
             basic_ratehourTXTBOX.TabIndex = 3;
             basic_ratehourTXTBOX.TextAlign = HorizontalAlignment.Right;
-            //basic_ratehourTXTBOX.TextChanged += basic_ratehourTXTBOX_TextChanged;
             // 
             // label11
             // 
@@ -989,7 +988,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Plum;
-            ClientSize = new Size(1510, 914);
+            ClientSize = new Size(1510, 808);
             Controls.Add(groupBox9);
             Controls.Add(exitBTN);
             Controls.Add(prev_payslipdetsBTN);

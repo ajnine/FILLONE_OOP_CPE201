@@ -111,11 +111,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Algerian", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(303, 14);
+            label1.Font = new Font("Broadway", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(281, 19);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(312, 30);
+            label1.Size = new Size(377, 32);
             label1.TabIndex = 0;
             label1.Text = "SERI'S CHOICE PAYROLL";
             // 
@@ -713,56 +713,71 @@
             // 
             // GrossIncBtn
             // 
-            GrossIncBtn.Location = new Point(437, 897);
+            GrossIncBtn.BackColor = Color.SteelBlue;
+            GrossIncBtn.Font = new Font("Modern No. 20", 9F, FontStyle.Bold);
+            GrossIncBtn.ForeColor = Color.Transparent;
+            GrossIncBtn.Location = new Point(433, 897);
             GrossIncBtn.Margin = new Padding(4, 5, 4, 5);
             GrossIncBtn.Name = "GrossIncBtn";
-            GrossIncBtn.Size = new Size(133, 35);
+            GrossIncBtn.Size = new Size(137, 35);
             GrossIncBtn.TabIndex = 66;
             GrossIncBtn.Text = "GROSS INCOME";
-            GrossIncBtn.UseVisualStyleBackColor = true;
+            GrossIncBtn.UseVisualStyleBackColor = false;
             GrossIncBtn.Click += GrossIncBtn_Click;
             // 
             // NetIncBtn
             // 
-            NetIncBtn.Location = new Point(576, 897);
+            NetIncBtn.BackColor = Color.SteelBlue;
+            NetIncBtn.Font = new Font("Modern No. 20", 9F, FontStyle.Bold);
+            NetIncBtn.ForeColor = Color.Transparent;
+            NetIncBtn.Location = new Point(572, 897);
             NetIncBtn.Margin = new Padding(4, 5, 4, 5);
             NetIncBtn.Name = "NetIncBtn";
-            NetIncBtn.Size = new Size(115, 35);
+            NetIncBtn.Size = new Size(119, 35);
             NetIncBtn.TabIndex = 67;
             NetIncBtn.Text = "NET INCOME";
-            NetIncBtn.UseVisualStyleBackColor = true;
+            NetIncBtn.UseVisualStyleBackColor = false;
             NetIncBtn.Click += NetIncBtn_Click;
             // 
             // SaveBtn
             // 
-            SaveBtn.Location = new Point(695, 897);
+            SaveBtn.BackColor = Color.SteelBlue;
+            SaveBtn.Font = new Font("Modern No. 20", 9F, FontStyle.Bold);
+            SaveBtn.ForeColor = Color.Transparent;
+            SaveBtn.Location = new Point(691, 897);
             SaveBtn.Margin = new Padding(4, 5, 4, 5);
             SaveBtn.Name = "SaveBtn";
-            SaveBtn.Size = new Size(65, 35);
+            SaveBtn.Size = new Size(69, 35);
             SaveBtn.TabIndex = 68;
             SaveBtn.Text = "SAVE";
-            SaveBtn.UseVisualStyleBackColor = true;
+            SaveBtn.UseVisualStyleBackColor = false;
             SaveBtn.Click += SaveBtn_Click;
             // 
             // UpdBtn
             // 
-            UpdBtn.Location = new Point(765, 897);
+            UpdBtn.BackColor = Color.SteelBlue;
+            UpdBtn.Font = new Font("Modern No. 20", 9F, FontStyle.Bold);
+            UpdBtn.ForeColor = Color.Transparent;
+            UpdBtn.Location = new Point(761, 897);
             UpdBtn.Margin = new Padding(4, 5, 4, 5);
             UpdBtn.Name = "UpdBtn";
-            UpdBtn.Size = new Size(83, 35);
+            UpdBtn.Size = new Size(87, 35);
             UpdBtn.TabIndex = 69;
             UpdBtn.Text = "UPDATE";
-            UpdBtn.UseVisualStyleBackColor = true;
+            UpdBtn.UseVisualStyleBackColor = false;
             // 
             // NewBtn
             // 
-            NewBtn.Location = new Point(851, 897);
+            NewBtn.BackColor = Color.SteelBlue;
+            NewBtn.Font = new Font("Modern No. 20", 9F, FontStyle.Bold);
+            NewBtn.ForeColor = Color.Transparent;
+            NewBtn.Location = new Point(847, 897);
             NewBtn.Margin = new Padding(4, 5, 4, 5);
             NewBtn.Name = "NewBtn";
-            NewBtn.Size = new Size(64, 35);
+            NewBtn.Size = new Size(68, 35);
             NewBtn.TabIndex = 70;
             NewBtn.Text = "NEW";
-            NewBtn.UseVisualStyleBackColor = true;
+            NewBtn.UseVisualStyleBackColor = false;
             NewBtn.Click += NewBtn_Click;
             // 
             // IncCut3TxtBox
@@ -834,6 +849,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightBlue;
             ClientSize = new Size(951, 998);
             Controls.Add(IncCut3TxtBox);
             Controls.Add(label37);

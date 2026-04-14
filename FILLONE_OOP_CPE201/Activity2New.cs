@@ -35,14 +35,14 @@ namespace FILLONE_OOP_CPE201
             changetxtbox.Enabled = false;
             discounttxtbox.Enabled = false;
 
-            pictureBox20.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\2-pc.-Pancakes-Solo.png");
-            pictureBox19.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\6-pc.-Chicken-Nuggets.png");
-            pictureBox18.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\Amazing-Aloha-Champ-Jr.-Fries-Drink.png");
-            pictureBox17.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\Yumburger-Half-Jolly-Spaghetti-Reg.-Fries-Super-Meal-With-Drink.png");
-            pictureBox16.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\Jolly-Spaghetti-With-1-pc.-Burger-Steak-With-Drink.png");
+            pictureBox20.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\2-pc.-Pancakes-Solo.png");
+            pictureBox19.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\6-pc.-Chicken-Nuggets.png");
+            pictureBox18.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\Amazing-Aloha-Champ-Jr.-Fries-Drink.png");
+            pictureBox17.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\Yumburger-Half-Jolly-Spaghetti-Reg.-Fries-Super-Meal-With-Drink.png");
+            pictureBox16.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\Jolly-Spaghetti-With-1-pc.-Burger-Steak-With-Drink.png");
 
             name1LBL.Text = "Burger Steak w/Drink";
-            name2LBL.Text = "CJ, BS, Spag w/Drink";
+            name2LBL.Text = "CJ, BS, Spag w/Drink"; 
             name3LBL.Text = "1pc ChickenJoy";
             name4LBL.Text = "1pc CJ w/CokeFloat";
             name5LBL.Text = "1pc Cj w/Drink";
