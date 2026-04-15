@@ -38,5 +38,10 @@ namespace FILLONE_OOP_CPE201
             countryCMBBOX.Items.Add("Canada");
             countryCMBBOX.Items.Add("Japan");
         }
+
+        private void countryCMBBOX_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

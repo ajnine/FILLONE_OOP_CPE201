@@ -78,6 +78,7 @@
             countryCMBBOX.Name = "countryCMBBOX";
             countryCMBBOX.Size = new Size(365, 28);
             countryCMBBOX.TabIndex = 4;
+            countryCMBBOX.SelectedIndexChanged += countryCMBBOX_SelectedIndexChanged;
             // 
             // dsplaylistbox
             // 

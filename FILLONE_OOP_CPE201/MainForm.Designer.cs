@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             menuStrip1 = new MenuStrip();
             pOSCashierToolStripMenuItem = new ToolStripMenuItem();
             alisFranchiseToolStripMenuItem = new ToolStripMenuItem();
@@ -51,7 +53,14 @@
             tileVerticalToolStripMenuItem = new ToolStripMenuItem();
             tileHorizontalToolStripMenuItem = new ToolStripMenuItem();
             cascadeToolStripMenuItem = new ToolStripMenuItem();
+            toolStrip1 = new ToolStrip();
+            toolStripComboBox1 = new ToolStripComboBox();
+            toolStripButton1 = new ToolStripButton();
+            toolStripButton2 = new ToolStripButton();
+            toolStripComboBox2 = new ToolStripComboBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             menuStrip1.SuspendLayout();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -74,28 +83,28 @@
             // alisFranchiseToolStripMenuItem
             // 
             alisFranchiseToolStripMenuItem.Name = "alisFranchiseToolStripMenuItem";
-            alisFranchiseToolStripMenuItem.Size = new Size(187, 26);
+            alisFranchiseToolStripMenuItem.Size = new Size(224, 26);
             alisFranchiseToolStripMenuItem.Text = "Ali's Franchise";
             alisFranchiseToolStripMenuItem.Click += alisFranchiseToolStripMenuItem_Click;
             // 
             // pizzaNiAliyahToolStripMenuItem
             // 
             pizzaNiAliyahToolStripMenuItem.Name = "pizzaNiAliyahToolStripMenuItem";
-            pizzaNiAliyahToolStripMenuItem.Size = new Size(187, 26);
+            pizzaNiAliyahToolStripMenuItem.Size = new Size(224, 26);
             pizzaNiAliyahToolStripMenuItem.Text = "Pizza ni Aliyah";
             pizzaNiAliyahToolStripMenuItem.Click += pizzaNiAliyahToolStripMenuItem_Click;
             // 
             // simplePOSToolStripMenuItem
             // 
             simplePOSToolStripMenuItem.Name = "simplePOSToolStripMenuItem";
-            simplePOSToolStripMenuItem.Size = new Size(187, 26);
+            simplePOSToolStripMenuItem.Size = new Size(224, 26);
             simplePOSToolStripMenuItem.Text = "Simple POS";
             simplePOSToolStripMenuItem.Click += simplePOSToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(187, 26);
+            logoutToolStripMenuItem.Size = new Size(224, 26);
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
@@ -173,21 +182,21 @@
             // lesson2ActivityToolStripMenuItem
             // 
             lesson2ActivityToolStripMenuItem.Name = "lesson2ActivityToolStripMenuItem";
-            lesson2ActivityToolStripMenuItem.Size = new Size(201, 26);
+            lesson2ActivityToolStripMenuItem.Size = new Size(224, 26);
             lesson2ActivityToolStripMenuItem.Text = "Lesson 2 Activity";
             lesson2ActivityToolStripMenuItem.Click += lesson2ActivityToolStripMenuItem_Click;
             // 
             // lesson3ActivityToolStripMenuItem
             // 
             lesson3ActivityToolStripMenuItem.Name = "lesson3ActivityToolStripMenuItem";
-            lesson3ActivityToolStripMenuItem.Size = new Size(201, 26);
+            lesson3ActivityToolStripMenuItem.Size = new Size(224, 26);
             lesson3ActivityToolStripMenuItem.Text = "Lesson 3 Activity";
             lesson3ActivityToolStripMenuItem.Click += lesson3ActivityToolStripMenuItem_Click;
             // 
             // lesson5ActivityToolStripMenuItem
             // 
             lesson5ActivityToolStripMenuItem.Name = "lesson5ActivityToolStripMenuItem";
-            lesson5ActivityToolStripMenuItem.Size = new Size(201, 26);
+            lesson5ActivityToolStripMenuItem.Size = new Size(224, 26);
             lesson5ActivityToolStripMenuItem.Text = "Lesson 5 Activity";
             lesson5ActivityToolStripMenuItem.Click += lesson5ActivityToolStripMenuItem_Click;
             // 
@@ -219,18 +228,67 @@
             cascadeToolStripMenuItem.Text = "Cascade";
             cascadeToolStripMenuItem.Click += cascadeToolStripMenuItem_Click;
             // 
+            // toolStrip1
+            // 
+            toolStrip1.ImageScalingSize = new Size(20, 20);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripComboBox1, toolStripButton1, toolStripButton2, toolStripComboBox2 });
+            toolStrip1.Location = new Point(0, 28);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(1014, 28);
+            toolStrip1.TabIndex = 2;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripComboBox1
+            // 
+            toolStripComboBox1.Name = "toolStripComboBox1";
+            toolStripComboBox1.Size = new Size(121, 28);
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(29, 25);
+            toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(29, 25);
+            toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripComboBox2
+            // 
+            toolStripComboBox2.Name = "toolStripComboBox2";
+            toolStripComboBox2.Size = new Size(121, 28);
+            toolStripComboBox2.Text = "POS";
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1014, 534);
+            Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
             Text = "MainForm";
+            Load += MainForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -260,5 +318,11 @@
         private ToolStripMenuItem tileVerticalToolStripMenuItem;
         private ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private ToolStripMenuItem cascadeToolStripMenuItem;
+        private ToolStrip toolStrip1;
+        private ToolStripComboBox toolStripComboBox1;
+        private ToolStripButton toolStripButton1;
+        private ToolStripButton toolStripButton2;
+        private ToolStripComboBox toolStripComboBox2;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }
