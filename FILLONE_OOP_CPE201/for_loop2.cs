@@ -30,6 +30,7 @@ namespace FILLONE_OOP_CPE201
 
         private void for_loop2_Load(object sender, EventArgs e)
         {
+            // Disable certain text boxes on form load to prevent user input until necessary
             basic_inccutoffTXTBOX.Enabled = false;
             honor_tothonorpayTXTBOX.Enabled = false;
             other_totincomepayTXTBOX.Enabled = false;
@@ -42,6 +43,101 @@ namespace FILLONE_OOP_CPE201
             taxcontribTXTBOX.Enabled = false;
         }
         private void other_hoursTXTBOX_TextChanged(object sender, EventArgs e)
+        {
+            // Calculate other income net income based on hours and rate, then update the total other income pay text box, gross income, and deductions
+            
+        }
+
+        private void calcBTN_Click(object sender, EventArgs e)
+        {
+            // Calculate total deductions and net income, then update the respective text boxes
+            try
+            {
+                sss_contrib = Convert.ToDouble(ssscontribTXTBOX.Text);
+                pagibig_contrib = Convert.ToDouble(pagibigcontribTXTBOX.Text);
+                philhealth_contrib = Convert.ToDouble(philhealthcontribTXTBOX.Text);
+                tax = Convert.ToDouble(taxcontribTXTBOX.Text);
+                total_deductions = sss_contrib + pagibig_contrib + philhealth_contrib + tax;
+                net_income = gross_income - total_deductions;
+                netincTXTBOX.Text = net_income.ToString("C");
+                totdeductTXTBOX.Text = total_deductions.ToString("C");
+                grossincTXTBOX.Text = gross_income.ToString("C");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
+        }
+
+        private void newBTN_Click(object sender, EventArgs e)
+        {
+            // Clear all text boxes and reset variables to their initial state
+            basic_hoursTXTBOX.Clear();
+            basic_rateTXTBOX.Clear();
+            basic_inccutoffTXTBOX.Clear();
+
+            // Clear honorarium-related text boxes and reset variables
+            honor_hoursTXTBOX.Clear();
+            honor_rateTXTBOX.Clear();
+            honor_tothonorpayTXTBOX.Clear();
+
+            // Clear other income-related text boxes and reset variables
+            other_hoursTXTBOX.Clear();
+            other_rateTXTBOX.Clear();
+            other_totincomepayTXTBOX.Clear();
+
+            // Clear deduction-related text boxes and reset variables
+            ssscontribTXTBOX.Clear();
+            philhealthcontribTXTBOX.Clear();
+            pagibigcontribTXTBOX.Clear();
+            taxcontribTXTBOX.Clear();
+
+            // Clear total deduction, gross income, and net income text boxes
+            totdeductTXTBOX.Clear();
+            grossincTXTBOX.Clear();
+            netincTXTBOX.Clear();
+        }
+
+        private void exitBTN_Click(object sender, EventArgs e)
+        {
+            // Close the form when the exit button is clicked
+            this.Close();
+        }
+
+        private void basic_hoursTXTBOX_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                basic_numhrs = Convert.ToDouble(basic_hoursTXTBOX.Text);
+                basic_rate = Convert.ToDouble(basic_rateTXTBOX.Text);
+                basic_netincome = basic_numhrs * basic_rate;
+                basic_inccutoffTXTBOX.Text = basic_netincome.ToString("n");
+
+                gross_income = basic_netincome + hono_netincome + other_netincome;
+                grossincTXTBOX.Text = gross_income.ToString("n");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
+        }
+
+        private void honor_hoursTXTBOX_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                hono_numhrs = Convert.ToDouble(honor_hoursTXTBOX.Text);
+                hono_rate = Convert.ToDouble(honor_rateTXTBOX.Text);
+                hono_netincome = hono_numhrs * hono_rate;
+                honor_tothonorpayTXTBOX.Text = hono_netincome.ToString("n");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
+            }
+        }
+
+        private void other_hoursTXTBOX_Leave(object sender, EventArgs e)
         {
             try
             {
@@ -121,59 +217,6 @@ namespace FILLONE_OOP_CPE201
                     taxcontribTXTBOX.Text = tax.ToString("n");
                 }
                 pagibigcontribTXTBOX.Text = "100";
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            }
-        }
-
-        private void calcBTN_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                sss_contrib = Convert.ToDouble(ssscontribTXTBOX.Text);
-                pagibig_contrib = Convert.ToDouble(pagibigcontribTXTBOX.Text);
-                philhealth_contrib = Convert.ToDouble(philhealthcontribTXTBOX.Text);
-                tax = Convert.ToDouble(taxcontribTXTBOX.Text);
-                total_deductions = sss_contrib + pagibig_contrib + philhealth_contrib + tax;
-                net_income = gross_income - total_deductions;
-                netincTXTBOX.Text = net_income.ToString("C");
-                totdeductTXTBOX.Text = total_deductions.ToString("C");
-                grossincTXTBOX.Text = gross_income.ToString("C");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            }
-        }
-
-        private void basic_hoursTXTBOX_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                basic_numhrs = Convert.ToDouble(basic_hoursTXTBOX.Text);
-                basic_rate = Convert.ToDouble(basic_rateTXTBOX.Text);
-                basic_netincome = basic_numhrs * basic_rate;
-                basic_inccutoffTXTBOX.Text = basic_netincome.ToString("n");
-
-                gross_income = basic_netincome + hono_netincome + other_netincome;
-                grossincTXTBOX.Text = gross_income.ToString("n");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error occurs in this area. Please contact your administrator!");
-            }
-        }
-
-        private void honor_hoursTXTBOX_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                hono_numhrs = Convert.ToDouble(honor_hoursTXTBOX.Text);
-                hono_rate = Convert.ToDouble(honor_rateTXTBOX.Text);
-                hono_netincome = hono_numhrs * hono_rate;
-                honor_tothonorpayTXTBOX.Text = hono_netincome.ToString("n");
             }
             catch (Exception)
             {

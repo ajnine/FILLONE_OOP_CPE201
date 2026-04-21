@@ -17,7 +17,7 @@ namespace FILLONE_OOP_CPE201
 
         private void showBTN_Click(object sender, EventArgs e)
         {
-            int InitialValue = 0;
+            int InitialValue = 1;
             int numTimesDisplay;
             numTimesDisplay = Convert.ToInt32(numberTXTBOX.Text);
             do

@@ -182,21 +182,21 @@
             // lesson2ActivityToolStripMenuItem
             // 
             lesson2ActivityToolStripMenuItem.Name = "lesson2ActivityToolStripMenuItem";
-            lesson2ActivityToolStripMenuItem.Size = new Size(224, 26);
+            lesson2ActivityToolStripMenuItem.Size = new Size(201, 26);
             lesson2ActivityToolStripMenuItem.Text = "Lesson 2 Activity";
             lesson2ActivityToolStripMenuItem.Click += lesson2ActivityToolStripMenuItem_Click;
             // 
             // lesson3ActivityToolStripMenuItem
             // 
             lesson3ActivityToolStripMenuItem.Name = "lesson3ActivityToolStripMenuItem";
-            lesson3ActivityToolStripMenuItem.Size = new Size(224, 26);
+            lesson3ActivityToolStripMenuItem.Size = new Size(201, 26);
             lesson3ActivityToolStripMenuItem.Text = "Lesson 3 Activity";
             lesson3ActivityToolStripMenuItem.Click += lesson3ActivityToolStripMenuItem_Click;
             // 
             // lesson5ActivityToolStripMenuItem
             // 
             lesson5ActivityToolStripMenuItem.Name = "lesson5ActivityToolStripMenuItem";
-            lesson5ActivityToolStripMenuItem.Size = new Size(224, 26);
+            lesson5ActivityToolStripMenuItem.Size = new Size(201, 26);
             lesson5ActivityToolStripMenuItem.Text = "Lesson 5 Activity";
             lesson5ActivityToolStripMenuItem.Click += lesson5ActivityToolStripMenuItem_Click;
             // 
@@ -204,27 +204,27 @@
             // 
             windowsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tileVerticalToolStripMenuItem, tileHorizontalToolStripMenuItem, cascadeToolStripMenuItem });
             windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            windowsToolStripMenuItem.Size = new Size(84, 24);
-            windowsToolStripMenuItem.Text = "Windows";
+            windowsToolStripMenuItem.Size = new Size(78, 24);
+            windowsToolStripMenuItem.Text = "Window";
             // 
             // tileVerticalToolStripMenuItem
             // 
             tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
-            tileVerticalToolStripMenuItem.Size = new Size(224, 26);
+            tileVerticalToolStripMenuItem.Size = new Size(190, 26);
             tileVerticalToolStripMenuItem.Text = "Tile Vertical";
             tileVerticalToolStripMenuItem.Click += tileVerticalToolStripMenuItem_Click;
             // 
             // tileHorizontalToolStripMenuItem
             // 
             tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
-            tileHorizontalToolStripMenuItem.Size = new Size(224, 26);
+            tileHorizontalToolStripMenuItem.Size = new Size(190, 26);
             tileHorizontalToolStripMenuItem.Text = "Tile Horizontal";
             tileHorizontalToolStripMenuItem.Click += tileHorizontalToolStripMenuItem_Click;
             // 
             // cascadeToolStripMenuItem
             // 
             cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            cascadeToolStripMenuItem.Size = new Size(224, 26);
+            cascadeToolStripMenuItem.Size = new Size(190, 26);
             cascadeToolStripMenuItem.Text = "Cascade";
             cascadeToolStripMenuItem.Click += cascadeToolStripMenuItem_Click;
             // 
@@ -284,6 +284,7 @@
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
             Text = "MainForm";
+            WindowState = FormWindowState.Maximized;
             Load += MainForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

@@ -359,28 +359,10 @@ namespace FILLONE_OOP_CPE201
 
         private void other_cutoffTXTBOX_TextChanged(object sender, EventArgs e)
         {
-            // philhealth contribution based from current table
-            double philhealth_value = 0;
-            if (grossincome < 10000)
+            try
             {
-                philhealth_value = 137.50;
-            }
-            else 
-            {
-                double philhealth_employshare = 137.50;
-                for (int x = 10000; x <= 40000; x += 1000) 
-                {
-                    if (grossincome >= x && grossincome < x + 1000 || grossincome > x + 1000) 
-                    {
-                        philhealth_value = philhealth_employshare;
-                    }
-                    philhealth_employshare  += 13.75;
-                }
-            }
-            philhealth_contribTXTBOX.Text = philhealth_value.ToString("N");
+                double philhealth_value = 0;
 
-            /*try
-            {
                 other_numhrs = Convert.ToDouble(other_cutoffTXTBOX.Text);
                 other_rate = Convert.ToDouble(other_ratehourTXTBOX.Text);
                 other_netincome = other_numhrs * other_rate;
@@ -388,13 +370,31 @@ namespace FILLONE_OOP_CPE201
 
                 grossincome = basic_netincome + hono_netincome + other_netincome;
                 grossincomeTXTBOX.Text = grossincome.ToString("n");
+
+                if (grossincome < 10000)
+                {
+                    philhealth_value = 137.50;
+                }
+                else
+                {
+                    double philhealth_employshare = 137.50;
+                    for (int x = 10000; x <= 40000; x += 1000)
+                    {
+                        if (grossincome >= x && grossincome < x + 1000 || grossincome > x + 1000)
+                        {
+                            philhealth_value = philhealth_employshare;
+                        }
+                        philhealth_employshare += 13.75;
+                    }
+                }
+                philhealth_contribTXTBOX.Text = philhealth_value.ToString("N");
             }
             catch (Exception)
             {
                 MessageBox.Show("Please input numeric value only.");
                 other_cutoffTXTBOX.Focus();
                 other_cutoffTXTBOX.Clear();
-            }*/
+            }
         }
     }
 }

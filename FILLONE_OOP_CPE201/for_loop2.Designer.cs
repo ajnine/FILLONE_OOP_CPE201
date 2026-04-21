@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             basic_rateTXTBOX = new TextBox();
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             basic_hoursTXTBOX = new TextBox();
@@ -47,14 +46,12 @@
             other_hoursTXTBOX = new TextBox();
             label10 = new Label();
             label11 = new Label();
-            label12 = new Label();
             other_rateTXTBOX = new TextBox();
             pagibigcontribTXTBOX = new TextBox();
             label13 = new Label();
             philhealthcontribTXTBOX = new TextBox();
             label14 = new Label();
             label15 = new Label();
-            label16 = new Label();
             ssscontribTXTBOX = new TextBox();
             taxcontribTXTBOX = new TextBox();
             label17 = new Label();
@@ -63,11 +60,15 @@
             grossincTXTBOX = new TextBox();
             label19 = new Label();
             label20 = new Label();
-            label21 = new Label();
             totdeductTXTBOX = new TextBox();
             calcBTN = new Button();
             newBTN = new Button();
             exitBTN = new Button();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            groupBox3 = new GroupBox();
+            groupBox4 = new GroupBox();
+            groupBox5 = new GroupBox();
             SuspendLayout();
             // 
             // basic_rateTXTBOX
@@ -76,16 +77,6 @@
             basic_rateTXTBOX.Name = "basic_rateTXTBOX";
             basic_rateTXTBOX.Size = new Size(220, 27);
             basic_rateTXTBOX.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(30, 40);
-            label1.Name = "label1";
-            label1.Size = new Size(83, 20);
-            label1.TabIndex = 1;
-            label1.Text = "BASIC PAY";
             // 
             // label2
             // 
@@ -113,7 +104,8 @@
             basic_hoursTXTBOX.Name = "basic_hoursTXTBOX";
             basic_hoursTXTBOX.Size = new Size(158, 27);
             basic_hoursTXTBOX.TabIndex = 4;
-            basic_hoursTXTBOX.TextChanged += basic_hoursTXTBOX_TextChanged;
+           // basic_hoursTXTBOX.TextChanged += basic_hoursTXTBOX_TextChanged;
+            basic_hoursTXTBOX.Leave += basic_hoursTXTBOX_Leave;
             // 
             // basic_inccutoffTXTBOX
             // 
@@ -155,7 +147,8 @@
             honor_hoursTXTBOX.Name = "honor_hoursTXTBOX";
             honor_hoursTXTBOX.Size = new Size(158, 27);
             honor_hoursTXTBOX.TabIndex = 11;
-            honor_hoursTXTBOX.TextChanged += honor_hoursTXTBOX_TextChanged;
+            //honor_hoursTXTBOX.TextChanged += honor_hoursTXTBOX_TextChanged;
+            honor_hoursTXTBOX.Leave += honor_hoursTXTBOX_Leave;
             // 
             // label6
             // 
@@ -183,9 +176,8 @@
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(30, 186);
             label8.Name = "label8";
-            label8.Size = new Size(115, 20);
+            label8.Size = new Size(0, 20);
             label8.TabIndex = 8;
-            label8.Text = "HONORARIUM";
             // 
             // honor_rateTXTBOX
             // 
@@ -210,7 +202,6 @@
             label9.Size = new Size(161, 17);
             label9.TabIndex = 19;
             label9.Text = "Total Other Income Pay:";
-            //label9.Click += label9_Click;
             // 
             // other_hoursTXTBOX
             // 
@@ -219,6 +210,7 @@
             other_hoursTXTBOX.Size = new Size(158, 27);
             other_hoursTXTBOX.TabIndex = 18;
             other_hoursTXTBOX.TextChanged += other_hoursTXTBOX_TextChanged;
+            other_hoursTXTBOX.Leave += other_hoursTXTBOX_Leave;
             // 
             // label10
             // 
@@ -239,16 +231,6 @@
             label11.Size = new Size(85, 17);
             label11.TabIndex = 16;
             label11.Text = "Rate / Hour:";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(30, 343);
-            label12.Name = "label12";
-            label12.Size = new Size(120, 20);
-            label12.TabIndex = 15;
-            label12.Text = "OTHER INCOME";
             // 
             // other_rateTXTBOX
             // 
@@ -300,16 +282,6 @@
             label15.Size = new Size(119, 17);
             label15.TabIndex = 23;
             label15.Text = "SSS Contribution:";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(420, 40);
-            label16.Name = "label16";
-            label16.Size = new Size(177, 20);
-            label16.TabIndex = 22;
-            label16.Text = "REGULAR DEDUCTIONS";
             // 
             // ssscontribTXTBOX
             // 
@@ -379,16 +351,6 @@
             label20.TabIndex = 32;
             label20.Text = "TOTAL DEDUCTIONS:";
             // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(418, 221);
-            label21.Name = "label21";
-            label21.Size = new Size(140, 20);
-            label21.TabIndex = 31;
-            label21.Text = "INCOME SUMMAR";
-            // 
             // totdeductTXTBOX
             // 
             totdeductTXTBOX.Location = new Point(607, 234);
@@ -415,6 +377,7 @@
             newBTN.TabIndex = 38;
             newBTN.Text = "NEW";
             newBTN.UseVisualStyleBackColor = true;
+            newBTN.Click += newBTN_Click;
             // 
             // exitBTN
             // 
@@ -424,6 +387,57 @@
             exitBTN.TabIndex = 39;
             exitBTN.Text = "EXIT";
             exitBTN.UseVisualStyleBackColor = true;
+            exitBTN.Click += exitBTN_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.Location = new Point(12, 33);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(386, 150);
+            groupBox1.TabIndex = 40;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "BASIC PAY";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox2.Location = new Point(12, 189);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(386, 145);
+            groupBox2.TabIndex = 41;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "HONORARIUM";
+            // 
+            // groupBox3
+            // 
+            groupBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox3.Location = new Point(12, 343);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(386, 145);
+            groupBox3.TabIndex = 42;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "OTHER INCOME";
+            // 
+            // groupBox4
+            // 
+            groupBox4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox4.Location = new Point(418, 38);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(412, 168);
+            groupBox4.TabIndex = 43;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "REGULAR DEDCUTIONS";
+            // 
+            // groupBox5
+            // 
+            groupBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox5.Location = new Point(418, 210);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(412, 161);
+            groupBox5.TabIndex = 44;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "INCOME SUMMARY";
             // 
             // for_loop2
             // 
@@ -438,7 +452,6 @@
             Controls.Add(grossincTXTBOX);
             Controls.Add(label19);
             Controls.Add(label20);
-            Controls.Add(label21);
             Controls.Add(totdeductTXTBOX);
             Controls.Add(taxcontribTXTBOX);
             Controls.Add(label17);
@@ -447,14 +460,12 @@
             Controls.Add(philhealthcontribTXTBOX);
             Controls.Add(label14);
             Controls.Add(label15);
-            Controls.Add(label16);
             Controls.Add(ssscontribTXTBOX);
             Controls.Add(other_totincomepayTXTBOX);
             Controls.Add(label9);
             Controls.Add(other_hoursTXTBOX);
             Controls.Add(label10);
             Controls.Add(label11);
-            Controls.Add(label12);
             Controls.Add(other_rateTXTBOX);
             Controls.Add(honor_tothonorpayTXTBOX);
             Controls.Add(label5);
@@ -468,8 +479,12 @@
             Controls.Add(basic_hoursTXTBOX);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(basic_rateTXTBOX);
+            Controls.Add(groupBox1);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox4);
+            Controls.Add(groupBox5);
             Name = "for_loop2";
             Text = "For Loop Example 2";
             Load += for_loop2_Load;
@@ -480,7 +495,6 @@
         #endregion
 
         private TextBox basic_rateTXTBOX;
-        private Label label1;
         private Label label2;
         private Label label3;
         private TextBox basic_hoursTXTBOX;
@@ -498,14 +512,12 @@
         private TextBox other_hoursTXTBOX;
         private Label label10;
         private Label label11;
-        private Label label12;
         private TextBox other_rateTXTBOX;
         private TextBox pagibigcontribTXTBOX;
         private Label label13;
         private TextBox philhealthcontribTXTBOX;
         private Label label14;
         private Label label15;
-        private Label label16;
         private TextBox ssscontribTXTBOX;
         private TextBox taxcontribTXTBOX;
         private Label label17;
@@ -514,10 +526,14 @@
         private TextBox grossincTXTBOX;
         private Label label19;
         private Label label20;
-        private Label label21;
         private TextBox totdeductTXTBOX;
         private Button calcBTN;
         private Button newBTN;
         private Button exitBTN;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private GroupBox groupBox3;
+        private GroupBox groupBox4;
+        private GroupBox groupBox5;
     }
 }
