@@ -19,11 +19,6 @@ namespace FILLONE_OOP_CPE201
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Activity2New_Load(object sender, EventArgs e)
         {
             itemnametxtbox.Enabled = false;
@@ -306,11 +301,6 @@ namespace FILLONE_OOP_CPE201
             pricetextbox.Text = "87";
         }
 
-        private void cancelBTN_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void calculateBTN_Click(object sender, EventArgs e)
         {
             int qty;
@@ -341,16 +331,6 @@ namespace FILLONE_OOP_CPE201
                 cash_renderedtxtbox.Clear();
                 cash_renderedtxtbox.Focus();
             }
-        }
-
-        private void discount_totaltxtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -406,21 +386,6 @@ namespace FILLONE_OOP_CPE201
         private void button14_Click(object sender, EventArgs e)
         {
             cash_renderedtxtbox.Text += ".";
-        }
-
-        private void enterBTN_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void changetxtbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
