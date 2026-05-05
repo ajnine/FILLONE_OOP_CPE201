@@ -182,12 +182,6 @@ namespace FILLONE_OOP_CPE201
 
         private void calculateBtn_Click(object sender, EventArgs e)
         {
-            price = Convert.ToDouble(priceTxtbox.Text);
-            quantity = Convert.ToInt32(qntyTxtbox.Text);
-            amount_paid = price * quantity;
-            changeTxtbox.Text = amount_paid.ToString("n");
-            cash_givenTxtbox.Focus();
-
             try
             {
                 amount_paid = Convert.ToDouble(amnt_paidTxtbox.Text);
@@ -199,13 +193,32 @@ namespace FILLONE_OOP_CPE201
             }
             catch (Exception)
             {
-                MessageBox.Show("ex.message");
+                MessageBox.Show("Invalid");
                 cash_givenTxtbox.Focus();
                 cash_givenTxtbox.Clear();
             }
-            finally 
-            { 
+            finally
+            {
                 MessageBox.Show("Transaction Completed!");
+            }
+        }
+
+        private void qntyTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                price = Convert.ToDouble(priceTxtbox.Text);
+                quantity = Convert.ToInt32(qntyTxtbox.Text);
+                amount_paid = price * quantity;
+
+                amnt_paidTxtbox.Text = amount_paid.ToString("n");
+                cash_givenTxtbox.Focus();
+            } 
+            catch (Exception)
+            { 
+                MessageBox.Show("Invalid data input");
+                qntyTxtbox.Clear() ;
+                qntyTxtbox.Show();
             }
         }
     }

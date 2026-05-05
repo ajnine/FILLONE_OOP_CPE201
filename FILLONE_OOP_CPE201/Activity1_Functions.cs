@@ -1,0 +1,193 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Text;
+using System.Text;
+using System.Windows.Forms;
+
+namespace FILLONE_OOP_CPE201
+{
+    public partial class Activity1_Functions : Form
+    {
+        // Declare variables to store item details and transaction information
+        private double amount_paid, price, cash_given, change;
+        private int quantity;
+        public Activity1_Functions()
+        {
+            InitializeComponent();
+        }
+
+        // function codes for setting the text property value of the item and price textboxes
+        private void displaytxtbox(string itemname, string price)
+        {
+            itemnameTxtbox.Text = itemname;
+            priceTxtbox.Text = price;
+        }
+
+        // function codes for clearing and placing cursor inside the quantity textbox
+        private void quantitytxtbox()
+        {
+            qntyTxtbox.Clear();
+            qntyTxtbox.Focus();
+        }
+
+        private void newBtn_Click(object sender, EventArgs e)
+        {
+            qntyTxtbox.Clear();
+            amnt_paidTxtbox.Clear();
+            cash_givenTxtbox.Clear();
+            changeTxtbox.Clear();
+        }
+
+        private void Activity1_Functions_Load(object sender, EventArgs e)
+        {
+            // Set the form to be borderless and maximized to fill the entire screen
+            changeTxtbox.Enabled = false;
+
+            // Set the form to be borderless and maximized to fill the entire screen
+            this.Location = new Point(0, 0);
+
+            // Set the form to be borderless and maximized to fill the entire screen
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            displaytxtbox ("Supermeal w/ Drink", "224");
+            quantitytxtbox();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("1 – pc. Chickenjoy Solo", "85");
+            quantitytxtbox();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("1-pc. Chickenjoy w/ Coke Float", "134");
+            quantitytxtbox();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("1 – pc. Chickenjoy With Drink", "105");
+            quantitytxtbox();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("1 – pc. Chickenjoy With Palabok Solo", "135");
+            quantitytxtbox();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("1 – pc. Chickenjoy W/ Jolly Spaghetti w/ Drink", "172");
+            quantitytxtbox();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("2 – pc. Pancakes Solo", "87");
+            quantitytxtbox();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("6 – pc. Chickenjoy Bucket w/ Jolly Spaghetti", "697");
+            quantitytxtbox();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("6 – pc. Chickenjoy Solo", "467");
+            quantitytxtbox();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("6 – pc. Chickenjoy with Palabok Family Pan", "927");
+            quantitytxtbox();
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("Amazing Aloha Champ Jr., Fries & Drink", "221");
+            quantitytxtbox();
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("Chickenjoy Bucket Family Meals", "745");
+            quantitytxtbox();
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("Jolly Crispy Fries Bucket", "191");
+            quantitytxtbox();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("Double Cheesy Yumburger With Fries & Drink", "217");
+            quantitytxtbox();
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            displaytxtbox("1 – pc. Burger Steak With Drink", "84");
+            quantitytxtbox();
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void calculateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                amount_paid = Convert.ToDouble(amnt_paidTxtbox.Text);
+                cash_given = Convert.ToDouble(cash_givenTxtbox.Text);
+                change = cash_given - amount_paid;
+                changeTxtbox.Text = change.ToString("n");
+                amnt_paidTxtbox.Text = amount_paid.ToString("c");
+                cash_givenTxtbox.Text = cash_given.ToString("c");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid");
+                cash_givenTxtbox.Focus();
+                cash_givenTxtbox.Clear();
+            }
+            finally
+            {
+                MessageBox.Show("Transaction Completed!");
+            }
+        }
+
+        private void qntyTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                price = Convert.ToDouble(priceTxtbox.Text);
+                quantity = Convert.ToInt32(qntyTxtbox.Text);
+                amount_paid = price * quantity;
+
+                amnt_paidTxtbox.Text = amount_paid.ToString("n");
+                cash_givenTxtbox.Focus();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid data input");
+                qntyTxtbox.Clear();
+                qntyTxtbox.Show();
+            }
+        }
+    }
+}

@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-
-namespace FILLONE_OOP_CPE201
+﻿namespace FILLONE_OOP_CPE201
 {
-    public partial class Activity4_Function : Form
+    public partial class Activity4_Class : Form
     {
         // global variables
         private double total_amount = 0;
@@ -16,11 +8,14 @@ namespace FILLONE_OOP_CPE201
 
         // to check if the user can change the value of the textboxes
         bool can_change = true;
-        public Activity4_Function()
+        public Activity4_Class()
         {
             InitializeComponent();
         }
 
+        // codes for accessing the class created earlier
+        Variables variables = new Variables();
+        Price_item_Value price_discountamount_value = new Price_item_Value();
         private void quantityTxtbox()
         {
             qntytxtbox.Clear();
@@ -33,7 +28,7 @@ namespace FILLONE_OOP_CPE201
             pricetxtbox.Text = price;
         }
 
-        private void Activity4_Function_Load(object sender, EventArgs e)
+        private void Activity4_Class_Load(object sender, EventArgs e)
         {
             // disabling textboxes
             pricetxtbox.Enabled = false;
@@ -291,27 +286,12 @@ namespace FILLONE_OOP_CPE201
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            // set variable
-            /*double price;
-
-            // to put text property value of textbox
-            disc_amttxtbox.Text = "0.00";
-            pricetxtbox.Text = "500.99";*/
-
-            // calling a function with assigned values for item name and price inside the parameters
             item_pricevalue("0.00", "500.99");
             quantityTxtbox();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            // set variable
-            /*double price;
-
-            // to put text property value of textbox
-            disc_amttxtbox.Text = "0.00";
-            pricetxtbox.Text = "550.00";*/
-
             item_pricevalue("0.00", "550.00");
             quantityTxtbox();
         }

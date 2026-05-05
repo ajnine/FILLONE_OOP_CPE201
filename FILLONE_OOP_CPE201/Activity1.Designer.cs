@@ -307,6 +307,7 @@
             qntyTxtbox.Name = "qntyTxtbox";
             qntyTxtbox.Size = new Size(135, 27);
             qntyTxtbox.TabIndex = 23;
+            qntyTxtbox.TextChanged += qntyTxtbox_TextChanged;
             // 
             // label3
             // 

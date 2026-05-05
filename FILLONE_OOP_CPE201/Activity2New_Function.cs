@@ -40,8 +40,8 @@ namespace FILLONE_OOP_CPE201
         // function method for the formula needed in the program's computations
         private void computation_formula_and_displaydata()
         {
-            discounted_amt = (qty* price) - discount_amt;
-            discounttxtbox.Text = discounted_amt.ToString("n");
+            discounted_amt = (qty * price) - discount_amt;
+            discounttxtbox.Text = discount_amt.ToString("n");
             discountedtxtbox.Text = discounted_amt.ToString("n");
         }
 
@@ -119,7 +119,7 @@ namespace FILLONE_OOP_CPE201
 
                 computation_formula_and_displaydata();
 
-                seniorcitizenRBTN.Enabled = false; 
+                seniorcitizenRBTN.Enabled = false;
                 employeediscRBTN.Enabled = false;
                 nodiscountRBTN.Enabled = false;
             }
@@ -141,7 +141,7 @@ namespace FILLONE_OOP_CPE201
                 discount_amt = (qty * price) * 0.15;
 
                 computation_formula_and_displaydata();
-                
+
                 seniorcitizenRBTN.Enabled = false;
                 withdiscRBTN.Enabled = false;
                 nodiscountRBTN.Enabled = false;
@@ -219,7 +219,7 @@ namespace FILLONE_OOP_CPE201
             price_item_textvalue("1pc ChickenJoy", "85");
             /*itemnametxtbox.Text = "1pc ChickenJoy";
             pricetextbox.Text = "85";*/
-            
+
             quantityTxtbox();
         }
 
@@ -264,7 +264,7 @@ namespace FILLONE_OOP_CPE201
             price_item_textvalue("Chicken Palabok", "205");
             /*itemnametxtbox.Text = "Chicken Palabok";
             pricetextbox.Text = "205";*/
-            
+
             quantityTxtbox();
         }
 
@@ -406,6 +406,11 @@ namespace FILLONE_OOP_CPE201
                 cash_renderedtxtbox.Clear();
                 cash_renderedtxtbox.Focus();
             }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
