@@ -168,5 +168,15 @@ namespace FILLONE_OOP_CPE201
             act4.MdiParent = this;
             act4.Show();
         }
+
+        private void variablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Variables f = new Variables();
+        }
+
+        private void priceitemValueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Price_item_Value f = new Price_item_Value();
+        }
     }
 }

@@ -167,6 +167,7 @@
             A_friedchickenCheckbox.TabIndex = 0;
             A_friedchickenCheckbox.Text = "10 pcs. Delicious Fried Chicken";
             A_friedchickenCheckbox.UseVisualStyleBackColor = true;
+            A_friedchickenCheckbox.CheckedChanged += A_friedchickenCheckbox_CheckedChanged;
             // 
             // groupBox4
             // 

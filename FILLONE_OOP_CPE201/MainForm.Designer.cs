@@ -61,6 +61,8 @@
             activity1ClassToolStripMenuItem = new ToolStripMenuItem();
             activity2NewClassToolStripMenuItem = new ToolStripMenuItem();
             activity4ClassToolStripMenuItem = new ToolStripMenuItem();
+            variablesToolStripMenuItem = new ToolStripMenuItem();
+            priceitemValueToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             toolStripComboBox1 = new ToolStripComboBox();
             toolStripButton1 = new ToolStripButton();
@@ -267,7 +269,7 @@
             // 
             // classesToolStripMenuItem
             // 
-            classesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { activity1ClassToolStripMenuItem, activity2NewClassToolStripMenuItem, activity4ClassToolStripMenuItem });
+            classesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { activity1ClassToolStripMenuItem, activity2NewClassToolStripMenuItem, activity4ClassToolStripMenuItem, variablesToolStripMenuItem, priceitemValueToolStripMenuItem });
             classesToolStripMenuItem.Name = "classesToolStripMenuItem";
             classesToolStripMenuItem.Size = new Size(70, 24);
             classesToolStripMenuItem.Text = "Classes";
@@ -292,6 +294,20 @@
             activity4ClassToolStripMenuItem.Size = new Size(224, 26);
             activity4ClassToolStripMenuItem.Text = "Activity4_Class";
             activity4ClassToolStripMenuItem.Click += activity4ClassToolStripMenuItem_Click;
+            // 
+            // variablesToolStripMenuItem
+            // 
+            variablesToolStripMenuItem.Name = "variablesToolStripMenuItem";
+            variablesToolStripMenuItem.Size = new Size(224, 26);
+            variablesToolStripMenuItem.Text = "Variables";
+            variablesToolStripMenuItem.Click += variablesToolStripMenuItem_Click;
+            // 
+            // priceitemValueToolStripMenuItem
+            // 
+            priceitemValueToolStripMenuItem.Name = "priceitemValueToolStripMenuItem";
+            priceitemValueToolStripMenuItem.Size = new Size(224, 26);
+            priceitemValueToolStripMenuItem.Text = "Price_item_Value";
+            priceitemValueToolStripMenuItem.Click += priceitemValueToolStripMenuItem_Click;
             // 
             // toolStrip1
             // 
@@ -398,5 +414,7 @@
         private ToolStripMenuItem activity1ClassToolStripMenuItem;
         private ToolStripMenuItem activity2NewClassToolStripMenuItem;
         private ToolStripMenuItem activity4ClassToolStripMenuItem;
+        private ToolStripMenuItem variablesToolStripMenuItem;
+        private ToolStripMenuItem priceitemValueToolStripMenuItem;
     }
 }

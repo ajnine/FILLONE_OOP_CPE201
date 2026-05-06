@@ -78,7 +78,7 @@ namespace FILLONE_OOP_CPE201
             bundleB_Rbtn.Checked = false;
 
             //inserting image
-            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle A.png");
+            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle A.png");
 
             // to check textboxes
             A_cokeCheckbox.Checked = true;
@@ -118,7 +118,7 @@ namespace FILLONE_OOP_CPE201
             bundleA_Rbtn.Checked = false;
 
             // inserting pictures
-            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle B.png");
+            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle B.png");
 
             // to uncheck bundle A
             A_cokeCheckbox.Checked = false;

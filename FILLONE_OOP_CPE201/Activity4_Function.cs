@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace FILLONE_OOP_CPE201
 {
@@ -13,6 +14,7 @@ namespace FILLONE_OOP_CPE201
         // global variables
         private double total_amount = 0;
         private int total_qty = 0;
+        private double prices = 0;
 
         // to check if the user can change the value of the textboxes
         bool can_change = true;
@@ -27,10 +29,14 @@ namespace FILLONE_OOP_CPE201
             qntytxtbox.Focus();
         }
 
-        public void item_pricevalue(string discountamount, string price)
+        public void item_pricevalue(string Checkbox, string discountamount, string price)
         {
-            discounted_amttxtbox.Text = discountamount;
-            pricetxtbox.Text = price;
+                disc_amttxtbox.Text = discountamount;
+                pricetxtbox.Text = price;
+                prices = Convert.ToDouble(pricetxtbox.Text);
+                dsplayListbox.Items.Add(Checkbox + " " + pricetxtbox.Text);
+                qntytxtbox.Text = "";
+                qntytxtbox.Focus();
         }
 
         private void Activity4_Function_Load(object sender, EventArgs e)
@@ -88,7 +94,7 @@ namespace FILLONE_OOP_CPE201
             bundleB_Rbtn.Checked = false;
 
             //inserting image
-            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle A.png");
+            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle A.png");
 
             // to check textboxes
             A_cokeCheckbox.Checked = true;
@@ -128,7 +134,7 @@ namespace FILLONE_OOP_CPE201
             bundleA_Rbtn.Checked = false;
 
             // inserting pictures
-            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle B.png");
+            orderpicturebox.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\FILLONE_OOP_CPE201\\FILLONE_OOP_CPE201\\food bundles pictures\\bundle B.png");
 
             // to uncheck bundle A
             A_cokeCheckbox.Checked = false;
@@ -158,28 +164,29 @@ namespace FILLONE_OOP_CPE201
 
         private void calcbillsBTN_Click(object sender, EventArgs e)
         {
-            // setting variables
-            double cash_given, change, total_amountPaid;
-
-            // to convert string data inside the textbox to numeric data to store inside the variable
             try
             {
-                cash_given = Convert.ToDouble(cash_gvntxtbox.Text);
-                total_amountPaid = Convert.ToDouble(total_billstxtbox.Text);
+                double price = Convert.ToDouble(pricetxtbox.Text);
+                int qty = Convert.ToInt32(qntytxtbox.Text);
+                double discount = Convert.ToDouble(disc_amttxtbox.Text);
+                double cash_given = Convert.ToDouble(cash_gvntxtbox.Text);
 
-                change = cash_given - total_amountPaid;
+                double discounted_amount = (price * qty) - discount;
+                double change = cash_given - discounted_amount;
+
+                total_billstxtbox.Text = discounted_amount.ToString("n");
+                discounted_amttxtbox.Text = discounted_amount.ToString("n");
+                total_qntytxtbox.Text = qty.ToString();
                 changetxtbox.Text = change.ToString("n");
 
-                dsplayListbox.Items.Add("Total Bills: " + "          " + total_billstxtbox.Text);
-                dsplayListbox.Items.Add("Cash Given: " + "          " + cash_gvntxtbox.Text);
-                dsplayListbox.Items.Add("Change: " + "          " + changetxtbox.Text);
-                dsplayListbox.Items.Add("Total No. of Items: " + "          " + total_qntytxtbox.Text);
+                dsplayListbox.Items.Add("Total Bills: " + total_billstxtbox.Text);
+                dsplayListbox.Items.Add("Cash Given: " + cash_given);
+                dsplayListbox.Items.Add("Change: " + changetxtbox.Text);
+                dsplayListbox.Items.Add("Total No. of Items: " + qty);
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Enter valid data in cash given textbox!");
-                cash_gvntxtbox.Clear();
-                cash_gvntxtbox.Focus();
+                MessageBox.Show("Please complete all fields correctly!");
             }
         }
 
@@ -270,10 +277,10 @@ namespace FILLONE_OOP_CPE201
             // to convert string data inside the textbox to numeric data to store inside the variable
             try
             {
-                price = Convert.ToDouble(pricetxtbox.Text);
+                price = Double.Parse(pricetxtbox.Text);
                 qty = Convert.ToInt32(qntytxtbox.Text);
 
-                discount_amount = Convert.ToDouble(disc_amttxtbox.Text);
+                discount_amount = Double.Parse(disc_amttxtbox.Text);
                 discounted_amount = (price * qty) - discount_amount;
 
                 total_qty += qty;
@@ -299,7 +306,7 @@ namespace FILLONE_OOP_CPE201
             pricetxtbox.Text = "500.99";*/
 
             // calling a function with assigned values for item name and price inside the parameters
-            item_pricevalue("0.00", "500.99");
+            item_pricevalue("Meal 1", "0.00", "500.99");
             quantityTxtbox();
         }
 
@@ -312,116 +319,121 @@ namespace FILLONE_OOP_CPE201
             disc_amttxtbox.Text = "0.00";
             pricetxtbox.Text = "550.00";*/
 
-            item_pricevalue("0.00", "550.00");
+            item_pricevalue("Meal 2", "0.00", "550.00");
             quantityTxtbox();
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "600.99");
+            item_pricevalue("Meal 3", "0.00", "600.99");
             quantityTxtbox();
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "700.50");
+            item_pricevalue("Meal 4", "0.00", "700.50");
             quantityTxtbox();
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "500.00");
+            item_pricevalue("Meal 5", "0.00", "500.00");
             quantityTxtbox();
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "750.00");
+            item_pricevalue("Meal 6", "0.00", "750.00");
             quantityTxtbox();
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "700.00");
+            item_pricevalue("Meal 7", "0.00", "700.00");
             quantityTxtbox();
         }
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "850.00");
+            item_pricevalue("Meal 8", "0.00", "850.00");
             quantityTxtbox();
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "450.00");
+            item_pricevalue("Meal 9", "0.00", "450.00");
             quantityTxtbox();
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "650.00");
+            item_pricevalue("Meal 10", "0.00", "650.00");
             quantityTxtbox();
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 11", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 12", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 13", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 14", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 15", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 16", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 17", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 18", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 19", "0.00", "575.00");
             quantityTxtbox();
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            item_pricevalue("0.00", "575.00");
+            item_pricevalue("Meal 20", "0.00", "575.00");
             quantityTxtbox();
+        }
+
+        private void A_friedchickenCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
