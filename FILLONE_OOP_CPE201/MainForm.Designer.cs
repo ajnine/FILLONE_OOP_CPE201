@@ -53,6 +53,14 @@
             tileVerticalToolStripMenuItem = new ToolStripMenuItem();
             tileHorizontalToolStripMenuItem = new ToolStripMenuItem();
             cascadeToolStripMenuItem = new ToolStripMenuItem();
+            functionsToolStripMenuItem = new ToolStripMenuItem();
+            activity1FunctionsToolStripMenuItem = new ToolStripMenuItem();
+            activity2NewFunctionToolStripMenuItem = new ToolStripMenuItem();
+            activity4FunctionToolStripMenuItem = new ToolStripMenuItem();
+            classesToolStripMenuItem = new ToolStripMenuItem();
+            activity1ClassToolStripMenuItem = new ToolStripMenuItem();
+            activity2NewClassToolStripMenuItem = new ToolStripMenuItem();
+            activity4ClassToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             toolStripComboBox1 = new ToolStripComboBox();
             toolStripButton1 = new ToolStripButton();
@@ -66,7 +74,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { pOSCashierToolStripMenuItem, pOSPrintFormsToolStripMenuItem, payrolToolStripMenuItem, loopsToolStripMenuItem, loopsToolStripMenuItem1, quizzesToolStripMenuItem, windowsToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { pOSCashierToolStripMenuItem, pOSPrintFormsToolStripMenuItem, payrolToolStripMenuItem, loopsToolStripMenuItem, loopsToolStripMenuItem1, quizzesToolStripMenuItem, windowsToolStripMenuItem, functionsToolStripMenuItem, classesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1014, 28);
@@ -83,28 +91,28 @@
             // alisFranchiseToolStripMenuItem
             // 
             alisFranchiseToolStripMenuItem.Name = "alisFranchiseToolStripMenuItem";
-            alisFranchiseToolStripMenuItem.Size = new Size(224, 26);
+            alisFranchiseToolStripMenuItem.Size = new Size(187, 26);
             alisFranchiseToolStripMenuItem.Text = "Ali's Franchise";
             alisFranchiseToolStripMenuItem.Click += alisFranchiseToolStripMenuItem_Click;
             // 
             // pizzaNiAliyahToolStripMenuItem
             // 
             pizzaNiAliyahToolStripMenuItem.Name = "pizzaNiAliyahToolStripMenuItem";
-            pizzaNiAliyahToolStripMenuItem.Size = new Size(224, 26);
+            pizzaNiAliyahToolStripMenuItem.Size = new Size(187, 26);
             pizzaNiAliyahToolStripMenuItem.Text = "Pizza ni Aliyah";
             pizzaNiAliyahToolStripMenuItem.Click += pizzaNiAliyahToolStripMenuItem_Click;
             // 
             // simplePOSToolStripMenuItem
             // 
             simplePOSToolStripMenuItem.Name = "simplePOSToolStripMenuItem";
-            simplePOSToolStripMenuItem.Size = new Size(224, 26);
+            simplePOSToolStripMenuItem.Size = new Size(187, 26);
             simplePOSToolStripMenuItem.Text = "Simple POS";
             simplePOSToolStripMenuItem.Click += simplePOSToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(224, 26);
+            logoutToolStripMenuItem.Size = new Size(187, 26);
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
@@ -157,6 +165,7 @@
             loopsToolStripMenuItem1.Name = "loopsToolStripMenuItem1";
             loopsToolStripMenuItem1.Size = new Size(63, 24);
             loopsToolStripMenuItem1.Text = "Loops";
+            loopsToolStripMenuItem1.Click += loopsToolStripMenuItem1_Click;
             // 
             // fORLoopToolStripMenuItem
             // 
@@ -227,6 +236,62 @@
             cascadeToolStripMenuItem.Size = new Size(190, 26);
             cascadeToolStripMenuItem.Text = "Cascade";
             cascadeToolStripMenuItem.Click += cascadeToolStripMenuItem_Click;
+            // 
+            // functionsToolStripMenuItem
+            // 
+            functionsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { activity1FunctionsToolStripMenuItem, activity2NewFunctionToolStripMenuItem, activity4FunctionToolStripMenuItem });
+            functionsToolStripMenuItem.Name = "functionsToolStripMenuItem";
+            functionsToolStripMenuItem.Size = new Size(85, 24);
+            functionsToolStripMenuItem.Text = "Functions";
+            // 
+            // activity1FunctionsToolStripMenuItem
+            // 
+            activity1FunctionsToolStripMenuItem.Name = "activity1FunctionsToolStripMenuItem";
+            activity1FunctionsToolStripMenuItem.Size = new Size(241, 26);
+            activity1FunctionsToolStripMenuItem.Text = "Activity1_Functions";
+            activity1FunctionsToolStripMenuItem.Click += activity1FunctionsToolStripMenuItem_Click;
+            // 
+            // activity2NewFunctionToolStripMenuItem
+            // 
+            activity2NewFunctionToolStripMenuItem.Name = "activity2NewFunctionToolStripMenuItem";
+            activity2NewFunctionToolStripMenuItem.Size = new Size(241, 26);
+            activity2NewFunctionToolStripMenuItem.Text = "Activity2New_Function";
+            activity2NewFunctionToolStripMenuItem.Click += activity2NewFunctionToolStripMenuItem_Click;
+            // 
+            // activity4FunctionToolStripMenuItem
+            // 
+            activity4FunctionToolStripMenuItem.Name = "activity4FunctionToolStripMenuItem";
+            activity4FunctionToolStripMenuItem.Size = new Size(241, 26);
+            activity4FunctionToolStripMenuItem.Text = "Activity4_Function";
+            activity4FunctionToolStripMenuItem.Click += activity4FunctionToolStripMenuItem_Click;
+            // 
+            // classesToolStripMenuItem
+            // 
+            classesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { activity1ClassToolStripMenuItem, activity2NewClassToolStripMenuItem, activity4ClassToolStripMenuItem });
+            classesToolStripMenuItem.Name = "classesToolStripMenuItem";
+            classesToolStripMenuItem.Size = new Size(70, 24);
+            classesToolStripMenuItem.Text = "Classes";
+            // 
+            // activity1ClassToolStripMenuItem
+            // 
+            activity1ClassToolStripMenuItem.Name = "activity1ClassToolStripMenuItem";
+            activity1ClassToolStripMenuItem.Size = new Size(224, 26);
+            activity1ClassToolStripMenuItem.Text = "Activity1_Class";
+            activity1ClassToolStripMenuItem.Click += activity1ClassToolStripMenuItem_Click;
+            // 
+            // activity2NewClassToolStripMenuItem
+            // 
+            activity2NewClassToolStripMenuItem.Name = "activity2NewClassToolStripMenuItem";
+            activity2NewClassToolStripMenuItem.Size = new Size(224, 26);
+            activity2NewClassToolStripMenuItem.Text = "Activity2New_Class";
+            activity2NewClassToolStripMenuItem.Click += activity2NewClassToolStripMenuItem_Click;
+            // 
+            // activity4ClassToolStripMenuItem
+            // 
+            activity4ClassToolStripMenuItem.Name = "activity4ClassToolStripMenuItem";
+            activity4ClassToolStripMenuItem.Size = new Size(224, 26);
+            activity4ClassToolStripMenuItem.Text = "Activity4_Class";
+            activity4ClassToolStripMenuItem.Click += activity4ClassToolStripMenuItem_Click;
             // 
             // toolStrip1
             // 
@@ -325,5 +390,13 @@
         private ToolStripButton toolStripButton2;
         private ToolStripComboBox toolStripComboBox2;
         private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem functionsToolStripMenuItem;
+        private ToolStripMenuItem activity1FunctionsToolStripMenuItem;
+        private ToolStripMenuItem activity2NewFunctionToolStripMenuItem;
+        private ToolStripMenuItem activity4FunctionToolStripMenuItem;
+        private ToolStripMenuItem classesToolStripMenuItem;
+        private ToolStripMenuItem activity1ClassToolStripMenuItem;
+        private ToolStripMenuItem activity2NewClassToolStripMenuItem;
+        private ToolStripMenuItem activity4ClassToolStripMenuItem;
     }
 }

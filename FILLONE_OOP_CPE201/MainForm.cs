@@ -121,5 +121,52 @@ namespace FILLONE_OOP_CPE201
         {
 
         }
+
+        private void loopsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void activity1FunctionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity1_Functions act1 = new Activity1_Functions();
+            act1.MdiParent = this;
+            act1.Show();
+        }
+
+        private void activity2NewFunctionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity2New_Function act2 = new Activity2New_Function();
+            act2.MdiParent = this;
+            act2.Show();
+        }
+
+        private void activity4FunctionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity4_Function act4 = new Activity4_Function();
+            act4.MdiParent = this;
+            act4.Show();
+        }
+
+        private void activity1ClassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity1_Class act1 = new Activity1_Class();
+            act1.MdiParent = this;
+            act1.Show();
+        }
+
+        private void activity2NewClassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity2New_Class act2 = new Activity2New_Class();
+            act2.MdiParent = this;
+            act2.Show();
+        }
+
+        private void activity4ClassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Activity4_Class act4 = new Activity4_Class();
+            act4.MdiParent = this;
+            act4.Show();
+        }
     }
 }
