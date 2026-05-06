@@ -412,5 +412,16 @@ namespace FILLONE_OOP_CPE201
         {
 
         }
+
+        private void cancelBTN_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Clear();
+            pricetextbox.Clear();
+            qtytxtbox.Clear();
+            discountedtxtbox.Clear();
+            discounttxtbox.Clear();
+            changetxtbox.Clear();
+            cash_renderedtxtbox.Clear();
+        }
     }
 }

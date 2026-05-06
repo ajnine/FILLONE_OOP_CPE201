@@ -37,7 +37,7 @@ namespace FILLONE_OOP_CPE201
             pictureBox16.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\Jolly-Spaghetti-With-1-pc.-Burger-Steak-With-Drink.png");
 
             name1LBL.Text = "Burger Steak w/Drink";
-            name2LBL.Text = "CJ, BS, Spag w/Drink"; 
+            name2LBL.Text = "CJ, BS, Spag w/Drink";
             name3LBL.Text = "1pc ChickenJoy";
             name4LBL.Text = "1pc CJ w/CokeFloat";
             name5LBL.Text = "1pc Cj w/Drink";
@@ -305,7 +305,7 @@ namespace FILLONE_OOP_CPE201
         {
             int qty;
             double discount_amt, discounted_amt, cash_rendered, change;
-            
+
             try
             {
                 qty = Convert.ToInt32(qtytxtbox.Text);
@@ -386,6 +386,17 @@ namespace FILLONE_OOP_CPE201
         private void button14_Click(object sender, EventArgs e)
         {
             cash_renderedtxtbox.Text += ".";
+        }
+
+        private void cancelBTN_Click(object sender, EventArgs e)
+        {
+            itemnametxtbox.Clear();
+            pricetextbox.Clear();
+            qtytxtbox.Clear();
+            discountedtxtbox.Clear();
+            discounttxtbox.Clear();
+            changetxtbox.Clear();
+            cash_renderedtxtbox.Clear();
         }
     }
 }

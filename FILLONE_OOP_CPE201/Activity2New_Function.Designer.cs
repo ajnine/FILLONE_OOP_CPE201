@@ -790,6 +790,7 @@
             cancelBTN.TabIndex = 12;
             cancelBTN.Text = "CANCEL";
             cancelBTN.UseVisualStyleBackColor = false;
+            cancelBTN.Click += cancelBTN_Click;
             // 
             // newBTN
             // 

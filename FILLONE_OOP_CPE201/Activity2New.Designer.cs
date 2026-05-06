@@ -183,7 +183,6 @@
             groupBox1.Size = new Size(569, 198);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
-            //groupBox1.Enter += groupBox1_Enter;
             // 
             // nodiscountRBTN
             // 
@@ -253,7 +252,7 @@
             cancelBTN.TabIndex = 12;
             cancelBTN.Text = "CANCEL";
             cancelBTN.UseVisualStyleBackColor = false;
-            //cancelBTN.Click += cancelBTN_Click;
+            cancelBTN.Click += cancelBTN_Click;
             // 
             // newBTN
             // 
@@ -356,7 +355,6 @@
             label2.Size = new Size(124, 20);
             label2.TabIndex = 0;
             label2.Text = "Name of an item:";
-            //label2.Click += label2_Click;
             // 
             // groupBox2
             // 
@@ -404,7 +402,6 @@
             discount_totaltxtbox.Name = "discount_totaltxtbox";
             discount_totaltxtbox.Size = new Size(387, 27);
             discount_totaltxtbox.TabIndex = 19;
-            //discount_totaltxtbox.TextChanged += discount_totaltxtbox_TextChanged;
             // 
             // qty_totaltxtbox
             // 
@@ -452,7 +449,6 @@
             changetxtbox.Name = "changetxtbox";
             changetxtbox.Size = new Size(212, 66);
             changetxtbox.TabIndex = 24;
-            //changetxtbox.TextChanged += changetxtbox_TextChanged;
             // 
             // label10
             // 
@@ -482,7 +478,6 @@
             enterBTN.TabIndex = 4;
             enterBTN.Text = "ENTER";
             enterBTN.UseVisualStyleBackColor = false;
-            //enterBTN.Click += enterBTN_Click;
             // 
             // button2
             // 
@@ -1097,7 +1092,6 @@
             label12.Size = new Size(70, 20);
             label12.TabIndex = 22;
             label12.Text = "LABEL 12";
-            //label12.Click += label12_Click;
             // 
             // label13
             // 

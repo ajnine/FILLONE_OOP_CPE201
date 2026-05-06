@@ -778,6 +778,7 @@
             exitBTN.TabIndex = 13;
             exitBTN.Text = "EXIT";
             exitBTN.UseVisualStyleBackColor = false;
+            exitBTN.Click += exitBTN_Click;
             // 
             // cancelBTN
             // 
@@ -788,6 +789,7 @@
             cancelBTN.TabIndex = 12;
             cancelBTN.Text = "CANCEL";
             cancelBTN.UseVisualStyleBackColor = false;
+            cancelBTN.Click += cancelBTN_Click;
             // 
             // newBTN
             // 
@@ -798,6 +800,7 @@
             newBTN.TabIndex = 11;
             newBTN.Text = "NEW";
             newBTN.UseVisualStyleBackColor = false;
+            newBTN.Click += newBTN_Click;
             // 
             // calculateBTN
             // 
