@@ -18,7 +18,7 @@ namespace FILLONE_OOP_CPE201
         public void pos_connString() 
         {
             pos_sql_connection = new SqlConnection();
-            pos_connectionString = "Data Source=ALI\\SQLEXPRESS;Initial Catalog = SampleDatabaseDB;Integrated Security=True;";
+            pos_connectionString = "Data Source=ALI\\SQLEXPRESS;Initial Catalog = POSDB;Integrated Security=True;";
             pos_sql_connection = new SqlConnection(pos_connectionString);
             pos_sql_connection.ConnectionString = pos_connectionString;
             pos_sql_connection.Open();
