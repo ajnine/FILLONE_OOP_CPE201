@@ -128,6 +128,7 @@
             PicBox.Size = new Size(233, 176);
             PicBox.TabIndex = 1;
             PicBox.TabStop = false;
+            PicBox.Click += PicBox_Click;
             // 
             // label4
             // 

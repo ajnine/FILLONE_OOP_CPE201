@@ -291,7 +291,7 @@ namespace FILLONE_OOP_CPE201
 
         private void browseBTN_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 // to open file dialog and to filter the file type to be selected
                 OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -301,13 +301,13 @@ namespace FILLONE_OOP_CPE201
                 picpath = openFileDialog.FileName;
                 picpathTXTBOX.Text = picpath;
                 pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
-            } 
-            catch 
+            }
+            catch
             {
                 MessageBox.Show("No file selected.");
-                
+
             }
-            
+
         }
 
         private void exitBTN_Click(object sender, EventArgs e)
@@ -395,6 +395,11 @@ namespace FILLONE_OOP_CPE201
                 other_cutoffTXTBOX.Focus();
                 other_cutoffTXTBOX.Clear();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

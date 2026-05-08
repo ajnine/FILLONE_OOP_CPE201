@@ -119,6 +119,7 @@
             student_picsPCTBOX.SizeMode = PictureBoxSizeMode.StretchImage;
             student_picsPCTBOX.TabIndex = 0;
             student_picsPCTBOX.TabStop = false;
+            student_picsPCTBOX.Click += student_picsPCTBOX_Click;
             // 
             // label1
             // 
@@ -157,7 +158,6 @@
             progsCMBBOX.Name = "progsCMBBOX";
             progsCMBBOX.Size = new Size(296, 28);
             progsCMBBOX.TabIndex = 5;
-            //progsCMBBOX.SelectedIndexChanged += progsCMBBOX_SelectedIndexChanged;
             // 
             // label4
             // 

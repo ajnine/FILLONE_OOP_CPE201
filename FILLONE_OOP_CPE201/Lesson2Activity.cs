@@ -87,5 +87,10 @@ namespace FILLONE_OOP_CPE201
             exambookletTXTBOX.Clear();
             otherfeesTXTBOX.Clear();
         }
+
+        private void student_picsPCTBOX_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

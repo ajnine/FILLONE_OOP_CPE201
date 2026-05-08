@@ -208,5 +208,9 @@ namespace FILLONE_OOP_CPE201
             IncTaxTxtBox.Text = incometax_contrib.ToString("n");
         }
 
+        private void PicBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
