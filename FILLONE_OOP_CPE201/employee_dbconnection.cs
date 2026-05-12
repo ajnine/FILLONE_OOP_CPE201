@@ -36,5 +36,31 @@ namespace FILLONE_OOP_CPE201
             employee_sql_dataadapter.SelectCommand = employee_sql_command;
             employee_sql_command.ExecuteNonQuery();
         }
+
+        public void employee_sqladapterInsert()
+        {
+            employee_sql_dataadapter = new SqlDataAdapter();
+            employee_sql_dataadapter.InsertCommand = employee_sql_command;
+            employee_sql_command.ExecuteNonQuery();
+        }
+
+        public void employee_sqladapterDelete()
+        {
+            employee_sql_dataadapter = new SqlDataAdapter();
+            employee_sql_dataadapter.DeleteCommand = employee_sql_command;
+            employee_sql_command.ExecuteNonQuery();
+        }
+        public void employee_sqladapterUpdate()
+        { 
+            employee_sql_dataadapter = new SqlDataAdapter();
+            employee_sql_dataadapter.UpdateCommand = employee_sql_command;
+            employee_sql_command.ExecuteNonQuery();
+        }
+
+        public void employee_sqldatasetSELECT()
+        {
+            employee_sql_dataset = new DataSet();
+            employee_sql_dataadapter.Fill(employee_sql_dataset, "pos_empRegTbl");
+        }
     }
 }
