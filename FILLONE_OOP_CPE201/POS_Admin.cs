@@ -194,7 +194,7 @@ namespace FILLONE_OOP_CPE201
         {
             try
             {
-                pos_dbconnect.pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTBb ON pos_nameTbl.pos_id = pos_picTBbl.pos_id INNER JOIN pos_priceTbl ON pos_picTBbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = '" + pos_id_comboBox.Text + "'";
+                pos_dbconnect.pos_sql = "SELECT * FROM pos_nameTbl INNER JOIN pos_picTBbl ON pos_nameTbl.pos_id = pos_picTBbl.pos_id INNER JOIN pos_priceTbl ON pos_picTBbl.pos_id = pos_priceTbl.pos_id WHERE pos_nameTbl.pos_id = '" + pos_id_comboBox.Text + "'";
                 pos_dbconnect.pos_cmd();
                 pos_dbconnect.pos_sqladapterSelect();
 
@@ -370,6 +370,8 @@ namespace FILLONE_OOP_CPE201
         private void new_cancelBTN_Click(object sender, EventArgs e)
         {
             cleartextboxes();
+            pos_id_comboBox.SelectedIndex = -1;
+            pos_id_comboBox.Text = string.Empty;
         }
 
         private void exitBTN_Click(object sender, EventArgs e)

@@ -11,15 +11,45 @@ namespace FILLONE_OOP_CPE201
 {
     public partial class Activity2New : Form
     {
-        int qty_total = 0;
+        pos_dbconnection pos_dbconnect = new pos_dbconnection();
+        Price_item_Value price_item_value = new Price_item_Value();
+        dbm_variables variables = new dbm_variables();
+
+        /*int qty_total = 0;
         double discount_totalgiven = 0;
-        double discounted_total = 0;
+        double discounted_total = 0;*/
         public Activity2New()
         {
+            pos_dbconnect.pos_connString();
             InitializeComponent();
         }
 
-        private void Activity2New_Load(object sender, EventArgs e)
+        private void quantityTxtbox()
+        {
+            qtytxtbox.Clear();
+            qtytxtbox.Focus();
+        }
+
+        private void quantity_price_Convert()
+        {
+            variables.quantity = Convert.ToInt32(qtytxtbox.Text);
+            variables.price = Convert.ToDouble(pricetextbox.Text);
+        }
+
+        private void computation_Formula_and_DisplayData()
+        {
+            variables.discounted_amt = (variables.quantity * variables.price) - variables.discount_amt;
+            discounttxtbox.Text = variables.discount_amt.ToString("n");
+            discountedtxtbox.Text = variables.discounted_amt.ToString("n");
+        }
+
+        public void GetItemPriceValue()
+        {
+            itemnametxtbox.Text = (price_item_value.GetItemName());
+            pricetextbox.Text = (price_item_value.GetPrice());
+        }
+
+        private void cleartextboxes()
         {
             itemnametxtbox.Enabled = false;
             pricetextbox.Enabled = false;
@@ -29,12 +59,171 @@ namespace FILLONE_OOP_CPE201
             discounted_totaltxtbox.Enabled = false;
             changetxtbox.Enabled = false;
             discounttxtbox.Enabled = false;
+        }
 
-            pictureBox20.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\2-pc.-Pancakes-Solo.png");
-            pictureBox19.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\6-pc.-Chicken-Nuggets.png");
-            pictureBox18.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\Amazing-Aloha-Champ-Jr.-Fries-Drink.png");
-            pictureBox17.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\Yumburger-Half-Jolly-Spaghetti-Reg.-Fries-Super-Meal-With-Drink.png");
-            pictureBox16.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\School\\OOP\\jollibee menu\\Jolly-Spaghetti-With-1-pc.-Burger-Steak-With-Drink.png");
+        private void Activity2New_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                itemnametxtbox.Enabled = false;
+                pricetextbox.Enabled = false;
+                discountedtxtbox.Enabled = false;
+                qty_totaltxtbox.Enabled = false;
+                discount_totaltxtbox.Enabled = false;
+                discounted_totaltxtbox.Enabled = false;
+                changetxtbox.Enabled = false;
+                discounttxtbox.Enabled = false;
+
+                picpathtxtbox1.Hide();
+                picpathtxtbox2.Hide();
+                picpathtxtbox3.Hide();
+                picpathtxtbox4.Hide();
+                picpathtxtbox5.Hide();
+                picpathtxtbox6.Hide();
+                picpathtxtbox7.Hide();
+                picpathtxtbox8.Hide();
+                picpathtxtbox9.Hide();
+                picpathtxtbox10.Hide();
+                picpathtxtbox11.Hide();
+                picpathtxtbox12.Hide();
+                picpathtxtbox13.Hide();
+                picpathtxtbox14.Hide();
+                picpathtxtbox15.Hide();
+                picpathtxtbox16.Hide();
+                picpathtxtbox17.Hide();
+                picpathtxtbox18.Hide();
+                picpathtxtbox19.Hide();
+                picpathtxtbox20.Hide();
+
+                pos_dbconnect.pos_select_cashier();
+                pos_dbconnect.pos_cmd();
+                pos_dbconnect.pos_sqladapterSelect();
+                pos_dbconnect.pos_sqldatasetSELECT();
+
+                name1LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][2].ToString();
+                name2LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][3].ToString();
+                name3LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][4].ToString();
+                name4LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][5].ToString();
+                name5LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][6].ToString();
+                name6LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][7].ToString();
+                name7LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][8].ToString();
+                name8LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][9].ToString();
+                name9LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][10].ToString();
+                name10LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][11].ToString();
+                name11LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][12].ToString();
+                name12LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][13].ToString();
+                name13LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][14].ToString();
+                name14LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][15].ToString();
+                name15LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][16].ToString();
+                name16LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][17].ToString();
+                name17LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][18].ToString();
+                name18LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][19].ToString();
+                name19LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][20].ToString();
+                name20LBL.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][21].ToString();
+
+                picpathtxtbox1.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][24].ToString();
+                pictureBox1.Image = Image.FromFile(picpathtxtbox1.Text);
+
+                picpathtxtbox2.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][25].ToString();
+                pictureBox2.Image = Image.FromFile(picpathtxtbox2.Text);
+
+                picpathtxtbox3.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][26].ToString();
+                pictureBox3.Image = Image.FromFile(picpathtxtbox3.Text);
+
+                picpathtxtbox4.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][27].ToString();
+                pictureBox4.Image = Image.FromFile(picpathtxtbox4.Text);
+
+                picpathtxtbox5.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][28].ToString();
+                pictureBox5.Image = Image.FromFile(picpathtxtbox5.Text);
+
+                picpathtxtbox6.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][29].ToString();
+                pictureBox6.Image = Image.FromFile(picpathtxtbox6.Text);
+
+                picpathtxtbox7.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][30].ToString();
+                pictureBox7.Image = Image.FromFile(picpathtxtbox7.Text);
+
+                picpathtxtbox8.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][31].ToString();
+                pictureBox8.Image = Image.FromFile(picpathtxtbox8.Text);
+
+                picpathtxtbox9.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][32].ToString();
+                pictureBox9.Image = Image.FromFile(picpathtxtbox9.Text);
+
+                picpathtxtbox10.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][33].ToString();
+                pictureBox10.Image = Image.FromFile(picpathtxtbox10.Text);
+
+                picpathtxtbox11.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][34].ToString();
+                pictureBox11.Image = Image.FromFile(picpathtxtbox11.Text);
+
+                picpathtxtbox12.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][35].ToString();
+                pictureBox12.Image = Image.FromFile(picpathtxtbox12.Text);
+
+                picpathtxtbox13.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][36].ToString();
+                pictureBox13.Image = Image.FromFile(picpathtxtbox13.Text);
+
+                picpathtxtbox14.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][37].ToString();
+                pictureBox14.Image = Image.FromFile(picpathtxtbox14.Text);
+
+                picpathtxtbox15.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][38].ToString();
+                pictureBox15.Image = Image.FromFile(picpathtxtbox15.Text);
+
+                picpathtxtbox16.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][39].ToString();
+                pictureBox16.Image = Image.FromFile(picpathtxtbox16.Text);
+
+                picpathtxtbox17.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][40].ToString();
+                pictureBox17.Image = Image.FromFile(picpathtxtbox17.Text);
+
+                picpathtxtbox18.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][41].ToString();
+                pictureBox18.Image = Image.FromFile(picpathtxtbox18.Text);
+
+                picpathtxtbox19.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][42].ToString();
+                pictureBox19.Image = Image.FromFile(picpathtxtbox19.Text);
+
+                picpathtxtbox20.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][43].ToString();
+                pictureBox20.Image = Image.FromFile(picpathtxtbox20.Text);
+
+                pricelbl1.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][46].ToString();
+                pricelbl2.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][47].ToString();
+                pricelbl3.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][48].ToString();
+                pricelbl4.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][49].ToString();
+                pricelbl5.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][50].ToString();
+                pricelbl6.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][51].ToString();
+                pricelbl7.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][52].ToString();
+                pricelbl8.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][53].ToString();
+                pricelbl9.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][54].ToString();
+                pricelbl10.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][55].ToString();
+                pricelbl11.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][56].ToString();
+                pricelbl12.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][57].ToString();
+                pricelbl13.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][58].ToString();
+                pricelbl14.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][59].ToString();
+                pricelbl15.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][60].ToString();
+                pricelbl16.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][61].ToString();
+                pricelbl17.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][62].ToString();
+                pricelbl18.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][63].ToString();
+                pricelbl19.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][64].ToString();
+                pricelbl20.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][65].ToString();
+
+                pos_dbconnect.pos_select_cashier_display();
+                pos_dbconnect.pos_cmd();
+                pos_dbconnect.pos_sqladapterSelect();
+                pos_dbconnect.pos_select_cashier_SELECTdisplay();
+
+                terminal_noLbl.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][3].ToString();
+                emp_idLbl.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][0].ToString();
+                emp_fnameLbl.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][1].ToString();
+                emp_surnameLbl.Text = pos_dbconnect.pos_sql_dataset.Tables[0].Rows[0][2].ToString();
+                DateTime datetime = DateTime.Now;
+                time_dateLbl.Text = datetime.ToString("MMMM dd, yyyy");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error occurs in this area. Please contact your administrator");
+            }
+            /*
+            pictureBox20.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\2-pc.-Pancakes-Solo.png");
+            pictureBox19.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\6-pc.-Chicken-Nuggets.png");
+            pictureBox18.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\Amazing-Aloha-Champ-Jr.-Fries-Drink.png");
+            pictureBox17.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\Yumburger-Half-Jolly-Spaghetti-Reg.-Fries-Super-Meal-With-Drink.png");
+            pictureBox16.Image = Image.FromFile("C:\\Users\\Ali\\Desktop\\OOP\\jollibee menu\\Jolly-Spaghetti-With-1-pc.-Burger-Steak-With-Drink.png");
 
             name1LBL.Text = "Burger Steak w/Drink";
             name2LBL.Text = "CJ, BS, Spag w/Drink";
@@ -46,6 +235,7 @@ namespace FILLONE_OOP_CPE201
             name8LBL.Text = "Chicken Palabok";
             name9LBL.Text = "Bacon Cheeseburger";
             name10LBL.Text = "Double CB, Fries w/Drink";
+            */
         }
 
         private void seniorcitizenRBTN_CheckedChanged(object sender, EventArgs e)
@@ -397,6 +587,17 @@ namespace FILLONE_OOP_CPE201
             discounttxtbox.Clear();
             changetxtbox.Clear();
             cash_renderedtxtbox.Clear();
+        }
+
+        private void enterBTN_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                if (seniorcitizenRBTN.Checked == true)
+                {
+                   //pos_dbconnect.pos_sql = "INSERT INTO salesTbl (product_name, product_quantity_per_transaction)";
+                }
+            } catch { }
         }
     }
 }

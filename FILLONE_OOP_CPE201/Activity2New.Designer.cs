@@ -78,6 +78,46 @@
             button14 = new Button();
             button15 = new Button();
             groupBox4 = new GroupBox();
+            pricelbl20 = new TextBox();
+            pricelbl19 = new TextBox();
+            pricelbl18 = new TextBox();
+            pricelbl17 = new TextBox();
+            pricelbl16 = new TextBox();
+            pricelbl15 = new TextBox();
+            pricelbl14 = new TextBox();
+            pricelbl13 = new TextBox();
+            pricelbl12 = new TextBox();
+            pricelbl11 = new TextBox();
+            pricelbl10 = new TextBox();
+            pricelbl9 = new TextBox();
+            pricelbl8 = new TextBox();
+            pricelbl7 = new TextBox();
+            pricelbl6 = new TextBox();
+            pricelbl5 = new TextBox();
+            pricelbl4 = new TextBox();
+            pricelbl3 = new TextBox();
+            pricelbl2 = new TextBox();
+            pricelbl1 = new TextBox();
+            picpathtxtbox20 = new TextBox();
+            picpathtxtbox19 = new TextBox();
+            picpathtxtbox18 = new TextBox();
+            picpathtxtbox17 = new TextBox();
+            picpathtxtbox16 = new TextBox();
+            picpathtxtbox15 = new TextBox();
+            picpathtxtbox14 = new TextBox();
+            picpathtxtbox13 = new TextBox();
+            picpathtxtbox12 = new TextBox();
+            picpathtxtbox11 = new TextBox();
+            picpathtxtbox10 = new TextBox();
+            picpathtxtbox9 = new TextBox();
+            picpathtxtbox8 = new TextBox();
+            picpathtxtbox7 = new TextBox();
+            picpathtxtbox6 = new TextBox();
+            picpathtxtbox5 = new TextBox();
+            picpathtxtbox4 = new TextBox();
+            picpathtxtbox3 = new TextBox();
+            picpathtxtbox2 = new TextBox();
+            picpathtxtbox1 = new TextBox();
             name20LBL = new Label();
             name19LBL = new Label();
             name18LBL = new Label();
@@ -118,9 +158,15 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
+            time_dateLbl = new Label();
+            emp_idLbl = new Label();
+            terminal_noLbl = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            emp_fnameLbl = new Label();
+            label18 = new Label();
+            label19 = new Label();
+            emp_surnameLbl = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -178,7 +224,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(itemnametxtbox);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(12, 60);
+            groupBox1.Location = new Point(12, 85);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(569, 198);
             groupBox1.TabIndex = 1;
@@ -364,7 +410,7 @@
             groupBox2.Controls.Add(discount_totaltxtbox);
             groupBox2.Controls.Add(qty_totaltxtbox);
             groupBox2.Controls.Add(label7);
-            groupBox2.Location = new Point(12, 264);
+            groupBox2.Location = new Point(12, 289);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(569, 144);
             groupBox2.TabIndex = 2;
@@ -425,7 +471,7 @@
             groupBox3.Controls.Add(changetxtbox);
             groupBox3.Controls.Add(label10);
             groupBox3.Controls.Add(cash_renderedtxtbox);
-            groupBox3.Location = new Point(12, 414);
+            groupBox3.Location = new Point(12, 439);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(569, 143);
             groupBox3.TabIndex = 3;
@@ -472,17 +518,18 @@
             // enterBTN
             // 
             enterBTN.BackColor = Color.PaleVioletRed;
-            enterBTN.Location = new Point(12, 563);
+            enterBTN.Location = new Point(12, 588);
             enterBTN.Name = "enterBTN";
             enterBTN.Size = new Size(177, 186);
             enterBTN.TabIndex = 4;
             enterBTN.Text = "ENTER";
             enterBTN.UseVisualStyleBackColor = false;
+            enterBTN.Click += enterBTN_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.PaleVioletRed;
-            button2.Location = new Point(199, 563);
+            button2.Location = new Point(199, 588);
             button2.Name = "button2";
             button2.Size = new Size(91, 42);
             button2.TabIndex = 5;
@@ -492,7 +539,7 @@
             // button3
             // 
             button3.BackColor = Color.PaleVioletRed;
-            button3.Location = new Point(296, 563);
+            button3.Location = new Point(296, 588);
             button3.Name = "button3";
             button3.Size = new Size(91, 42);
             button3.TabIndex = 6;
@@ -502,7 +549,7 @@
             // button4
             // 
             button4.BackColor = Color.PaleVioletRed;
-            button4.Location = new Point(393, 563);
+            button4.Location = new Point(393, 588);
             button4.Name = "button4";
             button4.Size = new Size(91, 42);
             button4.TabIndex = 7;
@@ -512,7 +559,7 @@
             // button5
             // 
             button5.BackColor = Color.PaleVioletRed;
-            button5.Location = new Point(490, 563);
+            button5.Location = new Point(490, 588);
             button5.Name = "button5";
             button5.Size = new Size(91, 42);
             button5.TabIndex = 8;
@@ -522,7 +569,7 @@
             // button6
             // 
             button6.BackColor = Color.PaleVioletRed;
-            button6.Location = new Point(199, 611);
+            button6.Location = new Point(199, 636);
             button6.Name = "button6";
             button6.Size = new Size(91, 42);
             button6.TabIndex = 9;
@@ -533,7 +580,7 @@
             // button7
             // 
             button7.BackColor = Color.PaleVioletRed;
-            button7.Location = new Point(296, 611);
+            button7.Location = new Point(296, 636);
             button7.Name = "button7";
             button7.Size = new Size(91, 42);
             button7.TabIndex = 10;
@@ -544,7 +591,7 @@
             // button8
             // 
             button8.BackColor = Color.PaleVioletRed;
-            button8.Location = new Point(393, 611);
+            button8.Location = new Point(393, 636);
             button8.Name = "button8";
             button8.Size = new Size(91, 42);
             button8.TabIndex = 11;
@@ -555,7 +602,7 @@
             // button9
             // 
             button9.BackColor = Color.PaleVioletRed;
-            button9.Location = new Point(490, 611);
+            button9.Location = new Point(490, 636);
             button9.Name = "button9";
             button9.Size = new Size(91, 42);
             button9.TabIndex = 12;
@@ -566,7 +613,7 @@
             // button10
             // 
             button10.BackColor = Color.PaleVioletRed;
-            button10.Location = new Point(199, 659);
+            button10.Location = new Point(199, 684);
             button10.Name = "button10";
             button10.Size = new Size(91, 42);
             button10.TabIndex = 13;
@@ -577,7 +624,7 @@
             // button11
             // 
             button11.BackColor = Color.PaleVioletRed;
-            button11.Location = new Point(296, 659);
+            button11.Location = new Point(296, 684);
             button11.Name = "button11";
             button11.Size = new Size(91, 42);
             button11.TabIndex = 14;
@@ -588,7 +635,7 @@
             // button12
             // 
             button12.BackColor = Color.PaleVioletRed;
-            button12.Location = new Point(393, 659);
+            button12.Location = new Point(393, 684);
             button12.Name = "button12";
             button12.Size = new Size(91, 42);
             button12.TabIndex = 15;
@@ -599,7 +646,7 @@
             // button13
             // 
             button13.BackColor = Color.PaleVioletRed;
-            button13.Location = new Point(490, 659);
+            button13.Location = new Point(490, 684);
             button13.Name = "button13";
             button13.Size = new Size(91, 42);
             button13.TabIndex = 17;
@@ -610,7 +657,7 @@
             // button1
             // 
             button1.BackColor = Color.PaleVioletRed;
-            button1.Location = new Point(199, 707);
+            button1.Location = new Point(199, 732);
             button1.Name = "button1";
             button1.Size = new Size(188, 42);
             button1.TabIndex = 18;
@@ -621,7 +668,7 @@
             // button14
             // 
             button14.BackColor = Color.PaleVioletRed;
-            button14.Location = new Point(393, 707);
+            button14.Location = new Point(393, 732);
             button14.Name = "button14";
             button14.Size = new Size(91, 42);
             button14.TabIndex = 19;
@@ -632,7 +679,7 @@
             // button15
             // 
             button15.BackColor = Color.PaleVioletRed;
-            button15.Location = new Point(490, 707);
+            button15.Location = new Point(490, 732);
             button15.Name = "button15";
             button15.Size = new Size(91, 42);
             button15.TabIndex = 20;
@@ -642,6 +689,46 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(pricelbl20);
+            groupBox4.Controls.Add(pricelbl19);
+            groupBox4.Controls.Add(pricelbl18);
+            groupBox4.Controls.Add(pricelbl17);
+            groupBox4.Controls.Add(pricelbl16);
+            groupBox4.Controls.Add(pricelbl15);
+            groupBox4.Controls.Add(pricelbl14);
+            groupBox4.Controls.Add(pricelbl13);
+            groupBox4.Controls.Add(pricelbl12);
+            groupBox4.Controls.Add(pricelbl11);
+            groupBox4.Controls.Add(pricelbl10);
+            groupBox4.Controls.Add(pricelbl9);
+            groupBox4.Controls.Add(pricelbl8);
+            groupBox4.Controls.Add(pricelbl7);
+            groupBox4.Controls.Add(pricelbl6);
+            groupBox4.Controls.Add(pricelbl5);
+            groupBox4.Controls.Add(pricelbl4);
+            groupBox4.Controls.Add(pricelbl3);
+            groupBox4.Controls.Add(pricelbl2);
+            groupBox4.Controls.Add(pricelbl1);
+            groupBox4.Controls.Add(picpathtxtbox20);
+            groupBox4.Controls.Add(picpathtxtbox19);
+            groupBox4.Controls.Add(picpathtxtbox18);
+            groupBox4.Controls.Add(picpathtxtbox17);
+            groupBox4.Controls.Add(picpathtxtbox16);
+            groupBox4.Controls.Add(picpathtxtbox15);
+            groupBox4.Controls.Add(picpathtxtbox14);
+            groupBox4.Controls.Add(picpathtxtbox13);
+            groupBox4.Controls.Add(picpathtxtbox12);
+            groupBox4.Controls.Add(picpathtxtbox11);
+            groupBox4.Controls.Add(picpathtxtbox10);
+            groupBox4.Controls.Add(picpathtxtbox9);
+            groupBox4.Controls.Add(picpathtxtbox8);
+            groupBox4.Controls.Add(picpathtxtbox7);
+            groupBox4.Controls.Add(picpathtxtbox6);
+            groupBox4.Controls.Add(picpathtxtbox5);
+            groupBox4.Controls.Add(picpathtxtbox4);
+            groupBox4.Controls.Add(picpathtxtbox3);
+            groupBox4.Controls.Add(picpathtxtbox2);
+            groupBox4.Controls.Add(picpathtxtbox1);
             groupBox4.Controls.Add(name20LBL);
             groupBox4.Controls.Add(name19LBL);
             groupBox4.Controls.Add(name18LBL);
@@ -688,6 +775,286 @@
             groupBox4.TabIndex = 21;
             groupBox4.TabStop = false;
             groupBox4.Text = "Items Display";
+            // 
+            // pricelbl20
+            // 
+            pricelbl20.Location = new Point(636, 636);
+            pricelbl20.Name = "pricelbl20";
+            pricelbl20.Size = new Size(112, 27);
+            pricelbl20.TabIndex = 78;
+            // 
+            // pricelbl19
+            // 
+            pricelbl19.Location = new Point(486, 636);
+            pricelbl19.Name = "pricelbl19";
+            pricelbl19.Size = new Size(112, 27);
+            pricelbl19.TabIndex = 77;
+            // 
+            // pricelbl18
+            // 
+            pricelbl18.Location = new Point(331, 636);
+            pricelbl18.Name = "pricelbl18";
+            pricelbl18.Size = new Size(112, 27);
+            pricelbl18.TabIndex = 76;
+            // 
+            // pricelbl17
+            // 
+            pricelbl17.Location = new Point(172, 636);
+            pricelbl17.Name = "pricelbl17";
+            pricelbl17.Size = new Size(112, 27);
+            pricelbl17.TabIndex = 75;
+            // 
+            // pricelbl16
+            // 
+            pricelbl16.Location = new Point(17, 636);
+            pricelbl16.Name = "pricelbl16";
+            pricelbl16.Size = new Size(112, 27);
+            pricelbl16.TabIndex = 74;
+            // 
+            // pricelbl15
+            // 
+            pricelbl15.Location = new Point(636, 453);
+            pricelbl15.Name = "pricelbl15";
+            pricelbl15.Size = new Size(112, 27);
+            pricelbl15.TabIndex = 73;
+            // 
+            // pricelbl14
+            // 
+            pricelbl14.Location = new Point(486, 453);
+            pricelbl14.Name = "pricelbl14";
+            pricelbl14.Size = new Size(112, 27);
+            pricelbl14.TabIndex = 72;
+            // 
+            // pricelbl13
+            // 
+            pricelbl13.Location = new Point(331, 453);
+            pricelbl13.Name = "pricelbl13";
+            pricelbl13.Size = new Size(112, 27);
+            pricelbl13.TabIndex = 71;
+            // 
+            // pricelbl12
+            // 
+            pricelbl12.Location = new Point(172, 453);
+            pricelbl12.Name = "pricelbl12";
+            pricelbl12.Size = new Size(112, 27);
+            pricelbl12.TabIndex = 70;
+            // 
+            // pricelbl11
+            // 
+            pricelbl11.Location = new Point(17, 453);
+            pricelbl11.Name = "pricelbl11";
+            pricelbl11.Size = new Size(112, 27);
+            pricelbl11.TabIndex = 69;
+            // 
+            // pricelbl10
+            // 
+            pricelbl10.Location = new Point(636, 276);
+            pricelbl10.Name = "pricelbl10";
+            pricelbl10.Size = new Size(112, 27);
+            pricelbl10.TabIndex = 68;
+            // 
+            // pricelbl9
+            // 
+            pricelbl9.Location = new Point(486, 276);
+            pricelbl9.Name = "pricelbl9";
+            pricelbl9.Size = new Size(112, 27);
+            pricelbl9.TabIndex = 67;
+            // 
+            // pricelbl8
+            // 
+            pricelbl8.Location = new Point(331, 276);
+            pricelbl8.Name = "pricelbl8";
+            pricelbl8.Size = new Size(112, 27);
+            pricelbl8.TabIndex = 66;
+            // 
+            // pricelbl7
+            // 
+            pricelbl7.Location = new Point(172, 276);
+            pricelbl7.Name = "pricelbl7";
+            pricelbl7.Size = new Size(112, 27);
+            pricelbl7.TabIndex = 65;
+            // 
+            // pricelbl6
+            // 
+            pricelbl6.Location = new Point(17, 276);
+            pricelbl6.Name = "pricelbl6";
+            pricelbl6.Size = new Size(112, 27);
+            pricelbl6.TabIndex = 64;
+            // 
+            // pricelbl5
+            // 
+            pricelbl5.Location = new Point(636, 103);
+            pricelbl5.Name = "pricelbl5";
+            pricelbl5.Size = new Size(112, 27);
+            pricelbl5.TabIndex = 63;
+            // 
+            // pricelbl4
+            // 
+            pricelbl4.Location = new Point(486, 107);
+            pricelbl4.Name = "pricelbl4";
+            pricelbl4.Size = new Size(112, 27);
+            pricelbl4.TabIndex = 62;
+            // 
+            // pricelbl3
+            // 
+            pricelbl3.Location = new Point(331, 107);
+            pricelbl3.Name = "pricelbl3";
+            pricelbl3.Size = new Size(112, 27);
+            pricelbl3.TabIndex = 61;
+            // 
+            // pricelbl2
+            // 
+            pricelbl2.Location = new Point(172, 105);
+            pricelbl2.Name = "pricelbl2";
+            pricelbl2.Size = new Size(112, 27);
+            pricelbl2.TabIndex = 60;
+            // 
+            // pricelbl1
+            // 
+            pricelbl1.Location = new Point(17, 105);
+            pricelbl1.Name = "pricelbl1";
+            pricelbl1.Size = new Size(112, 27);
+            pricelbl1.TabIndex = 59;
+            // 
+            // picpathtxtbox20
+            // 
+            picpathtxtbox20.Location = new Point(636, 570);
+            picpathtxtbox20.Name = "picpathtxtbox20";
+            picpathtxtbox20.Size = new Size(112, 27);
+            picpathtxtbox20.TabIndex = 58;
+            // 
+            // picpathtxtbox19
+            // 
+            picpathtxtbox19.Location = new Point(486, 570);
+            picpathtxtbox19.Name = "picpathtxtbox19";
+            picpathtxtbox19.Size = new Size(112, 27);
+            picpathtxtbox19.TabIndex = 57;
+            // 
+            // picpathtxtbox18
+            // 
+            picpathtxtbox18.Location = new Point(331, 570);
+            picpathtxtbox18.Name = "picpathtxtbox18";
+            picpathtxtbox18.Size = new Size(112, 27);
+            picpathtxtbox18.TabIndex = 56;
+            // 
+            // picpathtxtbox17
+            // 
+            picpathtxtbox17.Location = new Point(172, 570);
+            picpathtxtbox17.Name = "picpathtxtbox17";
+            picpathtxtbox17.Size = new Size(112, 27);
+            picpathtxtbox17.TabIndex = 55;
+            // 
+            // picpathtxtbox16
+            // 
+            picpathtxtbox16.Location = new Point(17, 570);
+            picpathtxtbox16.Name = "picpathtxtbox16";
+            picpathtxtbox16.Size = new Size(112, 27);
+            picpathtxtbox16.TabIndex = 54;
+            // 
+            // picpathtxtbox15
+            // 
+            picpathtxtbox15.Location = new Point(636, 389);
+            picpathtxtbox15.Name = "picpathtxtbox15";
+            picpathtxtbox15.Size = new Size(112, 27);
+            picpathtxtbox15.TabIndex = 53;
+            // 
+            // picpathtxtbox14
+            // 
+            picpathtxtbox14.Location = new Point(486, 389);
+            picpathtxtbox14.Name = "picpathtxtbox14";
+            picpathtxtbox14.Size = new Size(112, 27);
+            picpathtxtbox14.TabIndex = 52;
+            // 
+            // picpathtxtbox13
+            // 
+            picpathtxtbox13.Location = new Point(331, 389);
+            picpathtxtbox13.Name = "picpathtxtbox13";
+            picpathtxtbox13.Size = new Size(112, 27);
+            picpathtxtbox13.TabIndex = 51;
+            // 
+            // picpathtxtbox12
+            // 
+            picpathtxtbox12.Location = new Point(172, 389);
+            picpathtxtbox12.Name = "picpathtxtbox12";
+            picpathtxtbox12.Size = new Size(112, 27);
+            picpathtxtbox12.TabIndex = 50;
+            // 
+            // picpathtxtbox11
+            // 
+            picpathtxtbox11.Location = new Point(17, 389);
+            picpathtxtbox11.Name = "picpathtxtbox11";
+            picpathtxtbox11.Size = new Size(112, 27);
+            picpathtxtbox11.TabIndex = 49;
+            // 
+            // picpathtxtbox10
+            // 
+            picpathtxtbox10.Location = new Point(636, 213);
+            picpathtxtbox10.Name = "picpathtxtbox10";
+            picpathtxtbox10.Size = new Size(112, 27);
+            picpathtxtbox10.TabIndex = 48;
+            // 
+            // picpathtxtbox9
+            // 
+            picpathtxtbox9.Location = new Point(486, 213);
+            picpathtxtbox9.Name = "picpathtxtbox9";
+            picpathtxtbox9.Size = new Size(112, 27);
+            picpathtxtbox9.TabIndex = 48;
+            // 
+            // picpathtxtbox8
+            // 
+            picpathtxtbox8.Location = new Point(331, 213);
+            picpathtxtbox8.Name = "picpathtxtbox8";
+            picpathtxtbox8.Size = new Size(112, 27);
+            picpathtxtbox8.TabIndex = 47;
+            // 
+            // picpathtxtbox7
+            // 
+            picpathtxtbox7.Location = new Point(172, 213);
+            picpathtxtbox7.Name = "picpathtxtbox7";
+            picpathtxtbox7.Size = new Size(112, 27);
+            picpathtxtbox7.TabIndex = 46;
+            // 
+            // picpathtxtbox6
+            // 
+            picpathtxtbox6.Location = new Point(17, 213);
+            picpathtxtbox6.Name = "picpathtxtbox6";
+            picpathtxtbox6.Size = new Size(112, 27);
+            picpathtxtbox6.TabIndex = 45;
+            // 
+            // picpathtxtbox5
+            // 
+            picpathtxtbox5.Location = new Point(636, 45);
+            picpathtxtbox5.Name = "picpathtxtbox5";
+            picpathtxtbox5.Size = new Size(112, 27);
+            picpathtxtbox5.TabIndex = 44;
+            // 
+            // picpathtxtbox4
+            // 
+            picpathtxtbox4.Location = new Point(486, 45);
+            picpathtxtbox4.Name = "picpathtxtbox4";
+            picpathtxtbox4.Size = new Size(112, 27);
+            picpathtxtbox4.TabIndex = 43;
+            // 
+            // picpathtxtbox3
+            // 
+            picpathtxtbox3.Location = new Point(331, 45);
+            picpathtxtbox3.Name = "picpathtxtbox3";
+            picpathtxtbox3.Size = new Size(112, 27);
+            picpathtxtbox3.TabIndex = 42;
+            // 
+            // picpathtxtbox2
+            // 
+            picpathtxtbox2.Location = new Point(172, 45);
+            picpathtxtbox2.Name = "picpathtxtbox2";
+            picpathtxtbox2.Size = new Size(112, 27);
+            picpathtxtbox2.TabIndex = 41;
+            // 
+            // picpathtxtbox1
+            // 
+            picpathtxtbox1.Location = new Point(17, 45);
+            picpathtxtbox1.Name = "picpathtxtbox1";
+            picpathtxtbox1.Size = new Size(112, 27);
+            picpathtxtbox1.TabIndex = 40;
             // 
             // name20LBL
             // 
@@ -1084,42 +1451,106 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // label12
+            // time_dateLbl
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(18, 45);
-            label12.Name = "label12";
-            label12.Size = new Size(70, 20);
-            label12.TabIndex = 22;
-            label12.Text = "LABEL 12";
+            time_dateLbl.AutoSize = true;
+            time_dateLbl.Location = new Point(18, 70);
+            time_dateLbl.Name = "time_dateLbl";
+            time_dateLbl.Size = new Size(70, 20);
+            time_dateLbl.TabIndex = 22;
+            time_dateLbl.Text = "LABEL 12";
             // 
-            // label13
+            // emp_idLbl
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(247, 45);
-            label13.Name = "label13";
-            label13.Size = new Size(121, 20);
-            label13.TabIndex = 23;
-            label13.Text = "By: Aliyah Fillone";
+            emp_idLbl.AutoSize = true;
+            emp_idLbl.Location = new Point(150, 70);
+            emp_idLbl.Name = "emp_idLbl";
+            emp_idLbl.Size = new Size(93, 20);
+            emp_idLbl.TabIndex = 23;
+            emp_idLbl.Text = "EmployeeID.";
             // 
-            // label14
+            // terminal_noLbl
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(474, 45);
-            label14.Name = "label14";
-            label14.Size = new Size(95, 20);
-            label14.TabIndex = 24;
-            label14.Text = "Terminal #21";
+            terminal_noLbl.AutoSize = true;
+            terminal_noLbl.Location = new Point(474, 70);
+            terminal_noLbl.Name = "terminal_noLbl";
+            terminal_noLbl.Size = new Size(95, 20);
+            terminal_noLbl.TabIndex = 24;
+            terminal_noLbl.Text = "Terminal #21";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label15.Location = new Point(18, 45);
+            label15.Name = "label15";
+            label15.Size = new Size(46, 20);
+            label15.TabIndex = 25;
+            label15.Text = "Date:";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label16.Location = new Point(150, 45);
+            label16.Name = "label16";
+            label16.Size = new Size(96, 20);
+            label16.TabIndex = 26;
+            label16.Text = "EmployeeID.";
+            // 
+            // emp_fnameLbl
+            // 
+            emp_fnameLbl.AutoSize = true;
+            emp_fnameLbl.Location = new Point(282, 70);
+            emp_fnameLbl.Name = "emp_fnameLbl";
+            emp_fnameLbl.Size = new Size(78, 20);
+            emp_fnameLbl.TabIndex = 27;
+            emp_fnameLbl.Text = "Employee:";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label18.Location = new Point(284, 45);
+            label18.Name = "label18";
+            label18.Size = new Size(127, 20);
+            label18.TabIndex = 28;
+            label18.Text = "Employee Name:";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label19.Location = new Point(474, 45);
+            label19.Name = "label19";
+            label19.Size = new Size(121, 20);
+            label19.TabIndex = 29;
+            label19.Text = "PC Terminal No.";
+            // 
+            // emp_surnameLbl
+            // 
+            emp_surnameLbl.AutoSize = true;
+            emp_surnameLbl.Location = new Point(369, 70);
+            emp_surnameLbl.Name = "emp_surnameLbl";
+            emp_surnameLbl.Size = new Size(78, 20);
+            emp_surnameLbl.TabIndex = 30;
+            emp_surnameLbl.Text = "Employee:";
             // 
             // Activity2New
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Pink;
-            ClientSize = new Size(1378, 767);
-            Controls.Add(label14);
-            Controls.Add(label13);
-            Controls.Add(label12);
+            ClientSize = new Size(1378, 819);
+            Controls.Add(emp_surnameLbl);
+            Controls.Add(label19);
+            Controls.Add(label18);
+            Controls.Add(emp_fnameLbl);
+            Controls.Add(label16);
+            Controls.Add(label15);
+            Controls.Add(terminal_noLbl);
+            Controls.Add(emp_idLbl);
+            Controls.Add(time_dateLbl);
             Controls.Add(groupBox4);
             Controls.Add(button15);
             Controls.Add(button14);
@@ -1267,8 +1698,54 @@
         private Label name20LBL;
         private Label name19LBL;
         private Label name18LBL;
-        private Label label12;
-        private Label label13;
-        private Label label14;
+        private Label time_dateLbl;
+        private Label terminal_noLbl;
+        private TextBox picpathtxtbox20;
+        private TextBox picpathtxtbox19;
+        private TextBox picpathtxtbox18;
+        private TextBox picpathtxtbox17;
+        private TextBox picpathtxtbox16;
+        private TextBox picpathtxtbox15;
+        private TextBox picpathtxtbox14;
+        private TextBox picpathtxtbox13;
+        private TextBox picpathtxtbox12;
+        private TextBox picpathtxtbox11;
+        private TextBox picpathtxtbox10;
+        private TextBox picpathtxtbox9;
+        private TextBox picpathtxtbox8;
+        private TextBox picpathtxtbox7;
+        private TextBox picpathtxtbox6;
+        private TextBox picpathtxtbox5;
+        private TextBox picpathtxtbox4;
+        private TextBox picpathtxtbox3;
+        private TextBox picpathtxtbox2;
+        private TextBox picpathtxtbox1;
+        private TextBox pricelbl7;
+        private TextBox pricelbl6;
+        private TextBox pricelbl5;
+        private TextBox pricelbl4;
+        private TextBox pricelbl3;
+        private TextBox pricelbl2;
+        private TextBox pricelbl1;
+        private TextBox pricelbl11;
+        private TextBox pricelbl10;
+        private TextBox pricelbl9;
+        private TextBox pricelbl8;
+        private TextBox pricelbl16;
+        private TextBox pricelbl15;
+        private TextBox pricelbl14;
+        private TextBox pricelbl13;
+        private TextBox pricelbl12;
+        private TextBox pricelbl20;
+        private TextBox pricelbl19;
+        private TextBox pricelbl18;
+        private TextBox pricelbl17;
+        private Label label15;
+        private Label label16;
+        private Label emp_fnameLbl;
+        private Label label18;
+        private Label label19;
+        private Label emp_surnameLbl;
+        private Label emp_idLbl;
     }
 }
